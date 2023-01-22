@@ -6,7 +6,7 @@ layout: home
 
 # Content Directory
 
-Required labs files may be [DOWNLOADED HERE](https://github.com/CloudKlass/Azure-Admin/edit/main/archive/AzureAdministrator-AllFiles.zip)
+Required labs files may be [DOWNLOADED HERE](https://github.com/CloudKlass/Azure-Admin/edit/main/AzureAdministrator-AllFiles.zip)
 
 Hyperlinks to each of the lab exercises are listed below.
 
