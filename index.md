@@ -6,9 +6,9 @@ layout: home
 
 # Content Directory
 
-Required **labs files** can be [DOWNLOADED HERE](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator/archive/master.zip)
+The Lab files, contained within the **AllFiles** folder of the zip can be [DOWNLOADED HERE](https://github.com/MicrosoftLearning/AZ-104-MicrosoftAzureAdministrator/archive/master.zip)
 
-Please use the Hyperlinks to each of the lab exercises listed below *(not from the LabFiles download above)*.
+**Please Note:** Use the links to each of the lab exercises listed below *(not from the zip download above)*.
 
 ## Labs
 
