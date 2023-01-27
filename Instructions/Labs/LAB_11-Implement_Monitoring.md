@@ -58,7 +58,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
     >**Note**: Make sure to choose one of the regions listed as **Log Analytics Workspace Region** in the referenced in [Workspace mappings documentation](https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings)
 
    ```powershell
-   $location = '[Azure_region]'
+   $location = 'Westeurope'
 
    $rgName = 'az104-11-rg0'
 
