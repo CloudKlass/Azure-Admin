@@ -73,7 +73,8 @@ In this task, you will deploy a virtual machine that will be used to test monito
       -AsJob
    ```
 
-    >**Note**: Do not wait for the deployment to complete but instead proceed to the next task. The deployment should take about 3 minutes.
+    >**Note**: Do not wait for the deployment to complete but instead proceed to the next task. The deployment should take about 3 minutes. 
+    **Do not close** the  Cloud Shell pane.
 
 #### Task 2: Register the Microsoft.Insights and Microsoft.AlertsManagement resource providers.
 
@@ -85,7 +86,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
    Register-AzResourceProvider -ProviderNamespace Microsoft.AlertsManagement
    ```
 
-1. Minimize Cloud Shell pane (but do not close it).
+1. **Minimize** the Cloud Shell pane (but do not close it).
 
 #### Task 3: Create and configure an Azure Log Analytics workspace and Azure Automation-based solutions
 
@@ -100,7 +101,7 @@ In this task, you will create and configure an Azure Log Analytics workspace and
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | the name of a new resource group **az104-11-rg1** |
     | Log Analytics Workspace | any unique name |
-    | Region | West Europe |
+    | Region | **West Europe** |
 
     >**Note**: Make sure that you specify the same region into which you deployed virtual machines in the previous task.
 
@@ -115,7 +116,7 @@ In this task, you will create and configure an Azure Log Analytics workspace and
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource group | **az104-11-rg1** |
     | Automation account name | any unique name |
-    | Region | West Europe |
+    | Region | **West Europe** |
 
     >**Note**: Wait for the deployment to complete. The deployment might take about 3 minutes.
 
@@ -161,13 +162,15 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. On the **az104-11-vm0** blade, in the **Monitoring** section, click **Diagnostic settings**.
 
-1. On the **Overview** tab of the **az104-11-vm0 \| Diagnostic settings** blade, click **Enable guest-level monitoring**.
+1. On the **az104-11-vm0 \| Diagnostic settings** blade, from the **Diagnostics storage account** drop-down list, select the storage account that starts with the letters **'az'**
+
+1.  click **Enable guest-level monitoring**.
 
     >**Note**: Wait for the operation to take effect. This might take about 3 minutes.
 
 1. Switch to the **Performance counters** tab of the **az104-11-vm0 \| Diagnostic settings** blade and review the available counters.
 
-    >**Note**: By default, CPU, memory, disk, and network counters are enabled. You can switch to the **Custom** view for more detailed listing.
+    >**Note**: By default, CPU, memory, disk, and network counters are enabled.
 
 1. Switch to the **Logs** tab of the **az104-11-vm0 \| Diagnostic settings** blade and review the available event log collection options.
 
