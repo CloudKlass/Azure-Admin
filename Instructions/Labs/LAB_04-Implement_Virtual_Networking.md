@@ -43,6 +43,77 @@ In this task, you will create a virtual network with multiple subnets by using t
 
 1. In the Azure portal, search for and select **Virtual networks**, and, on the **Virtual networks** blade, click **+ Create**.
 
+>**Important Note:** 
+>>If the CREATE VIRTUAL NETWORK - TAB menu order is:     
+*"Basics* | **Security** | **IP Addressess** | *Tags* | *Review + Create*". Use **Option 1 instructions**.
+
+>>If the CREATE VIRTUAL NETWORK - TAB menu order is:   
+*"Basics* | **IP Addressess** | **Security** | *Tags* | *Review + Create*". Scroll down and use **Option 2 instructions**.
+
+#### **Option 1 instructions**
+
+1. On the **Basics** blade.  Create a virtual network with the following settings (leave others with their default values):
+
+    | Setting | Value |
+    | --- | --- |
+    | Subscription | the name of the Azure subscription you will be using in this lab |
+    | Resource Group | the name of a **new** resource group **az104-04-rg1** |
+    | Name | **az104-04-vnet1** |
+    | Region | the name of any Azure region available in the subscription you will use in this lab |
+
+1. Click **Next**.
+
+1. On the **Security** blade.Click **Next**.
+
+1. On the **IP addresses** blade: In the **existing Address space section**, select the three dots and click **Delete address space**
+
+1. On the IP addresses blade, Click **Add an IP address space**
+
+1. On the **Add an IP address space** blade: Enter the following values
+
+    | Setting | Value |
+    | --- | --- |
+    | Address space type | **IPv4** |
+    | Starting address | **10.40.0.0** |
+    | Address space size | **/16** |
+
+1. Click **Add**.
+
+1.Back on the **IP addresses blade**: In the new address space section. Click **Add an subnet**
+
+1. Create a subnet with the following **Subnet settings** (leave others with their default values):
+
+    | Setting | Value |
+    | --- | --- |
+    | Subnet template | **Default** |
+    | Name | **Subnet0**
+    | Starting address | **10.40.0.0** |
+    | Subnet size | **/24 (256 addresses)** |
+    | Route table | **None** |
+
+1. Click **Add**
+
+1. Click **Review and Create**. Let validation occur, and click **Create** again to submit your deployment.
+
+    >**Note:** Wait for the virtual network to be provisioned. This should take less than a minute.
+
+Click on **Go to resource**
+
+1. On the **az104-04-vnet1** virtual network blade, click **Subnets** and then click **+ Subnet**.
+
+1. Create a subnet with the following settings (leave others with their default values):
+
+    | Setting | Value |
+    | --- | --- |
+    | Name | **subnet1** |
+    | Address range (CIDR block) | **10.40.1.0/24** |
+    
+1. Click **Save**
+
+
+
+#### **Option 2 instructions**
+
 1. Create a virtual network with the following settings (leave others with their default values):
 
     | Setting | Value |
