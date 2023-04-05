@@ -216,7 +216,7 @@ In this task, you will test transitivity of virtual network peering by using Net
 
     > **Note**: **10.62.0.4** represents the private IP address of **az104-06-vm2**
 
-1. Click **Check** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
+1. Click **Run diagnostic tests** and wait until results of the connectivity check are returned. Verify that the status is **Success**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
 
     > **Note**: This is expected, since the hub virtual network is peered directly with the first spoke virtual network.
 
@@ -235,7 +235,7 @@ In this task, you will test transitivity of virtual network peering by using Net
 
     > **Note**: **10.63.0.4** represents the private IP address of **az104-06-vm3**
 
-1. Click **Check** and wait until results of the connectivity check are returned. Verify that the status is **Reachable**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
+1. Click **Run diagnostic tests** and wait until results of the connectivity check are returned. Verify that the status is **Success**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs.
 
     > **Note**: This is expected, since the hub virtual network is peered directly with the second spoke virtual network.
 
@@ -252,7 +252,7 @@ In this task, you will test transitivity of virtual network peering by using Net
     | Protocol | **TCP** |
     | Destination Port | **3389** |
 
-1. Click **Check** and wait until results of the connectivity check are returned. Note that the status is **Unreachable**.
+1. Click **Run diagnostic tests** and wait until results of the connectivity check are returned. Note that the status is **Failed**.
 
     > **Note**: This is expected, since the two spoke virtual networks are not peered with each other (virtual network peering is not transitive).
 
