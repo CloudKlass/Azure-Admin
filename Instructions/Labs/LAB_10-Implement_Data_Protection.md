@@ -76,6 +76,8 @@ In this task, you will deploy two virtual machines that will be used to test dif
       -TemplateParameterFile $HOME/az104-10-vms-edge-parameters.json `
       -AsJob
    ```
+1. **When Prompted:**  The AdminPassword requires a minimum 12 character complex password.
+You could use for example '**Pa55w.rd090523**'  where '**090523**' is the date, month year.
 
 1. Minimize Cloud Shell (but do not close it).
 
