@@ -178,6 +178,9 @@ In this task, you will deploy Azure virtual machines into different subnets of t
       -TemplateParameterFile $HOME/az104-04-vms-loop-parameters.json
    ```
 
+1. **When Prompted:**  The AdminPassword requires a minimum 12 character complex password.
+You could use for example '**Pa55w.rd090523**'  where '**090523**' is the date, month year.
+
     >**Note**: This method of deploying ARM templates uses Azure PowerShell. You can perform the same task by running the equivalent Azure CLI command **az deployment create** (for more information, refer to [Deploy resources with Resource Manager templates and Azure CLI](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-cli).
 
     >**Note**: Wait for the deployment to complete before proceeding to the next task. This should take about 2 minutes.
