@@ -80,6 +80,9 @@ In this task, you will deploy an Azure virtual machine that you will use later i
       -AsJob
    ```
 
+1. **When Prompted:**  The AdminPassword requires a minimum 12 character complex password.
+You could use for example '**Pa55w.rd090523**'  where '**090523**' is the date, month year.
+
     >**Note**: Do not wait for the deployments to complete, but proceed to the next task.
 
     >**Note**: If you got an error stating the VM size is not available please ask your instructor for assistance and try these steps.
