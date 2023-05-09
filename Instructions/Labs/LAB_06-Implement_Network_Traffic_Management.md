@@ -81,6 +81,9 @@ In this task, you will deploy four virtual machines into the same Azure region. 
       -TemplateParameterFile $HOME/az104-06-vms-loop-parameters.json
    ```
 
+1. **When Prompted:**  The AdminPassword requires a minimum 12 character complex password.
+You could use for example '**Pa55w.rd090523**'  where '**090523**' is the date, month year.
+
     >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 5 minutes.
 
     >**Note**: If you got an error stating the VM size is not available please ask your instructor for assistance and try these steps.
