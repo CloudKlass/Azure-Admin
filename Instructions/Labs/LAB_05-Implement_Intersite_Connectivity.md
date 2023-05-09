@@ -58,6 +58,8 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
    New-AzResourceGroup -Name $rgName -Location $location1
    ```
+1. **When Prompted:**  The AdminPassword requires a minimum 12 character complex password.
+You could use for example '**Pa55w.rd090523**'  where '**090523**' is the date, month year.
 
    >**Note**: The regions used above were tested and known to work when this lab was last officially reviewed. If you would prefer to use different locations, or they no longer work, you will need to identify two different regions that Standard D2Sv3 virtual machines can be deployed into.
    >
@@ -79,6 +81,9 @@ In this task, you will deploy three virtual machines, each into a separate virtu
       -location1 $location1 `
       -location2 $location2
    ```
+
+1. **When Prompted:**  The AdminPassword requires a minimum 12 character complex password.
+You could use for example '**Pa55w.rd090523**'  where '**090523**' is the date, month year.
 
     >**Note**: Wait for the deployment to complete before proceeding to the next step. This should take about 2 minutes.
 
