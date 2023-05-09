@@ -73,6 +73,9 @@ In this task, you will deploy a virtual machine that will be used to test monito
       -AsJob
    ```
 
+1. **When Prompted:**  The AdminPassword requires a minimum 12 character complex password.
+You could use for example '**Pa55w.rd090523**'  where '**090523**' is the date, month year.
+
     >**Note**: Do not wait for the deployment to complete but instead proceed to the next task. The deployment should take about 3 minutes. 
     **Do not close** the  Cloud Shell pane.
 
