@@ -349,7 +349,7 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
 
 1. In the Azure portal, search for and select **Virtual machine scale sets** and, on the **Virtual machine scale sets** blade, click **+ Create**.
 
-1. On the **Basics** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values) and click **Next : Disks >**:
+1. On the **Basics** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values) and click **Next : Spot >**:
 
     | Setting | Value |
     | --- | --- |
@@ -358,12 +358,15 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
     | Virtual machine scale set name | **az10408vmss0** |
     | Region | **EastUS** |
     | Availability zone | Select **Zones 1, 2** and **3** |
+    | Orchestration Mode | Select **Uniform** radio button |
     | Image | **Windows Server 2019 Datacenter - x64 Gen2** |
     | Size | **Standard_B2ms** |
     | Username | **Azureuser** |
     | Password | **Provide a secure password**  |
 
     >**Note**: For the list of Azure regions which support deployment of Windows virtual machines to availability zones, refer to [What are Availability Zones in Azure?](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
+
+1. On the **Spot** tab of the **Create a virtual machine scale set** blade, accept the default values and click **Next : Disks >**.
 
 1. On the **Disks** tab of the **Create a virtual machine scale set** blade, accept the default values and click **Next : Networking >**.
 
