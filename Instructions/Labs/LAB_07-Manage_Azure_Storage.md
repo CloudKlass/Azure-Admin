@@ -264,7 +264,9 @@ In this task, you will create and configure Azure Files shares.
 
 1. Verify that the script completed successfully.
 
-1. Navigate back to the **az104-07-share** file share blade, click **Refresh**, and verify that **az104-07-folder** appears in the list of folders.
+1. Navigate back to the **az104-07-share** file share blade.
+
+1. In the menu, under Operations, select **Browse** click **Refresh**, and verify that **az104-07-folder** appears in the list of folders.
 
 1. Click **az104-07-folder** and verify that **az104-07-file.txt** appears in the list of files.
 
