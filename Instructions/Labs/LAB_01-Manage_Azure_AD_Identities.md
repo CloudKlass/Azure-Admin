@@ -32,7 +32,7 @@ In the lab, you will:
 
 ### Exercise 1
 
-#### Task 1: Create and configure Azure AD users
+### Task 1: Create and configure Azure AD users
 
 In this task, you will create and configure Azure AD users.
 
@@ -56,13 +56,13 @@ In this task, you will create and configure Azure AD users.
 
     | Setting | Value |
     | --- | --- |
-    | User name | **az104-01a-aaduser1** |
-    | Name | **az104-01a-aaduser1** |
-    | Let me create the password | enabled |
+    | User principle name | **az104-01a-aaduser1** |
+    | Display Name | **az104-01a-aaduser1** |
+    | Auto-generate password | **de-select** |
     | Initial password | **Provide a secure password** |
-    | Usage location | **United States** |
-    | Job title | **Cloud Administrator** |
-    | Department | **IT** |
+    | Job title (Properties tab) | **Cloud Administrator** |
+    | Department (Properties tab)| **IT** |
+    | Usage location (Properties tab)| **United States** |
 
     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
 
@@ -90,17 +90,17 @@ In this task, you will create and configure Azure AD users.
 
     | Setting | Value |
     | --- | --- |
-    | User name | **az104-01a-aaduser2** |
-    | Name | **az104-01a-aaduser2** |
-    | Let me create the password | enabled |
+    | User principle name | **az104-01a-aaduser2** |
+    | Display Name | **az104-01a-aaduser2** |
+    | Auto-generate password | **de-select** |
     | Initial password | **Provide a secure password** |
-    | Usage location | **United States** |
-    | Job title | **System Administrator** |
-    | Department | **IT** |
+    | Job title (Properties tab) | **System Administrator** |
+    | Department (Properties tab)| **IT** |
+    | Usage location (Properties tab)| **United States** |
 
 1. Sign out as the az104-01a-aaduser1 user from the Azure portal and close the InPrivate browser window.
 
-#### Task 2: Create Azure AD groups with assigned and dynamic membership
+### Task 2: Create Azure AD groups with assigned and dynamic membership
 
 In this task, you will create Azure Active Directory groups with assigned and dynamic membership.
 
@@ -183,7 +183,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 1. Navigate back to the **Groups - All groups** blade, click the entry representing the **IT System Administrators** group and, on then display its **Members** blade. Verify that the **az104-01a-aaduser2** appears in the list of group members.
 
-#### Task 3: Create an Azure Active Directory (AD) tenant (Optional - Lab environment issue)
+### Task 3: Create an Azure Active Directory (AD) tenant (Optional - Lab environment issue)
 
 In this task, you will create a new Azure AD tenant.
 
@@ -212,7 +212,7 @@ In this task, you will create a new Azure AD tenant.
 1. Display the blade of the newly created Azure AD tenant by using the **Click here to navigate to your new tenant: Contoso Lab** link or the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
 
 1. Sign in with your Admin account if prompted.
-#### Task 4: Manage Azure AD guest users.
+### Task 4: Manage Azure AD guest users.
 
 In this task, you will create Azure AD guest users and grant them access to resources in an Azure subscription.
 
@@ -222,9 +222,9 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
     | Setting | Value |
     | --- | --- |
-    | User name | **az104-01b-aaduser1** |
-    | Name | **az104-01b-aaduser1** |
-    | Let me create the password | enabled |
+    | User principle name | **az104-01b-aaduser1** |
+    | Display name | **az104-01b-aaduser1** |
+    | Auto-generate password | **De-select** |
     | Initial password | **Provide a secure password** |
     | Job title | **System Administrator** |
     | Department | **IT** |
@@ -241,11 +241,11 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
     | Setting | Value |
     | --- | --- |
-    | Name | **az104-01b-aaduser1** |
     | Email address | the User Principal Name you copied earlier in this task |
-    | Usage location | **United States** |
-    | Job title | **Lab Administrator** |
-    | Department | **IT** |
+    | Display Name (Properties tab) | **az104-01b-aaduser1** |
+    | Job title (Properties tab)| **Lab Administrator** |
+    | Department (Properties tab)| **IT** |
+    | Usage location (Properties tab)| **United States** |
 
 1. Click **Invite**. 
 
@@ -256,7 +256,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
 1. Click **+ Add membership** and add the guest user account to the **IT Lab Administrators** group.
 
 
-#### Task 5: Clean up resources
+### Task 5: Clean up resources
 
 > **Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not incur unexpected costs. While, in this case, there are no additional charges associated with Azure Active Directory tenants and their objects, you might want to consider removing the user accounts, the group accounts, and the Azure Active Directory tenant you created in this lab.
 
@@ -280,7 +280,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
 > **Note**: If a tenant has a trial license, then you would have to wait for the trial license expiration before you could delete the tenant. This would not incur any additional cost.
 
-#### Review
+### Review
 
 In this lab, you have:
 
