@@ -35,7 +35,7 @@ In this lab, you will:
 
 ### Exercise 1
 
-#### Task 1: Create and configure a virtual network
+### Task 1: Create and configure a virtual network
 
 In this task, you will create a virtual network with multiple subnets by using the Azure portal
 
@@ -50,7 +50,7 @@ In this task, you will create a virtual network with multiple subnets by using t
 >>If the CREATE VIRTUAL NETWORK - TAB menu order is:   
 *"Basics* | **IP Addressess** | **Security** | *Tags* | *Review + Create*". Scroll down and use **Option 2 instructions**.
 
-#### **Option 1 instructions**
+### **Option 1 instructions**
 
 1. On the **Basics** blade.  Create a virtual network with the following settings (leave others with their default values):
 
@@ -65,35 +65,26 @@ In this task, you will create a virtual network with multiple subnets by using t
 
 1. On the **Security** blade.Click **Next**.
 
-1. On the **IP addresses** blade: In the **existing Address space section**, select the three dots and click **Delete address space**
+1. On the **IP addresses** blade: In the **existing Address space section** 
 
-1. On the IP addresses blade, Click **Add an IP address space**
-
-1. On the **Add an IP address space** blade: Enter the following values
+1. Edit the **IP address space** blade: Enter the following values
 
     | Setting | Value |
     | --- | --- |
-    | Address space type | **IPv4** |
     | Starting address | **10.40.0.0** |
-    | Address space size | **/16** |
+    | Address space size | **/16 (65,536 addresses)** |
 
-1. Click **Add**.
-
-1.Back on the **IP addresses blade**: In the new address space section. Click **Add an subnet**
-
-1. Create a subnet with the following **Subnet settings** (leave others with their default values):
+1. Select the **default** subnet link and change the following: (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
-    | Subnet template | **Default** |
     | Name | **Subnet0**
     | Starting address | **10.40.0.0** |
     | Subnet size | **/24 (256 addresses)** |
-    | Route table | **None** |
 
-1. Click **Add**
+2. Click **Save**
 
-1. Click **Review and Create**. Let validation occur, and click **Create** again to submit your deployment.
+3. Click **Review and Create**. Let validation occur, and click **Create** again to submit your deployment.
 
     >**Note:** Wait for the virtual network to be provisioned. This should take less than a minute.
 
@@ -112,7 +103,7 @@ Click on **Go to resource**
 
 
 
-#### **Option 2 instructions**
+### **Option 2 instructions**
 
 1. Create a virtual network with the following settings (leave others with their default values):
 
@@ -151,7 +142,7 @@ Click on **Go to resource**
 
 1. Click **Save**
 
-#### Task 2: Deploy virtual machines into the virtual network
+### Task 2: Deploy virtual machines into the virtual network
 
 In this task, you will deploy Azure virtual machines into different subnets of the virtual network by using an ARM template
 
@@ -194,7 +185,7 @@ You could use for example '**Pa55w.rd090523**'  where '**090523**' is the date, 
 
 1. Close the Cloud Shell pane.
 
-#### Task 3: Configure private and public IP addresses of Azure VMs
+### Task 3: Configure private and public IP addresses of Azure VMs
 
 In this task, you will configure static assignment of public and private IP addresses assigned to network interfaces of Azure virtual machines.
 
@@ -250,7 +241,7 @@ In this task, you will configure static assignment of public and private IP addr
 
     >**Note**: You will need both IP addresses in the last task of this lab.
 
-#### Task 4: Configure network security groups
+### Task 4: Configure network security groups
 
 In this task, you will configure network security groups in order to allow for restricted connectivity to Azure virtual machines.
 
@@ -319,7 +310,7 @@ In this task, you will configure network security groups in order to allow for r
 
     >**Note**: Leave the Remote Desktop session open. You will need it in the next task.
 
-#### Task 5: Configure Azure DNS for internal name resolution
+### Task 5: Configure Azure DNS for internal name resolution
 
 In this task, you will configure DNS name resolution within a virtual network by using Azure private DNS zones.
 
@@ -373,7 +364,7 @@ In this task, you will configure DNS name resolution within a virtual network by
 
 1. Close the Remote Desktop connection to **az104-04-vm0**
 
-#### Task 6: Configure Azure DNS for external name resolution
+### Task 6: Configure Azure DNS for external name resolution
 
 In this task, you will configure external DNS name resolution by using Azure public DNS zones.
 
@@ -443,7 +434,7 @@ In this task, you will configure external DNS name resolution by using Azure pub
 
 16. Verify that the output of the command includes the public IP address of **az104-04-vm1**.
 
-#### Clean up resources
+### Clean up resources
 
  > **Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges.
 
@@ -465,7 +456,7 @@ In this task, you will configure external DNS name resolution by using Azure pub
 
     >**Note**: The command executes asynchronously (as determined by the -AsJob parameter), so while you will be able to run another PowerShell command immediately afterwards within the same PowerShell session, it will take a few minutes before the resource groups are actually removed.
 
-#### Review
+### Review
 
 In this lab, you have:
 
