@@ -44,7 +44,7 @@ In the lab, you will:
 
 ### Exercise 1
 
-#### Task 1: Implement Management Groups
+### Task 1: Implement Management Groups
 
 In this task, you will create and configure management groups. 
 
@@ -81,7 +81,7 @@ In this task, you will create and configure management groups.
 
     >**Note**: On the **az104-02-mg1 \| Subscriptions** blade, use **'CTRL+C'** to copy the ID of your Azure subscription into Clipboard. You will need it in the next task.
 
-#### Task 2: Create custom RBAC roles
+### Task 2: Create custom RBAC roles
 
 In this task, you will create a definition of a custom RBAC role.
 
@@ -124,7 +124,7 @@ In this task, you will create a definition of a custom RBAC role.
 
 1. Close the Cloud Shell pane.
 
-#### Task 3: Assign RBAC roles
+### Task 3: Assign RBAC roles
 
 In this task, you will create an Azure Active Directory user, assign the RBAC role you created in the previous task to that user, and verify that the user can perform the task specified in the RBAC role definition.
 
@@ -134,12 +134,12 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 
     | Setting | Value |
     | --- | --- |
-    | User name | **az104-02-aaduser1**|
-    | Name | **az104-02-aaduser1**|
-    | Let me create the password | enabled |
+    | User principle name | **az104-02-aaduser1**|
+    | Display name | **az104-02-aaduser1**|
+    | Auto-generate password | **De-select** |
     | Initial password | **Provide a secure password** |
 
-    >**Note**: **Copy to clipboard** the full **User name**. You will need it later in this lab.
+    >**Note**: **Copy to clipboard** the full **User principle name**. You will need it later in this lab.
 
 1. In the Azure portal, navigate back to the **az104-02-mg1** management group and display its **details**.
 
@@ -167,7 +167,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 
 1. Do not continue with creating the support request. Instead, sign out as the az104-02-aaduser1 user from the Azure portal and close the InPrivate browser window.
 
-#### Task 4: Clean up resources
+### Task 4: Clean up resources
 
    >**Note**: Remember to remove any newly created Azure resources that you no longer use. Removing unused resources ensures you will not see unexpected charges, although, resources created in this lab do not incur extra cost.
 
@@ -210,7 +210,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 
 1. Navigate back to the **Management groups** blade, click the **ellipsis** icon to the right of the **az104-02-mg1** management group and click **Delete**.
  
-#### Review
+### Review
 
 In this lab, you have:
 
