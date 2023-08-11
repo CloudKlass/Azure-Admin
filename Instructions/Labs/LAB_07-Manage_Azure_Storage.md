@@ -234,13 +234,18 @@ In this task, you will create and configure Azure Files shares.
 
 1. In the Azure portal, navigate back to the blade of the storage account you created in the first task of this lab and, in the **Data storage** section, click **File shares**.
 
-1. Click **+ File share** and create a file share with the following settings:
+1. Click **+ File share** On the **Basic** tab of the **New file share** blade enter the following settings:
 
     | Setting | Value |
     | --- | --- |
     | Name | **az104-07-share** |
+    | Tier | **Transaction optimized** |
 
-1. Click the newly created file share and click **Connect**.
+1. Click **Next:Backup>** and **Untick** Enable backup
+
+1. Select **Review + create**, then **Create**.
+
+1. the newly created file share and click **Connect**.
 
 1. On the **Connect** blade, ensure that the **Windows** tab is selected. Below you will find a button with the label **Show Script**. Click on the button and you will find grey textbox with a script, in the bottom right corner of that box hover over the pages icon and click **Copy to clipboard**.
 
