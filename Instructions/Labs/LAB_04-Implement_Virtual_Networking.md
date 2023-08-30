@@ -156,8 +156,6 @@ In this task, you will deploy Azure virtual machines into different subnets of t
 
     >**Note**: You must upload each file separately. After uploading, use **dir** to ensure both files were successfully uploaded.
 
-1. **Edit the Parameters file, and change the password**. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault. 
-
 1. From the Cloud Shell pane, run the following to deploy two virtual machines by using the template and parameter files:
 
    ```powershell
