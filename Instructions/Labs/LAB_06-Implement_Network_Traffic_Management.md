@@ -53,8 +53,6 @@ In this task, you will deploy four virtual machines into the same Azure region. 
 
     >**Note**: You must upload each file separately. After uploading, use dir to ensure both files were successfully uploaded.
 
-1. **Edit the Parameters file you just uploaded and change the password**. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault. 
-
 1. From the Cloud Shell pane, run the following to create the first resource group that will be hosting the lab environment (replace the '[Azure_region]' placeholder with the name of an Azure region where you intend to deploy Azure virtual machines)(you can use the "(Get-AzLocation).Location" cmdlet to get the region list):
 
     ```powershell 
