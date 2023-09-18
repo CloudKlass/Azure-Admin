@@ -56,9 +56,6 @@ In this task, you will deploy three virtual machines, each into a separate virtu
 
    New-AzResourceGroup -Name $rgName -Location $location1
    ```
-1. **When Prompted:**  The AdminPassword requires a minimum 12 character complex password.
-You could use for example '**Pa55w.rd090523**'  where '**090523**' is the date, month year.
-
    >**Note**: The regions used above were tested and known to work when this lab was last officially reviewed. If you would prefer to use different locations, or they no longer work, you will need to identify two different regions that Standard D2Sv3 virtual machines can be deployed into.
    >
    >In order to identify Azure regions, from a PowerShell session in Cloud Shell, run **(Get-AzLocation).Location**
@@ -105,18 +102,22 @@ In this task, you will configure local and global peering between the virtual ne
 
     | Setting | Value|
     | --- | --- |
-    | This virtual network: Peering link name | **az104-05-vnet0_to_az104-05-vnet1** |
-    | This virtual network: Traffic to remote virtual network | **Allow (default)** |
-    | This virtual network: Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway | **None** |
-    | Remote virtual network: Peering link name | **az104-05-vnet1_to_az104-05-vnet0** |
+    | **This virtual network**| 
+    | Peering link name | **az104-05-vnet0_to_az104-05-vnet1** |
+    | Allow access to remote virtual network | **Allow (default)** |
+    | Allow Traffic to remote virtual network | **Allow** |
+    | Allow traffic forwarded from the remote virtual network (allow gateway transit)|  **De-Selected** |
+    | Use remote virtual network gateway or route server | **De-Selected** |
+    | **Remote virtual network** |
+    | Peering link name | **az104-05-vnet1_to_az104-05-vnet0** |
     | Virtual network deployment model | **Resource manager** |
-    | I know my resource ID | unselected |
+    | I know my resource ID | **De-Selected** |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Virtual network | **az104-05-vnet1** |
-    | Traffic to remote virtual network | **Allow (default)** |
-    | Traffic forwarded from remote virtual network | **Block traffic that originates from outside this virtual network** |
-    | Virtual network gateway | **None** |
+    | Allow access to current virtual network | **Allow (default)** |
+    | Allow Traffic to current virtual network | **Allow** |
+    | Allow traffic forwarded from current virtual network (allow gateway transit)|  **De-Selected** |
+    | Use current virtual network gateway or route server | **De-Selected** |
 
     >**Note**: This step establishes two local peerings - one from az104-05-vnet0 to az104-05-vnet1 and the other from az104-05-vnet1 to az104-05-vnet0.
 
