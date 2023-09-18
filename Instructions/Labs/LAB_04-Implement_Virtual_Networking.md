@@ -208,6 +208,8 @@ In this task, you will configure static assignment of public and private IP addr
     | Name | **az104-04-pip0** |
     | SKU | **Standard** |
 
+    >Note: If you have problems with Azure allowing the name, add your initials to the end.
+
 1. On the **ipconfig1** blade, set **Assignment** to **Static**, leave the default value of **IP address** set to **10.40.0.4**.
 
 1. Back on the **ipconfig1** blade, save the changes. Make sure to wait for the save operation to complete before you proceed to the next step.
@@ -374,7 +376,10 @@ In this task, you will configure external DNS name resolution by using Azure pub
     | --- | --- |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Resource Group | **az104-04-rg1** |
-    | Name | **Adatum.com** |
+    | Name | **[Yourname]Adatum.com** :See note below
+
+    >**Note**: Replace '[Yourname], including the square brackets, with your lastname to create a unique Domain Name. Or you can create any unique name to use.
+
 
 3. Click **Review and Create**. Let validation occur, and hit **Create** again to submit your deployment.
 
