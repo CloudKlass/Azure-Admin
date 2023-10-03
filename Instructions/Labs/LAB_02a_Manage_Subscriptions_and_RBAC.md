@@ -9,7 +9,7 @@ lab:
 
 ## Lab requirements
 
-This lab requires permissions to create Azure Active Directory (Azure AD) users, create custom Azure Role Based Access Control (RBAC) roles, and assign these roles to Azure AD users. Not all lab hosters may provide this capability. Ask your instructor for the availability of this lab.
+This lab requires permissions to create Microsoft Entra ID users, create custom Azure Role Based Access Control (RBAC) roles, and assign these roles to Microsoft Entra ID users. Not all lab hosters may provide this capability. Ask your instructor for the availability of this lab.
 
 ## Lab scenario
 
@@ -17,7 +17,7 @@ In order to improve management of Azure resources in Contoso, you have been task
 
 - creating a management group that would include all of Contoso's Azure subscriptions
 
-- granting permissions to submit support requests for all subscriptions in the management group to a designated Azure Active Directory user. That user's permissions should be limited only to: 
+- granting permissions to submit support requests for all subscriptions in the management group to a designated Microsoft Entra ID user. That user's permissions should be limited only to: 
 
     - creating support request tickets
     - viewing resource groups
@@ -54,11 +54,11 @@ In this task, you will create and configure management groups.
 
 1. Review the messages at the top of the **Management groups** blade. If you are seeing the message stating **You are registered as a directory admin but do not have the necessary permissions to access the root management group**, perfom the following sequence of steps:
 
-    1. In the Azure portal, search for and select **Azure Active Directory**.
+    1. In the Azure portal, search for and select **Microsoft Entra ID**.
     
-    1.  On the blade displaying properties of your Azure Active Directory tenant, in the vertical menu on the left side, in the **Manage** section, select **Properties**.
+    1.  On the blade displaying properties of your Microsoft Entra ID tenant, in the vertical menu on the left side, in the **Manage** section, select **Properties**.
     
-    1.  On the **Properties** blade of your your Azure Active Directory tenant, in the **Access management for Azure resources** section, select **Yes** and then select **Save**.
+    1.  On the **Properties** blade of your your Microsoft Entra ID tenant, in the **Access management for Azure resources** section, select **Yes** and then select **Save**.
     
     1.  Navigate back to the **Management groups** blade, and select **Refresh**.
 
@@ -126,9 +126,9 @@ In this task, you will create a definition of a custom RBAC role.
 
 ### Task 3: Assign RBAC roles
 
-In this task, you will create an Azure Active Directory user, assign the RBAC role you created in the previous task to that user, and verify that the user can perform the task specified in the RBAC role definition.
+In this task, you will create an Microsoft Entra ID user, assign the RBAC role you created in the previous task to that user, and verify that the user can perform the task specified in the RBAC role definition.
 
-1. In the Azure portal, search for and select **Azure Active Directory**, on the Azure Active Directory blade, click **Users**, and then click **+ New user**.
+1. In the Azure portal, search for and select **Microsoft Entra ID**, on the Microsoft Entra ID blade, click **Users**, and then click **+ New user**.
 
 1. Create a new user with the following settings (leave others with their defaults):
 
@@ -173,7 +173,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 
    >**Note**: Don't worry if the lab resources cannot be immediately removed. Sometimes resources have dependencies and take a longer time to delete. It is a common Administrator task to monitor resource usage, so just periodically review your resources in the Portal to see how the cleanup is going.
 
-1. In the Azure portal, search for and select **Azure Active Directory**, on the Azure Active Directory blade, click **Users**.
+1. In the Azure portal, search for and select **Microsoft Entra ID**, on the Microsoft Entra ID blade, click **Users**.
 
 1. On the **Users - All users** blade, click **az104-02-aaduser1**.
 
@@ -181,7 +181,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 
 1. In the Azure portal, start a **PowerShell** session within the **Cloud Shell**.
 
-1. From the Cloud Shell pane, run the following to remove the assignment of the custom role definition (replace the `[object_ID]` placeholder with the value of the **object ID** attribute of the **az104-02-aaduser1** Azure Active Directory user account you copied earlier in this task):
+1. From the Cloud Shell pane, run the following to remove the assignment of the custom role definition (replace the `[object_ID]` placeholder with the value of the **object ID** attribute of the **az104-02-aaduser1** Microsoft Entra ID user account you copied earlier in this task):
 
    ```powershell
    
@@ -198,7 +198,7 @@ In this task, you will create an Azure Active Directory user, assign the RBAC ro
 
 1. Close '**Cloud Shell**'
 
-1. In the Azure portal, navigate back to the **Users - All users** blade of the **Azure Active Directory**, and delete the **az104-02-aaduser1** user account.
+1. In the Azure portal, navigate back to the **Users - All users** blade of **Microsoft Entra ID**, and delete the **az104-02-aaduser1** user account.
    
 1. In the Azure portal, navigate back to the **Management groups** blade. 
 
