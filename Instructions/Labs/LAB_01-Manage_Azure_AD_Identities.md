@@ -1,16 +1,16 @@
 ---
 lab:
-    title: '01 - Manage Azure Active Directory Identities'
+    title: '01 - Manage Microsoft Entra ID Identities'
     module: 'Administer Identity'
 ---
 
-# Lab 01 - Manage Azure Active Directory Identities
+# Lab 01 - Manage Microsoft Entra ID Identities
 
 # Student lab manual
 
 ## Lab scenario
 
-In order to allow Contoso users to authenticate by using Azure AD, you have been tasked with provisioning users and group accounts. Membership of the groups should be updated automatically based on the user job titles. You also need to create a test Azure AD tenant with a test user account and grant that account limited permissions to resources in the Contoso Azure subscription.
+In order to allow Contoso users to authenticate by using Microsoft Entra ID, you have been tasked with provisioning users and group accounts. Membership of the groups should be updated automatically based on the user job titles. You also need to create a test Microsoft Entra ID tenant with a test user account and grant that account limited permissions to resources in the Contoso Azure subscription.
 
 **Note:** An **[interactive lab simulation](https://mslabs.cloudguides.com/guides/AZ-104%20Exam%20Guide%20-%20Microsoft%20Azure%20Administrator%20Exercise%201)** is available that allows you to click through this lab at your own pace. You may find slight differences between the interactive simulation and the hosted lab, but the core concepts and ideas being demonstrated are the same.
 
@@ -18,10 +18,10 @@ In order to allow Contoso users to authenticate by using Azure AD, you have been
 
 In the lab, you will:
 
-+ Task 1: Create and configure Azure AD users
-+ Task 2: Create Azure AD groups with assigned and dynamic membership
++ Task 1: Create and configure users
++ Task 2: Create groups with assigned and dynamic membership
 + Task 3: Create an Azure Active Directory (AD) tenant (Optional - lab environment issue)
-+ Task 4: Manage Azure AD guest users (Optional - lab environment issue)
++ Task 4: Manage guest users (Optional - lab environment issue)
 
 ## Estimated timing: 30 minutes
 
@@ -32,15 +32,15 @@ In the lab, you will:
 
 ### Exercise 1
 
-### Task 1: Create and configure Azure AD users
+### Task 1: Create and configure Microsoft Entra ID users
 
-In this task, you will create and configure Azure AD users.
+In this task, you will create and configure Microsoft Entra ID users.
 
->**Note**: If you have previously used the Trial license for Azure AD Premium on this Azure AD Tenant you will need a new Azure AD Tenant and perform the Task 2 after Task 3 in that new Azure AD tenant.
+>**Note**: If you have previously used the Trial license for Microsoft Entra ID Premium on this Tenant you will need a new Microsoft Entra ID Tenant and perform the Task 2 after Task 3 in that new Microsoft Entra ID tenant.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
-1. In the Azure portal, search for and select **Azure Active Directory**.
+1. In the Azure portal, search for and select **Microsoft Entra ID**.
 
 1. On the Azure Active Directory blade, scroll down to the **Manage** section, click **User settings**, and review available configuration options.
 
@@ -48,7 +48,7 @@ In this task, you will create and configure Azure AD users.
 
 1. Click **edit properties**, in the **Settings** section, set **Usage location** to **United States** and click **save** to apply the change.
 
-    >**Note**: This is necessary in order to assign an Azure AD Premium P2 license to your user account later in this lab.
+    >**Note**: This is necessary in order to assign an Microsoft Entra ID Premium P2 license to your user account later in this lab.
 
 1. Navigate back to the **Users - All users** blade, and then click **+ New user**.
 
@@ -68,11 +68,11 @@ In this task, you will create and configure Azure AD users.
 
 1. Refresh the screen, and in the list of users, click the newly created user account to display its blade.
 
-1. Review the options available in the **Manage** section and note that you can identify the Azure AD roles assigned to the user account as well as the user account's permissions to Azure resources.
+1. Review the options available in the **Manage** section and note that you can identify the Microsoft Entra ID roles assigned to the user account as well as the user account's permissions to Azure resources.
 
 1. In the **Manage** section, click **Assigned roles**, then click **+ Add assignment** button and assign the **User administrator** role to **az104-01a-aaduser1**.
 
-    >**Note**: You also have the option of assigning Azure AD roles when provisioning a new user.
+    >**Note**: You also have the option of assigning Microsoft Entra ID roles when provisioning a new user.
 
 1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password to a secure password of your choosing. 
 
@@ -82,9 +82,9 @@ In this task, you will create and configure Azure AD users.
 
     >**Note**: While this user account can access the Azure Active Directory tenant, it does not have any access to Azure resources. This is expected, since such access would need to be granted explicitly by using Azure Role-Based Access Control. 
 
-1. In the **InPrivate** browser window, on the Azure AD blade, scroll down to the **Manage** section, click **User settings**, and note that you do not have permissions to modify any configuration options.
+1. In the **InPrivate** browser window, on the Microsoft Entra ID blade, scroll down to the **Manage** section, click **User settings**, and note that you do not have permissions to modify any configuration options.
 
-1. In the **InPrivate** browser window, on the Azure AD blade, in the **Manage** section, click **Users**, and then click **+ New user**.
+1. In the **InPrivate** browser window, on the Microsoft Entra ID blade, in the **Manage** section, click **Users**, and then click **+ New user**.
 
 1. Create a new user with the following settings (leave others with their defaults):
 
@@ -100,25 +100,25 @@ In this task, you will create and configure Azure AD users.
 
 1. Sign out as the az104-01a-aaduser1 user from the Azure portal and close the InPrivate browser window.
 
-### Task 2: Create Azure AD groups with assigned and dynamic membership
+### Task 2: Create Microsoft Entra ID groups with assigned and dynamic membership
 
 In this task, you will create Azure Active Directory groups with assigned and dynamic membership.
 
-1. Back in the Azure portal where you are signed in with your **user account**, navigate back to the **Overview** blade of the Azure AD tenant and, in the **Manage** section, click **Licenses**.
+1. Back in the Azure portal where you are signed in with your **user account**, navigate back to the **Overview** blade of the Microsoft Entra ID tenant and, in the **Manage** section, click **Licenses**.
 
-    >**Note**: Azure AD Premium P1 or P2 licenses are required in order to implement dynamic groups.
+    >**Note**: Microsoft Entra ID Premium P1 or P2 licenses are required in order to implement dynamic groups.
 
 1. In the **Manage** section, click **All products**.
 
-1. Click **+ Try/Buy** and activate the free trial of Azure AD Premium P2.
+1. Click **+ Try/Buy** and activate the free trial of Microsoft Entra ID Premium P2.
 
 1. Refresh the browser window to verify that the activation was successful. 
 
  >**Note**: It can take up to 10 minutes for the licenses to activate. Continue refreshing the page until it appears. Do not proceed until the licenses have been activated.
 
-1. From the **Licenses - All products** blade, select the **Azure Active Directory Premium P2** entry, and assign all license options of Azure AD Premium P2 to your user account and the two newly created user accounts.
+1. From the **Licenses - All products** blade, select the **Azure Active Directory Premium P2** entry, and assign all license options of Microsoft Entra ID Premium P2 to your user account and the two newly created user accounts.
 
-1. In the Azure portal, navigate back to the Azure AD tenant blade and click **Groups**.
+1. In the Azure portal, navigate back to the Microsoft Entra ID tenant blade and click **Groups**.
 
 1. Use the **+ New group** button to create a new group with the following settings:
 
@@ -143,7 +143,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 1. Save the rule by clicking **+Add expression** and **Save**. Back on the **New Group** blade, click **Create**. 
 
-1. Back on the **Groups - All groups** blade of the Azure AD tenant, click the **+ New group** button and create a new group with the following settings:
+1. Back on the **Groups - All groups** blade of the Microsoft Entra ID tenant, click the **+ New group** button and create a new group with the following settings:
 
     | Setting | Value |
     | --- | --- |
@@ -164,7 +164,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 1. Save the rule by clicking **+Add expression** and **Save**. Back on the **New Group** blade, click **Create**. 
 
-1. Back on the **Groups - All groups** blade of the Azure AD tenant, click the **+ New group** button, and create a new group with the following settings:
+1. Back on the **Groups - All groups** blade of the Microsoft Entra ID tenant, click the **+ New group** button, and create a new group with the following settings:
 
     | Setting | Value |
     | --- | --- |
@@ -183,9 +183,9 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 1. Navigate back to the **Groups - All groups** blade, click the entry representing the **IT System Administrators** group and, on then display its **Members** blade. Verify that the **az104-01a-aaduser2** appears in the list of group members.
 
-### Task 3: Create an Azure Active Directory (AD) tenant (Optional - Lab environment issue)
+### Task 3: Create a tenant (Optional - Lab environment issue)
 
-In this task, you will create a new Azure AD tenant.
+In this task, you will create a new Microsoft Entra ID tenant.
 
    >**Note**: There is a known issue with the Captcha verification in the lab environment. If you experience this issue, please skip both this task and the next. We are working on a solution.
 
@@ -195,7 +195,7 @@ In this task, you will create a new Azure AD tenant.
 
     | Setting | Value |
     | --- | --- |
-    | Directory type | **Azure Active Directory** |
+    | Directory type | **Microsoft Entra ID** |
     
 1. Click **Next : Configuration**
 
@@ -209,14 +209,14 @@ In this task, you will create a new Azure AD tenant.
 
 1. Click **Review + create** and then click **Create**.  Complete the Captcha check and click **Submit**
 
-1. Display the blade of the newly created Azure AD tenant by using the **Click here to navigate to your new tenant: Contoso Lab** link or the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
+1. Display the blade of the newly created Microsoft Entra ID tenant by using the **Click here to navigate to your new tenant: Contoso Lab** link or the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
 
 1. Sign in with your Admin account if prompted.
-### Task 4: Manage Azure AD guest users.
+### Task 4: Manage Microsoft Entra ID guest users.
 
-In this task, you will create Azure AD guest users and grant them access to resources in an Azure subscription.
+In this task, you will create Microsoft Entra ID guest users and grant them access to resources in an Azure subscription.
 
-1. In the Azure portal displaying the Contoso Lab Azure AD tenant, in the **Manage** section, click **Users**, and then click **+ New user**.
+1. In the Azure portal displaying the Contoso Lab Microsoft Entra ID tenant, in the **Manage** section, click **Users**, and then click **+ New user**.
 
 1. Create a new user with the following settings (leave others with their defaults):
 
@@ -233,7 +233,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
 
-1. Switch back to your default Azure AD tenant by using the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
+1. Switch back to your default Microsoft Entra ID tenant by using the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
 
 1. Navigate back to the **Users - All users** blade, and then click **+ Invite external user**.
 
@@ -270,11 +270,11 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
 1. Navigate to the **Groups - All groups** blade, select the groups you created in this lab, click **Delete**, and, when prompted to confirm, click **OK**.
 
-1. In the Azure portal, display the blade of the Contoso Lab Azure AD tenant by using the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
+1. In the Azure portal, display the blade of the Contoso Lab Microsoft Entra ID tenant by using the **Directory + Subscription** button (directly to the right of the Cloud Shell button) in the Azure portal toolbar.
 
 1. Navigate to the **Users - All users** blade, click the entry representing the **az104-01b-aaduser1** user account, on the **az104-01b-aaduser1 - Profile** blade click **Delete**, and, when prompted to confirm, click **OK**.
 
-1. Navigate to the **Contoso Lab - Overview** blade of the Contoso Lab Azure AD tenant, click **Manage tenants** and then on the next screen, select the box next to **Contoso Lab**, click **Delete**, on the **Delete tenant 'Contoso Labs'?** blade, click the **Get permission to delete Azure resources** link, on the **Properties** blade of Azure Active Directory, set **Access management for Azure resources** to **Yes** and click **Save**.
+1. Navigate to the **Contoso Lab - Overview** blade of the Contoso Lab Microsoft Entra ID tenant, click **Manage tenants** and then on the next screen, select the box next to **Contoso Lab**, click **Delete**, on the **Delete tenant 'Contoso Labs'?** blade, click the **Get permission to delete Azure resources** link, on the **Properties** blade of Azure Active Directory, set **Access management for Azure resources** to **Yes** and click **Save**.
 
 1. Navigate back to the **Delete tenant 'Contoso Lab'** blade and click **Refresh**, click **Delete**.
 
@@ -284,7 +284,7 @@ In this task, you will create Azure AD guest users and grant them access to reso
 
 In this lab, you have:
 
-- Created and configured Azure AD users
-- Created Azure AD groups with assigned and dynamic membership
+- Created and configured Microsoft Entra ID users
+- Created Microsoft Entra ID groups with assigned and dynamic membership
 - Created an Azure Active Directory (AD) tenant
-- Managed Azure AD guest users 
+- Managed Microsoft Entra ID guest users 
