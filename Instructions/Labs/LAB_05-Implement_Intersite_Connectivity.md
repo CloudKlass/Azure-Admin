@@ -104,20 +104,20 @@ In this task, you will configure local and global peering between the virtual ne
     | --- | --- |
     | **This virtual network**| 
     | Peering link name | **az104-05-vnet0_to_az104-05-vnet1** |
-    | Allow access to remote virtual network | **Allow (default)** |
-    | Allow Traffic to remote virtual network | **Allow** |
-    | Allow traffic forwarded from the remote virtual network (allow gateway transit)|  **De-Selected** |
-    | Use remote virtual network gateway or route server | **De-Selected** |
+    | Allow 'az104-05-vnet0' to access the peered virtual network | **Allow (default)** |
+    | Allow 'az104-05-vnet0' to receive forwarded traffic from the peered virtual network | **Allow** |
+    | Allow gateway in 'az104-05-vnet0' to forward traffic to the peered virtual network |  **De-Selected** |
+    | Enable 'az104-05-vnet0' to use the peered virtual networks' remote gateway | **De-Selected** |
     | **Remote virtual network** |
     | Peering link name | **az104-05-vnet1_to_az104-05-vnet0** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | **De-Selected** |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Virtual network | **az104-05-vnet1** |
-    | Allow access to current virtual network | **Allow (default)** |
-    | Allow Traffic to current virtual network | **Allow** |
-    | Allow traffic forwarded from current virtual network (allow gateway transit)|  **De-Selected** |
-    | Use current virtual network gateway or route server | **De-Selected** |
+    | Allow the peered virtual network to access 'az104-05-vnet0' | **Allow (default)** |
+    | Allow the peered virtual network to receive forwarded traffic from 'az104-05-vnet0' | **Allow** |
+    | Allow gateway in the peered virtual network to forward traffic to 'az104-05-vnet0'|  **De-Selected** |
+    | Enable the peered virtual network to use 'az104-05-vnet0' remote gateway | **De-Selected** |
 
     >**Note**: This step establishes two local peerings - one from az104-05-vnet0 to az104-05-vnet1 and the other from az104-05-vnet1 to az104-05-vnet0.
 
@@ -143,20 +143,21 @@ In this task, you will configure local and global peering between the virtual ne
     | --- | --- |
     | **This virtual network**| 
     | Peering link name | **az104-05-vnet0_to_az104-05-vnet2** |
-    | Allow access to remote virtual network | **Allow (default)** |
-    | Allow Traffic to remote virtual network | **Allow** |
-    | Allow traffic forwarded from the remote virtual network (allow gateway transit)|  **De-Selected** |
-    | Use remote virtual network gateway or route server | **De-Selected** |
+    | Allow 'az104-05-vnet0' to access the peered virtual network | **Allow (default)** |
+    | Allow 'az104-05-vnet0' to receive forwarded traffic from the peered virtual network | **Allow** |
+    | Allow gateway in 'az104-05-vnet0' to forward traffic to the peered virtual network |  **De-Selected** |
+    | Enable 'az104-05-vnet0' to use the peered virtual networks' remote gateway | **De-Selected** |
     | **Remote virtual network** |
     | Peering link name | **az104-05-vnet2_to_az104-05-vnet0** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | **De-Selected** |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Virtual network | **az104-05-vnet2** |
-    | Allow access to current virtual network | **Allow (default)** |
-    | Allow Traffic to current virtual network | **Allow** |
-    | Allow traffic forwarded from current virtual network (allow gateway transit)|  **De-Selected** |
-    | Use current virtual network gateway or route server | **De-Selected** |
+    | Allow the peered virtual network to access 'az104-05-vnet0' | **Allow (default)** |
+    | Allow the peered virtual network to receive forwarded traffic from 'az104-05-vnet0' | **Allow** |
+    | Allow gateway in the peered virtual network to forward traffic to 'az104-05-vnet0'|  **De-Selected** |
+    | Enable the peered virtual network to use 'az104-05-vnet0' remote gateway | **De-Selected** |
+
 
 
     >**Note**: This step establishes two global peerings - one from az104-05-vnet0 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet0.
@@ -185,20 +186,20 @@ In this task, you will configure local and global peering between the virtual ne
     | --- | --- |
     | **This virtual network**| 
     | Peering link name | **az104-05-vnet1_to_az104-05-vnet2** |
-    | Allow access to remote virtual network | **Allow (default)** |
-    | Allow Traffic to remote virtual network | **Allow** |
-    | Allow traffic forwarded from the remote virtual network (allow gateway transit)|  **De-Selected** |
-    | Use remote virtual network gateway or route server | **De-Selected** |
+    | Allow 'az104-05-vnet1' to access the peered virtual network | **Allow (default)** |
+    | Allow 'az104-05-vnet1' to receive forwarded traffic from the peered virtual network | **Allow** |
+    | Allow gateway in 'az104-05-vnet1' to forward traffic to the peered virtual network |  **De-Selected** |
+    | Enable 'az104-05-vnet1' to use the peered virtual networks' remote gateway | **De-Selected** |
     | **Remote virtual network** |
     | Peering link name | **az104-05-vnet2_to_az104-05-vnet1** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | **De-Selected** |
     | Subscription | the name of the Azure subscription you are using in this lab |
     | Virtual network | **az104-05-vnet2** |
-    | Allow access to current virtual network | **Allow (default)** |
-    | Allow Traffic to current virtual network | **Allow** |
-    | Allow traffic forwarded from current virtual network (allow gateway transit)|  **De-Selected** |
-    | Use current virtual network gateway or route server | **De-Selected** |
+    | Allow the peered virtual network to access 'az104-05-vnet1' | **Allow (default)** |
+    | Allow the peered virtual network to receive forwarded traffic from 'az104-05-vnet1' | **Allow** |
+    | Allow gateway in the peered virtual network to forward traffic to 'az104-05-vnet1'|  **De-Selected** |
+    | Enable the peered virtual network to use 'az104-05-vnet1' remote gateway | **De-Selected** |
 
     >**Note**: This step establishes two global peerings - one from az104-05-vnet1 to az104-05-vnet2 and the other from az104-05-vnet2 to az104-05-vnet1.
 
