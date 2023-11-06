@@ -183,7 +183,7 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 1. Navigate back to the **Groups - All groups** blade, click the entry representing the **IT System Administrators** group and, on then display its **Members** blade. Verify that the **az104-01a-aaduser2** appears in the list of group members.
 
-### Task 3: Create a tenant (Optional - Lab environment issue)
+### Task 3: Create a tenant (Cannot do at present **Go to Task 4**)
 
 In this task, you will create a new Microsoft Entra ID tenant.
 
@@ -214,9 +214,9 @@ In this task, you will create a new Microsoft Entra ID tenant.
 1. Sign in with your Admin account if prompted.
 ### Task 4: Manage Microsoft Entra ID guest users.
 
-In this task, you will create Microsoft Entra ID guest users and grant them access to resources in an Azure subscription.
+In this task, you will create Microsoft Entra ID External user and grant them access to resources in an Azure subscription.
 
-1. In the Azure portal displaying the Contoso Lab Microsoft Entra ID tenant, in the **Manage** section, click **Users**, and then click **+ New user**.
+1. In the Azure portal displaying the Contoso Lab Microsoft Entra ID tenant, in the **Manage** section, click **Users**, and then click **+ New user**, then select **Invite External User**.
 
 1. Create a new user with the following settings (leave others with their defaults):
 
