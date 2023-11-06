@@ -120,7 +120,7 @@ In this task, you will apply a resource lock to an Azure resource group containi
 
     >**Note**: This is expected, since the resource group-level lock applies to delete operations only. 
 
-### Clean up resources
+### Do not clean up resources yet.
 
    >**Note**: Do not delete resources you deployed in this lab. You will be using them in the next lab of this module. Remove only the resource lock you created in this lab.
 
