@@ -118,7 +118,7 @@ In this lab, you will:
 
 1. From the **az104-03b-rg1 - Deployments** blade, click the first entry in the list of deployments and review the content of the **Input** and **Template** blades.
 
-#### Clean up resources
+#### Do not clean up resources yet.
 
    >**Note**: Do not delete resources you deployed in this lab. You will reference them in the next lab of this module.
 
