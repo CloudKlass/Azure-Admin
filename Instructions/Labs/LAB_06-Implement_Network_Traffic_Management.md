@@ -157,15 +157,15 @@ In this task, you will configure local peering between the virtual networks you 
     | Allow gateway in 'az104-05-vnet01' to forward traffic to the peered virtual network |  **De-Selected** |
     | Enable 'az104-05-vnet01' to use the peered virtual networks' remote gateway | **De-Selected** |
     | **Remote virtual network** |
-    | Peering link name | **az104-05-vnet2_to_az104-05-vnet01** |
+    | Peering link name | **az104-06-vnet2_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | **De-Selected** |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Virtual network | **az104-05-vnet2** |
-    | Allow the peered virtual network to access 'az104-05-vnet01' | **Allow (default)** |
-    | Allow the peered virtual network to receive forwarded traffic from 'az104-05-vnet01' | **Allow** |
-    | Allow gateway in the peered virtual network to forward traffic to 'az104-05-vnet01'|  **De-Selected** |
-    | Enable the peered virtual network to use 'az104-05-vnet01' remote gateway | **De-Selected** |
+    | Virtual network | **az104-06-vnet2** |
+    | Allow the peered virtual network to access 'az104-06-vnet01' | **Allow (default)** |
+    | Allow the peered virtual network to receive forwarded traffic from 'az104-06-vnet01' | **Allow** |
+    | Allow gateway in the peered virtual network to forward traffic to 'az104-06-vnet01'|  **De-Selected** |
+    | Enable the peered virtual network to use 'az104-06-vnet01' remote gateway | **De-Selected** |
 
     >**Note**: Wait for the operation to complete.
 
@@ -173,27 +173,27 @@ In this task, you will configure local peering between the virtual networks you 
 
     >**Note**: **Allow forwarded traffic** needs to be enabled in order to facilitate routing between spoke virtual networks, which you will implement later in this lab.
 
-1. On the **az104-06-vnet01** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
+2. On the **az104-06-vnet01** virtual network blade, in the **Settings** section, click **Peerings** and then click **+ Add**.
 
-1. Add a peering with the following settings (leave others with their default values) and click **Add**:
+3. Add a peering with the following settings (leave others with their default values) and click **Add**:
 
     | Setting | Value |
     | --- | --- |
     | This virtual network: Peering link name | **az104-06-vnet01_to_az104-06-vnet3** |
     | Allow 'az104-05-vnet01' to access the peered virtual network | **Allow (default)** |
     | Allow 'az104-05-vnet01' to receive forwarded traffic from the peered virtual network | **Allow** |
-    | Allow gateway in 'az104-05-vnet01' to forward traffic to the peered virtual network |  **De-Selected** |
+    | Allow gateway in 'az104-06-vnet01' to forward traffic to the peered virtual network |  **De-Selected** |
     | Enable 'az104-05-vnet1' to use the peered virtual networks' remote gateway | **De-Selected** |
     | **Remote virtual network** |
-    | Peering link name | **az104-05-vnet3_to_az104-05-vnet01** |
+    | Peering link name | **az104-06-vnet3_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
     | I know my resource ID | **De-Selected** |
     | Subscription | the name of the Azure subscription you are using in this lab |
-    | Virtual network | **az104-05-vnet3** |
+    | Virtual network | **az104-06-vnet3** |
     | Allow the peered virtual network to access 'az104-05-vnet01' | **Allow (default)** |
-    | Allow the peered virtual network to receive forwarded traffic from 'az104-05-vnet01' | **Allow** |
-    | Allow gateway in the peered virtual network to forward traffic to 'az104-05-vnet01'|  **De-Selected** |
-    | Enable the peered virtual network to use 'az104-05-vnet01' remote gateway | **De-Selected** |
+    | Allow the peered virtual network to receive forwarded traffic from 'az104-06-vnet01' | **Allow** |
+    | Allow gateway in the peered virtual network to forward traffic to 'az104-06-vnet01'|  **De-Selected** |
+    | Enable the peered virtual network to use 'az104-06-vnet01' remote gateway | **De-Selected** |
 
     >**Note**: This step establishes two local peerings - one from az104-06-vnet01 to az104-06-vnet3 and the other from az104-06-vnet3 to az104-06-vnet01. This completes setting up the hub and spoke topology (with two spoke virtual networks).
 
