@@ -203,7 +203,7 @@ In this task, you will configure authentication and authorization for Azure Stor
 
 1. Click the **Switch to the Azure AD User Account** link next to the **Authentication method** label.
 
-    > **Note**: You can see an error when you change the authentication method (the error is *"You do not have permissions to list the data using your user account with Azure AD"*). It is expected.  
+    > **Note**: You can see an error when you change the authentication method (the error is *"You do not have permissions to list the data using your user account with Entra ID"*). It is expected.  
 
     > **Note**: At this point, you do not have permissions to change the Authentication method.
 
