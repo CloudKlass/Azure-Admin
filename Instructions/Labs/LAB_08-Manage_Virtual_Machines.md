@@ -459,7 +459,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. In the Azure portal, search for and select **Virtual machine scale sets** and select the **az10408vmss0** scale set
 
-1. In the **az10408vmss0** blade, in the **Settings** section, click **Size**.
+1. In the **az10408vmss0** blade, in the **Availability + Scale** section, click **Size**.
 
 1. In the list of available sizes, select **Standard DS1_v2** and click **Resize**.
 
@@ -471,7 +471,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. Return to the **az10408vmss0 - Instances** blade, click the entry representing the second instance and, on the scale set instance blade, note its **Location** (it should be one of the other two zones in the target Azure region into which you deployed the Azure virtual machine scale set).
 
-1. Return to the **az10408vmss0 - Instances** blade, and in the **Settings** section, click **Scaling**.
+1. Return to the **az10408vmss0 - Instances** blade, and in the **Availability + Scale** section, click **Scaling**.
 
 1. On the **az10408vmss0 - Scaling** blade, select the **Custom autoscale** option and configure autoscale with the following settings (leave others with their default values):
 
