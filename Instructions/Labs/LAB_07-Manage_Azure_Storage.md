@@ -51,8 +51,6 @@ In this task, you will deploy an Azure virtual machine that you will use later i
 
     >**Note**: You must upload each file separately. After uploading, use dir to ensure both files were successfully uploaded.
 
-1. **Edit the Parameters file you just uploaded and change the password**. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault. 
-
 1. From the Cloud Shell pane, run the following to create the resource group that will be hosting the virtual machine (replace the '[Azure_region]' placeholder with the name of an Azure region where you intend to deploy the Azure virtual machine)
 
     >**Note**: To list the names of Azure regions, run `(Get-AzLocation).Location`
@@ -70,7 +68,7 @@ In this task, you will deploy an Azure virtual machine that you will use later i
     New-AzResourceGroup -Name $rgName -Location $location
     ```
     
-1. From the Cloud Shell pane, run the following to deploy the virtual machine by using the uploaded template and parameter files:
+2. From the Cloud Shell pane, run the following to deploy the virtual machine by using the uploaded template and parameter files:
 
    ```powershell
    New-AzResourceGroupDeployment `
@@ -80,7 +78,7 @@ In this task, you will deploy an Azure virtual machine that you will use later i
       -AsJob
    ```
 
-1. **When Prompted:**  The AdminPassword requires a minimum 12 character complex password.
+3. **When Prompted:**  The AdminPassword requires a minimum 12 character complex password.
 You could use for example '**Pa55w.rd090523**'  where '**090523**' is the date, month year.
 
     >**Note**: Do not wait for the deployments to complete, but proceed to the next task.
