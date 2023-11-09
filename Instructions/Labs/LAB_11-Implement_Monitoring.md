@@ -51,8 +51,6 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
     >**Note**: You must upload each file separately. After uploading, use **dir** to ensure both files were successfully uploaded.
 
-1. **Edit the Parameters file you just uploaded and change the password**. If you need help editing the file in the Shell please ask your instructor for assistance. As a best practice, secrets, like passwords, should be more securely stored in the Key Vault. 
-
 1. From the Cloud Shell pane, run the following to create the resource group that will be hosting the virtual machines:
 
    ```powershell
