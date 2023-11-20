@@ -50,6 +50,8 @@ In this task, you will create and configure Microsoft Entra ID users.
 
 1. Navigate back to the **Users - All users** blade, and then click **+ New user**.
 
+1. Select **Create new user**
+
 1. Create a new user with the following settings (leave others with their defaults):
 
     | Setting | Value |
@@ -64,6 +66,8 @@ In this task, you will create and configure Microsoft Entra ID users.
 
     >**Note**: **Copy to clipboard** the full **User Principal Name** (user name plus domain). You will need it later in this task.
 
+1. Select **Review + create** then Select **Create**
+   
 1. Refresh the screen, and in the list of users, click the newly created user account to display its blade.
 
 1. Review the options available in the **Manage** section and note that you can identify the Microsoft Entra ID roles assigned to the user account as well as the user account's permissions to Azure resources.
@@ -72,19 +76,21 @@ In this task, you will create and configure Microsoft Entra ID users.
 
     >**Note**: You also have the option of assigning Microsoft Entra ID roles when provisioning a new user.
 
-1. Open an **InPrivate** browser window and sign in to the [Azure portal](https://portal.azure.com) using the newly created user account. When prompted to update the password, change the password to a secure password of your choosing. 
+1. Open a **New Incognito window** browser window and sign in to the Azure portal **(Portal.Azure.com)** using the newly created user account. When prompted to update the password, change the password to a secure password of your choosing. 
 
     >**Note**: Rather than typing the user name (including the domain name), you can paste the content of Clipboard.
 
-1. In the **InPrivate** browser window, in the Azure portal, search for and select **Azure Active Directory**.
+    >**Note**: On the Security prompt, Select **Ask Later**.
+
+1. In the Azure portal, search for and select **Microsoft Entra ID**.
 
     >**Note**: While this user account can access the Azure Active Directory tenant, it does not have any access to Azure resources. This is expected, since such access would need to be granted explicitly by using Azure Role-Based Access Control. 
 
-1. In the **InPrivate** browser window, on the Microsoft Entra ID blade, scroll down to the **Manage** section, click **User settings**, and note that you do not have permissions to modify any configuration options.
+1. On the Microsoft Entra ID blade, scroll down to the **Manage** section, click **User settings**, and note that you do not have permissions to modify any configuration options.
 
-1. In the **InPrivate** browser window, on the Microsoft Entra ID blade, in the **Manage** section, click **Users**, and then click **+ New user**.
+1. On the Microsoft Entra ID blade, in the **Manage** section, click **Users**, and then click **+ New user**.
 
-1. Create a new user with the following settings (leave others with their defaults):
+1.  Create a new user with the following settings (leave others with their defaults):
 
     | Setting | Value |
     | --- | --- |
@@ -96,19 +102,19 @@ In this task, you will create and configure Microsoft Entra ID users.
     | Department (Properties tab)| **IT** |
     | Usage location (Properties tab)| **United States** |
 
-1. Sign out as the az104-01a-aaduser1 user from the Azure portal and close the InPrivate browser window.
+1. **Sign out as the az104-01a-aaduser1 user from the Azure portal and close the Incognito browser window.**
 
 ### Task 2: Create Microsoft Entra ID groups with assigned and dynamic membership
 
 In this task, you will create Azure Active Directory groups with assigned and dynamic membership.
 
-1. Back in the Azure portal where you are signed in with your **user account**, navigate back to the **Overview** blade of the Microsoft Entra ID tenant and, in the **Manage** section, click **Licenses**.
+1. Back in the Azure portal where you are signed in with your **Admin** ***user account***, navigate back to the **Overview** blade of the Microsoft Entra ID tenant and, in the **Manage** section, click **Licenses**.
 
     >**Note**: Microsoft Entra ID Premium P1 or P2 licenses are required in order to implement dynamic groups.
 
 1. In the **Manage** section, click **All products**.
 
-1. Click **+ Try/Buy** and activate the free trial of Microsoft Entra ID Premium P2.
+1. Click **+ Try/Buy**, click on the **Free trial** drop down link of Microsoft ***Entra ID Premium P2***, and select **Activate**.
 
 1. Refresh the browser window to verify that the activation was successful. 
 
