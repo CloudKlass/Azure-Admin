@@ -20,8 +20,6 @@ In the lab, you will:
 
 + Task 1: Create and configure users
 + Task 2: Create groups with assigned and dynamic membership
-+ Task 3: Create an Azure Active Directory (AD) tenant (Optional - lab environment issue)
-+ Task 4: Manage guest users (Optional - lab environment issue)
 
 ## Estimated timing: 30 minutes
 
