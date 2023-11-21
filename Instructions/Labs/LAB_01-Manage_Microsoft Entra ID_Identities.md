@@ -40,9 +40,9 @@ In this task, you will create and configure Microsoft Entra ID users.
 
 1. In the Azure portal, search for and select **Microsoft Entra ID**.
 
-1. On the Azure Active Directory blade, scroll down to the **Manage** section, click **User settings**, and review available configuration options.
+1. On the Microsoft Entra ID blade, scroll down to the **Manage** section, click **User settings**, and review available configuration options.
 
-1. On the Azure Active Directory blade, in the **Manage** section, click **Users**, and then click your user account to display its **Profile** settings. 
+1. On the Microsoft Entra ID blade, in the **Manage** section, click **Users**, and then click your user account to display its **Profile** settings. 
 
 1. Click **edit properties**, in the **Settings** section, set **Usage location** to **United States** and click **save** to apply the change.
 
