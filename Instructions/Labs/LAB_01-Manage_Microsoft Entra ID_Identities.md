@@ -110,17 +110,17 @@ In this task, you will create Azure Active Directory groups with assigned and dy
 
 1. Back in the Azure portal where you are signed in with your **Admin** ***user account***, navigate back to the **Overview** blade of the Microsoft Entra ID tenant and, in the **Manage** section, click **Licenses**.
 
-    >**Note**: Microsoft Entra ID Premium P1 or P2 licenses are required in order to implement dynamic groups.
+    >**Note**: Microsoft Entra ID P1 or P2 licenses are required in order to implement dynamic groups.
 
 1. In the **Manage** section, click **All products**.
 
-1. Click **+ Try/Buy**, click on the **Free trial** drop down link of Microsoft ***Entra ID Premium P2***, and select **Activate**.
+1. Click **+ Try/Buy**, click on the **Free trial** drop down link of Microsoft ***Microsoft Entra ID P2***, and select **Activate**.
 
 1. Refresh the browser window to verify that the activation was successful. 
 
  >**Note**: It can take up to 10 minutes for the licenses to activate. Continue refreshing the page until it appears. Do not proceed until the licenses have been activated.
 
-1. From the **Licenses - All products** blade, select the **Azure Active Directory Premium P2** entry, and assign all license options of Microsoft Entra ID Premium P2 to your user account and the two newly created user accounts.
+1. From the **Licenses - All products** blade, select the **Microsoft Entra ID P2** entry, and assign all license options of Microsoft Entra ID P2 to your user account and the two newly created user accounts.
 
 1. In the Azure portal, navigate back to the Microsoft Entra ID tenant blade and click **Groups**.
 
