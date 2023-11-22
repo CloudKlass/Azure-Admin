@@ -201,7 +201,7 @@ In this task, you will configure static assignment of public and private IP addr
 
 1. In the list IP configurations, click **ipconfig1**.
 
-1. On the **ipconfig1** blade, in the **Public IP address settings** section, select **Associate**, click **+ Create new**, specify the following settings, and click **OK**:
+1. On the **ipconfig1** blade, in the **Public IP address settings** section, select the **Associate Public IP address** tick box, click **Create a public IP address**, specify the following settings, and click **OK**:
 
     | Setting | Value |
     | --- | --- |
@@ -247,7 +247,7 @@ In this task, you will configure network security groups in order to allow for r
 
 1. In the Azure portal, navigate back to the **az104-04-rg1** resource group blade, and in the list of its resources, click **az104-04-vm0**.
 
-1. On the **az104-04-vm0** overview blade, click **Connect**, click **RDP** in the drop-down menu, on the **Connect with RDP** blade, click **Download RDP File** using the Public IP address and follow the prompts to start the Remote Desktop session.
+1. On the **az104-04-vm0** overview blade, click **Connect**, Then **Connect** in the drop-down menu. Click the **Select** button in the Native RDP box , on the **Connect with RDP** blade, click **Download RDP File**. Navigate to the downloads folder and select the downloaded RDP connection and follow the prompts to start the Remote Desktop session.
 
 1. Note that the connection attempt fails.
 
@@ -306,7 +306,7 @@ In this task, you will configure network security groups in order to allow for r
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-1. When prompted, sign in with the user and password in the parameters file.
+1. When prompted, sign in with the username ***azureuser*** and password you used when creating the Virtual Machine.
 
     >**Note**: Leave the Remote Desktop session open. You will need it in the next task.
 
