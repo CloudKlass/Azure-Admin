@@ -306,7 +306,7 @@ In this task, you will configure network security groups in order to allow for r
 
     >**Note**: You can ignore any warning prompts when connecting to the target virtual machines.
 
-1. When prompted, sign in with the username ***azureuser*** and password you used when creating the Virtual Machine.
+1. When prompted, sign in with the username ***student*** and password you used when creating the Virtual Machine.
 
     >**Note**: Leave the Remote Desktop session open. You will need it in the next task.
 
