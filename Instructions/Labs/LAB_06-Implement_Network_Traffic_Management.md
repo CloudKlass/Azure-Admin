@@ -152,10 +152,10 @@ In this task, you will configure local peering between the virtual networks you 
     | --- | --- |
     | **This virtual network**|
     | Peering link name | **az104-06-vnet01_to_az104-06-vnet2** |
-    | Allow 'az104-05-vnet01' to access the peered virtual network | **Allow (default)** |
-    | Allow 'az104-05-vnet01' to receive forwarded traffic from the peered virtual network | **Allow** |
-    | Allow gateway in 'az104-05-vnet01' to forward traffic to the peered virtual network |  **De-Selected** |
-    | Enable 'az104-05-vnet01' to use the peered virtual networks' remote gateway | **De-Selected** |
+    | Allow 'az104-06-vnet01' to access the peered virtual network | **Allow (default)** |
+    | Allow 'az104-06-vnet01' to receive forwarded traffic from the peered virtual network | **Allow** |
+    | Allow gateway in 'az104-06-vnet01' to forward traffic to the peered virtual network |  **De-Selected** |
+    | Enable 'az104-06-vnet01' to use the peered virtual networks' remote gateway | **De-Selected** |
     | **Remote virtual network** |
     | Peering link name | **az104-06-vnet2_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
@@ -180,10 +180,10 @@ In this task, you will configure local peering between the virtual networks you 
     | Setting | Value |
     | --- | --- |
     | This virtual network: Peering link name | **az104-06-vnet01_to_az104-06-vnet3** |
-    | Allow 'az104-05-vnet01' to access the peered virtual network | **Allow (default)** |
-    | Allow 'az104-05-vnet01' to receive forwarded traffic from the peered virtual network | **Allow** |
+    | Allow 'az104-06-vnet01' to access the peered virtual network | **Allow (default)** |
+    | Allow 'az104-06-vnet01' to receive forwarded traffic from the peered virtual network | **Allow** |
     | Allow gateway in 'az104-06-vnet01' to forward traffic to the peered virtual network |  **De-Selected** |
-    | Enable 'az104-05-vnet1' to use the peered virtual networks' remote gateway | **De-Selected** |
+    | Enable 'az104-06-vnet1' to use the peered virtual networks' remote gateway | **De-Selected** |
     | **Remote virtual network** |
     | Peering link name | **az104-06-vnet3_to_az104-06-vnet01** |
     | Virtual network deployment model | **Resource manager** |
