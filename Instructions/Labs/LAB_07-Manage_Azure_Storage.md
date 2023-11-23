@@ -201,7 +201,7 @@ In this task, you will configure authentication and authorization for Azure Stor
 
 1. Close the InPrivate mode browser window, return to the browser window showing the **licenses/LICENSE** blade of the Azure Storage container, and from there, navigate back to the **az104-07-container** blade.
 
-1. Click the **Switch to the Azure AD User Account** link next to the **Authentication method** label.
+1. Click the **Switch to Microsoft Entra ID Account** link next to the **Authentication method** label.
 
     > **Note**: You can see an error when you change the authentication method (the error is *"You do not have permissions to list the data using your user account with Entra ID"*). It is expected.  
 
@@ -213,7 +213,7 @@ In this task, you will configure authentication and authorization for Azure Stor
 
 1. On the **Add role assignment** blade, on the **Role** tab:
 
-1. Type **'storage'** into the **Search window** and select **Storage Blob** Data Owner from the selection and Click **Next**.
+1. Type **'storage'** into the **Search window** and select **Storage Blob Data Owner** from the selection and Click **Next**.
 
 1. On the **Members** tab, click **+Select members**.
 
