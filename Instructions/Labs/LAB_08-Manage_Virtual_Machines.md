@@ -397,9 +397,7 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
     | --- | --- |
     | Load balancer name | **az10408vmss0-lb** |
 
-1. Click **Next:Scaling>**
-
-1. On the **Scaling** tab of the **Create a virtual machine scale set** blade, view the options but leave all the default values and click **Next : Management >**:
+1. Click **Next : Management >**:
 
 1. On the **Management** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values):
 
