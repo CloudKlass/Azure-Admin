@@ -463,7 +463,7 @@ In this task, you will change the size of virtual machine scale set instances, c
 
 1. In the list of available sizes, select **Standard DS1_v2** and click **Resize**.
 
-1. In the **Settings** section, click **Instances**, select the checkboxes next to the two instances of the virtual machine scale set, click **Upgrade**, and then, when prompted for confirmation, click **Yes**.
+1. In the **az10408vmss0** blade, click **Instances**, select the checkboxes next to the two instances of the virtual machine scale set, click **Upgrade**, and then, when prompted for confirmation, click **Yes**.
 
     >**Note:** If the upgrade button is greyed out. click the **Refresh** button on the **Instances** blade
 
