@@ -397,6 +397,8 @@ In this task, you will deploy Azure virtual machine scale set across availabilit
     | --- | --- |
     | Load balancer name | **az10408vmss0-lb** |
 
+1. Click **Next : Scaling >**: Accept the defaults
+
 1. Click **Next : Management >**:
 
 1. On the **Management** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values):
@@ -438,7 +440,7 @@ In this task, you will install Windows Server Web Server role on the instances o
 
     >**Note**: Wait for the installation of the extension to complete before proceeding to the next step.
 
-1. In the **Settings** section of the **az10408vmss0** blade, click **Instances**, select the checkboxes next to the two instances of the virtual machine scale set, click **Upgrade**, and then, when prompted for confirmation, click **Yes**.
+1. In the **az10408vmss0** blade, click **Instances**, select the checkboxes next to the two instances of the virtual machine scale set, click **Upgrade**, and then, when prompted for confirmation, click **Yes**.
 
     >**Note**: Wait for the upgrade to complete before proceeding to the next step.
 
