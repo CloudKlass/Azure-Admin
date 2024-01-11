@@ -244,7 +244,7 @@ In this task you will scale compute for Azure virtual machines by changing their
     | Storage type | **Premium SSD** |
     | Size (GiB)| **1024 GiB** |
 
-1. Back on the **az104-08-vm0 - Disks** blade, click **Save**.
+1. Back on the **az104-08-vm0 - Disks** blade, click **Apply**.
 
     >**Note**:  Wait for Disk provisioning to complete before moving on to the next step. 
 
