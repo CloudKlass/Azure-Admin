@@ -179,15 +179,7 @@ In this task, you will configure Azure virtual machine diagnostic settings.
 
 1. On the **az104-11-vm0** blade, in the **Monitoring** section, click **Logs** and then click **Enable**.
 
-1. On the **Monitoring configuration** blade. In the **Enable insights using** section, accept the default setting of **Azure Monitor agent (Recommended)**
-
-1. In the **Data collection rule** section, click **Create new**.
-
-1. On the **Create new rule** blade, In the **Data collection rule name** section add the name **vm0-Collection**. 
-
-1. On the **Create new rule** blade, In the **Log Analytics workspaces** section drop-down list, select the **Log Analytics account** you created earlier and click **Create**. 
-
-1. Back on the **Monitoring configuration** blade, click **Configure**
+1. On the **az104-11-vm0** - Logs blade, note **Azure Monitor agent** will be installed, and then **click Configure**.
 
     >**Note**: Do not wait for the operation to complete but instead proceed to the next step. The operation might take about 5 minutes.
 
