@@ -98,7 +98,7 @@ In this task, you use the downloaded template to deploy a new managed disk. This
 
 1. **Save** your changes.
 
-1. Dpn't forget the parameters file. Select **Edit parameters**, click **Load file** and upload the **parameters.json**. 
+1. Don't forget the parameters file. Select **Edit parameters**, click **Load file** and upload the **parameters.json**. 
 
 1. Make this change so it matches the template file.
 
@@ -176,7 +176,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 1. Confirm the disk was created.
 
    ```powershell
-   Get-AzDisk
+   Get-AzDisk -ResourceGroup az104-rg3
    ```
    
 ## Task 5: Deploy a template with the CLI 
