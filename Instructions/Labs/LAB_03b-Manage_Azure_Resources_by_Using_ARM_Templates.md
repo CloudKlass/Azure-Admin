@@ -213,7 +213,9 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 In this task, you will use a Bicep file to deploy a managed disk. Bicep is a declarative automation tool that is built on ARM templates.
 
-1. Continue working in the **Cloud Shell** in a **Bash** session.
+1. Continue working in the **Cloud Shell** in a **Bash** session. 
+
+    >**Note**: If you need to, you can use **clear** to clear the command window.
 
 1. Locate and download the **\Allfiles\Lab03\azuredeploydisk.bicep** file.
 
@@ -225,7 +227,7 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
    
 1. Make the following changes:
 
-    + Change the **managedDiskName** value to `Disk4`.
+    + Change the **managedDiskName** value to `az104-Disk5`.
     + Change the **sku name** value to `StandardSSD_LRS`.
     + Change the **diskSizeinGiB** value to `32`.
 
