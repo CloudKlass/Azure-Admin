@@ -60,7 +60,7 @@ In this task, you create a core services virtual network with a virtual machine.
     | Virtual machine name |    `CoreServicesVM` |
     | Region | **(US) East US** |
     | Availability options | No infrastructure redundancy required |
-    | Security type | **Standard** |
+    | Security type | **Trusted launch virtual machines** |
     | Image | **Windows Server 2019 Datacenter: x64 Gen2** (notice your other choices) |
     | Size | **Standard_DS2_v3** |
     | Username | `localadmin` | 
@@ -80,6 +80,8 @@ In this task, you create a core services virtual network with a virtual machine.
     | Address range | `10.0.0.0/16`  |
     | Subnet Name | `Core` | 
     | Subnet address range | `10.0.0.0/24` |
+
+1. In the **Public IP** dropdown list select **None**
 
 1. Select the **Monitoring** tab. For Boot Diagnostics, select **Disable**.
 
@@ -105,8 +107,8 @@ In this task, you create a manufacturing services virtual network with a virtual
     | Resource group |  `az104-rg5` |
     | Virtual machine name |    `ManufacturingVM` |
     | Region | **(US) East US** |
-    | Security type | **Standard** |
     | Availability options | No infrastructure redundancy required |
+    | Security type | **Trusted launch virtual machines** |
     | Image | **Windows Server 2019 Datacenter: x64 Gen2** |
     | Size | **Standard_DS2_v3** | 
     | Username | `localadmin` | 
@@ -125,9 +127,13 @@ In this task, you create a manufacturing services virtual network with a virtual
     | Subnet Name | `Manufacturing` |
     | Subnet address range | `172.16.0.0/24` |
 
+1. In the **Public IP** dropdown list select **None**    
+
 1. Select the **Monitoring** tab. For Boot Diagnostics, select **Disable**.
 
 1. Select **Review + Create**, and then select **Create**.
+
+    >Note: Wait for the VM to deploy before moving on to the next Task. 
 
 ## Task 3: Use Network Watcher to test the connection between virtual machines 
 
@@ -144,7 +150,7 @@ In this task, you verify that resources in peered virtual networks can communica
     | --- | --- |
     | Source type           | **Virtual machine**   |
     | Virtual machine       | **CoreServicesVM**    | 
-    | Destination type      | **Virtual machine**   |
+    | Destination type      | **Select a Virtual machine**   |
     | Virtual machine       | **ManufacturingVM**   | 
     | Preferred IP Version  | **Both**              | 
     | Protocol              | **TCP**               |
@@ -156,14 +162,16 @@ In this task, you verify that resources in peered virtual networks can communica
 
 1. Select **Run diagnostic tests**.
 
-    >**Note**: It may take a couple of minutes for the results to be returned. The screen selections will be greyed out while the results are being collected. Notice the **Connectivity test** shows **UnReachable**. This makes sense because the virtual machines are in different virtual networks. 
+    >**Note**: It may take a few minutes for the results to be returned. The screen selections will be greyed out while the results are being collected. Notice the **Connectivity test** shows **Unknown** or **UnReachable**. This makes sense because the virtual machines are in different virtual networks. 
 
  
 ## Task 4: Configure virtual network peerings between virtual networks
 
 In this task, you create a virtual network peering to enable communications between resources in the virtual networks. 
 
-1. In the Azure portal, select for and select the `CoreServicesVnet` virtual network.
+1. In the Azure portal, search for and select **Virtual Networks**
+
+1. Select the `CoreServicesVnet` virtual network.
 
 1. In CoreServicesVnet, under **Settings**, select **Peerings**.
 
@@ -211,7 +219,7 @@ In this task, you retest the connection between the virtual machines in differen
    
 ### Test the connection to the CoreServicesVM from the **ManufacturingVM**.
 
->**Did you know?** There are many ways to check connections. In this task, you use **Run command**. You could also continue to use Network Watcher. Or you could use a [Remote Desktop Connection](https://learn.microsoft.com/azure/virtual-machines/windows/connect-rdp#connect-to-the-virtual-machine) to the access the virtual machine. Once connected, use **test-connection**. As you have time, give RDP a try. 
+>**Did you know?** There are many ways to check connections. In this task, you use **Run command**. You could also continue to use Network Watcher. Or you could use a [Remote Desktop Connection](https://learn.microsoft.com/azure/virtual-machines/windows/connect-rdp#connect-to-the-virtual-machine) to the access the virtual machine. Once connected, use **test-connection**. 
 
 1. Switch to the `ManufacturingVM` virtual machine.
 
@@ -235,7 +243,7 @@ In this task, you want to control network traffic between the perimeter subnet a
 
 1. Search for select the `CoreServicesVnet`.
 
-1. Select **Subnets** and then **+ Create**. Be sure to **Save** your changes. 
+1. Select **Subnets** and then **+ Subnet**. Be sure to **Save** your changes. 
 
     | Setting | Value | 
     | --- | --- |
@@ -243,7 +251,7 @@ In this task, you want to control network traffic between the perimeter subnet a
     | Subnet address range | `10.0.1.0/24`  |
 
    
-1. In the Azure portal, search for and select `Route tables`, and then select **Create**. 
+1. In the Azure portal, search for and select `Route tables`, and then select **+ Create**. 
 
     | Setting | Value | 
     | --- | --- |
@@ -252,6 +260,8 @@ In this task, you want to control network traffic between the perimeter subnet a
     | Region | **East US** |
     | Name | `rt-CoreServices` |
     | Propagate gateway routes | **No** |
+
+1. Select **Review + create** and then **Create**
 
 1. After the route table deploys, select **Go to resource**.
 
@@ -267,7 +277,7 @@ In this task, you want to control network traffic between the perimeter subnet a
 
 1. Select **+ Add** when the route is completed. The last thing to do is associate the route with the subnet.
 
-1. Select **Subnets** and then **Associate**. Complete the configuration.
+1. Select **Subnets** and then **+ Associate**. To complete the configuration Click **OK**.
 
     | Setting | Value | 
     | --- | --- |
