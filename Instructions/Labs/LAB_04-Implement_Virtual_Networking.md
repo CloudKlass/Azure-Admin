@@ -242,11 +242,11 @@ In this task, we create an Application Security Group and a Network Security Gro
     | Destination | **Service tag** |
     | Destination service tag | **Internet** |
     | Service | **Custom** |
-    | Destination port ranges | **8080** |
+    | Destination port ranges | * |
     | Protocol | **Any** |
     | Action | **Deny** |
     | Priority | **4096** |
-    | Name | **DenyAnyCustom8080Outbound** |
+    | Name | **DenyInternetOutbound** |
 
 
 ## Task 4: Configure public and private Azure DNS zones
@@ -255,7 +255,7 @@ In this task, you will create and configure public and private DNS zones.
 
 ### Configure a public DNS zone
 
-You can configure Azure DNS to resolve host names in your public domain. For example, if you purchased the contoso.xyz domain name from a domain name registrar, you can configure Azure DNS to host the `contoso.com` domain and resolve www.contoso.xyz to the IP address of your web server or web app.
+You can configure Azure DNS to resolve host names in your public domain. For example, if you purchased the ***contoso.xyz*** domain name from a domain name registrar, you can configure **Azure DNS** to host the `contoso.xyz` domain and resolve ***www.contoso.xyz*** to the IP address of your web server or web app.
 
 1. In the portal, search for and select `DNS zones`.
 
@@ -267,7 +267,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
     |:---------|:---------|
     | Subscription | **Select your subscription** |
     | Resource group | **az04-rg4** |
-    | Name | `contoso.com` (if reserved adjust the name) |
+    | Name | `mydomain.com` (if reserved adjust the name) |
     | Region |**East US** (review the informational icon) |
 
 1. Select **Review create** and then **Create**.
@@ -287,14 +287,14 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
 
 >**Note:**  In a real-world scenario, you'd enter the public IP address of your web server.
 
-1. Select **OK** and verify **contoso.com** has an A record set named **www**.
+1. Select **OK** and verify **mydomain.com** has an A record set named **www**.
 
 1. Open a command prompt, and run the following command:
 
    ```sh
    nslookup www.contoso.com <name server name>
    ```
-1. Verify the host name www.contoso.com resolves to the IP address you provided. This confirms name resolution is working correctly.
+1. Verify the host name www.mydomain.com resolves to the IP address you provided. This confirms name resolution is working correctly.
 
 ### Configure a private DNS zone
 
@@ -310,7 +310,7 @@ A private DNS zone provides name resolution services within virtual networks. A 
     |:---------|:---------|
     | Subscription | **Select your subscription** |
     | Resource group | **az04-rg4** |
-    | Name | `private.contoso.com` (adjust if you had to rename) |
+    | Name | `private.mydomain.com` (adjust if you had to rename) |
     | Region |**East US** |
 
 1. Select **Review create** and then **Create**.
