@@ -141,6 +141,8 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Replace the one occurrence of **CoreServicesVnet** with `ManufacturingVnet`.
 
+1. Replace the **null** entry next to ***value:*** with `ManufacturingVnet`
+
 1. **Save** your changes.
    
 ### Deploy the custom template
