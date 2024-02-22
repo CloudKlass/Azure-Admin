@@ -152,7 +152,11 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 1. Navigate back to the **az104-vm1** virtual machine and select **Disks**.
 
-1. Verify the disk is now **Standard SSD**.
+1. Select `Attach existing disks`, and in the drop down list under `Disk name`, select **vm1-disk1**
+
+1. Verify the disk is now **Standard SSD**. 
+
+1. Click **Apply**
 
     >**Note:** You have now created a virtual machine, scaled the SKU and the data disk size. In the next task we use Virtual Machine Scale Sets to automate the scaling process.
 
@@ -164,9 +168,20 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 In this task, you will deploy an Azure virtual machine scale set across availability zones. VM Scale Sets reduce the administrative overhead of automation by enabling you to configure metrics or conditions that allow the scale set to horizontally scale, scale in or scale out.
 
-1. In the Azure portal, search for and select `Virtual machine scale sets` and, on the **Virtual machine scale sets** blade, click **+ Create**.
+1. Use the icon (top right) to launch a **Cloud Shell** session. Alternately, navigate directly to `https://shell.azure.com`.
 
-1. On the **Basics** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values) and click **Next : Spot >**:
+1. Be sure to select **PowerShell**.
+
+1. Run the following command to register the microsoft insights provider. This is required for AutoScaling to be configured.
+
+    ```Powershell
+    Register-AzResourceProvider -ProviderNamespace Microsoft.Insights
+    ```
+1. Close **Cloud Shell**.
+
+2. In the Azure portal, search for and select `Virtual machine scale sets` and, on the **Virtual machine scale sets** blade, click **+ Create**.
+
+3. On the **Basics** tab of the **Create a virtual machine scale set** blade, specify the following settings (leave others with their default values) and click **Next : Spot >**:
 
     | Setting | Value |
     | --- | --- |
@@ -180,6 +195,8 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Image | **Windows Server 2019 Datacenter - x64 Gen2** |
     | Run with Azure Spot discount | **Unchecked** |
     | Size | **Standard D2s_v3** |
+    | Scaling mode | **Manually update the capacity** |
+    | Instance count | **2** |
     | Username | `localadmin` |
     | Password | **Provide a secure password**  |
     | Already have a Windows Server license? | **Unchecked** |
@@ -188,11 +205,11 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
     ![Screenshot of the create vmss page. ](../media/az104-lab08-create-vmss.png)
 
-1. On the **Spot** tab, accept the defaults and select **Next: Disks >**.
+4. On the **Spot** tab, accept the defaults and select **Next: Disks >**.
 
-1. On the **Disks** tab, accept the default values and click **Next : Networking >**.
+5. On the **Disks** tab, accept the default values and click **Next : Networking >**.
 
-1. On the **Networking** page, click the **Create virtual network** link below the **Virtual network** textbox and create a new virtual network with the following settings (leave others with their default values).  When finished, select **OK**.
+6. On the **Networking** page, click the **Create virtual network** link below the **Virtual network** textbox and create a new virtual network with the following settings (leave others with their default values).  When finished, select **OK**.
 
     | Setting | Value |
     | --- | --- |
@@ -201,17 +218,17 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Subnet name | `subnet0` |
     | Subnet range | `10.82.0.0/24` |
 
-1. In the **Networking** tab, click the **Edit network interface** icon to the right of the network interface entry.
+7. In the **Networking** tab, click the **Edit network interface** icon to the right of the network interface entry.
 
-1. For **NIC network security group** section, select **Advanced** and then click **Create new** under the **Configure network security group** drop-down list.
+8. For **NIC network security group** section, select **Advanced** and then click **Create new** under the **Configure network security group** drop-down list.
 
-1. On the **Create network security group** blade, specify the following settings (leave others with their default values):
+9. On the **Create network security group** blade, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Name | **vmss1-nsg** |
 
-1. Click **Add an inbound rule** and add an inbound security rule with the following settings (leave others with their default values):
+10. Click **Add an inbound rule** and add an inbound security rule with the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
@@ -223,18 +240,18 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Priority | **1010** |
     | Name | `allow-http` |
 
-1. Click **Add** and, back on the **Create network security group** blade, click **OK**.
+11. Click **Add** and, back on the **Create network security group** blade, click **OK**.
 
-1. In the **Edit network interface** blade, in the **Public IP address** section, click **Enabled** and click **OK**.
+12. In the **Edit network interface** blade, in the **Public IP address** section, click **Enabled** and click **OK**.
 
-1. In the **Networking** tab, under the **Load balancing** section, specify the following (leave others with their default values).
+13. In the **Networking** tab, under the **Load balancing** section, specify the following (leave others with their default values).
 
     | Setting | Value |
     | --- | --- |
     | Load balancing options | **Azure load balancer** |
     | Select a load balancer | **Create a load balancer** |
 
-1. On the **Create a load balancer** page, specify the load balancer name and take the defaults. Click **Create** when you are done then **Next : Scaling >**.
+14. On the **Create a load balancer** page, specify the load balancer name and take the defaults. Click **Create** when you are done then **Next : Scaling >**.
 
     | Setting | Value |
     | --- | --- |
@@ -242,26 +259,19 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
     >**Note:** Pause for a minute and review what you done. At this point, you have configured the virtual machine scale set with disks and networking. In the network configuration you have created a network security group and allowed HTTP. You have also created a load balancer with a public IP address.
 
-1. On the **Scaling** tab, specify the following settings (leave others with their default values) and click **Next : Management >**:
-
-    | Setting | Value |
-    | --- | --- |
-    | Initial instance count | `2` |
-    | Scaling policy | **Manual** |
-
-1. On the **Management** tab, specify the following settings (leave others with their default values):
+15. On the **Management** tab, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
     | Boot diagnostics | **Disable** |
 
-1. Click **Next : Health >**.
+16. Click **Next : Health >**.
 
-1. On the **Health** tab, review the default settings without making any changes and click **Next : Advanced >**.
+17. On the **Health** tab, review the default settings without making any changes and click **Next : Advanced >**.
 
-1. On the **Advanced** tab, click **Review + create**.
+18. On the **Advanced** tab, click **Review + create**.
 
-1. On the **Review + create** tab, ensure that the validation passed and click **Create**.
+19. On the **Review + create** tab, ensure that the validation passed and click **Create**.
 
     >**Note**: Wait for the virtual machine scale set deployment to complete. This should take approximately 5 minutes. While you wait review the [documentation](https://learn.microsoft.com/azure/virtual-machine-scale-sets/overview).
 
