@@ -72,7 +72,7 @@ In this task, you will use a template to deploy one virtual network, one network
 
 ## Task 2: Configure an Azure Load Balancer
 
-In this task, you implement an Azure Load Balancer in front of the two Azure virtual machines in the virtual network. Load Balancers in Azure provide layer 4 connectivity across resources, such as virtual machines. Load Balancer configuration includes a front-end IP address to accept connections, a backend pool, and rules that define how connections should traverse the load balancer.
+In this task, you implement an Azure Load Balancer in front of two Azure virtual machines in the virtual network. Load Balancers in Azure provide layer 4 connectivity across resources, such as virtual machines. Load Balancer configuration includes a front-end IP address to accept connections, a backend pool, and rules that define how connections should traverse the load balancer.
 
 ## Architecture diagram - Load Balancer
 
@@ -117,7 +117,7 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
 
     >**Note:** The Standard SKU provides a static IP address. Static IP addresses are assigned with the resource is created and released when the resource is deleted.  
 
-1. On the **Backend pools** tab, click **Add a backend pool** with the following settings (leave others with their default values). Click **+ Add** (twice) and then click **Next: Inbound rules**.
+1. On the **Backend pools** tab, click **+ Add a backend pool** with the following settings (leave others with their default values). Click **+ Add** (twice) and then click **Next: Inbound rules**.
 
     | Setting | Value |
     | --- | --- |
@@ -231,8 +231,8 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | --- | --- |
     | Name | `az104-appgwbe` |
     | Add backend pool without targets | **No** |
-    | Virtual machine | **az104-rg6-nic1 (10.60.1.4)** |
-    | Virtual machine | **az104-rg6-nic2 (10.60.2.4)** |
+    | `Target type:` **Virtual machine** | `Target:` **az104-rg6-nic1 (10.60.1.4)** |
+    | `Target type:` **Virtual machine** | `Target:` **az104-rg6-nic2 (10.60.2.4)** |
 
 1. Click **Add a backend pool**. This is the backend pool for **images**. Specify the following settings (leave others with their default values). When completed click **Add**.
 
@@ -240,7 +240,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | --- | --- |
     | Name | `az104-imagebe` |
     | Add backend pool without targets | **No** |
-    | Virtual machine | **az104-rg6-nic1 (10.60.1.4)** |
+    | `Target type:` **Virtual machine** | `Target:` **az104-rg6-nic1 (10.60.1.4)** |
 
 1. Click **Add a backend pool**. This is the backend pool for **video**. Specify the following settings (leave others with their default values). When completed click **Add**.
 
@@ -248,7 +248,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | --- | --- |
     | Name | `az104-videobe` |
     | Add backend pool without targets | **No** |
-    | Virtual machine | **az104-rg6-nic2 (10.60.2.4)** |
+    | `Target type:` **Virtual machine** | `Target:` **az104-rg6-nic2 (10.60.2.4)** |
 
 1. Select **Next: Configuration** and then **Add routing rules**. Complete the information.
 
@@ -266,8 +266,8 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
    | Setting | Value |
     | --- | --- |
-    | Backend target | `az104-appgwbe` |
-    | Backend settings | `az104-http` (create new) |
+    | Backend target | Select from drop down list `az104-appgwbe` |
+    | Backend settings | `az104-http` (add new) |
 
    >**Note:** Take a minute to read the information about **Cookie-based affinity** and **Connection draining**.
 
