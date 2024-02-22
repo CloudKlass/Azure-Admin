@@ -12,7 +12,7 @@ In this lab you learn to create storage accounts for Azure blobs and Azure files
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**.
 
-## Estimated timing: 50 minutes
+## Estimated timing: 30 minutes
 
 ## Lab scenario
 
@@ -82,7 +82,7 @@ In this task, you will create and configure a storage account. The storage accou
 
 1. In the **Data management** section, select **Lifecycle management**, and then select **Add a rule**.
 
-    + **Name** the rule `Movetocool`. Notice your options for limiting the scope of the rule.
+    + **Name** the rule `Movetocool`. Notice your options for limiting the scope of the rule, accept the defaults and Select **Next**.
     
     + On the **Base blobs** tab, *if* based blobs were last modified more than `30 days` ago *then* **move to cool storage**. Notice your other choices. 
     
