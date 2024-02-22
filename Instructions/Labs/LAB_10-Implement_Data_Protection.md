@@ -113,9 +113,9 @@ In this task, you will create a Recovery Services vault. A Recovery Services vau
     
     >**Did you know?** The [Cross Region Restore](https://learn.microsoft.com/azure/backup/backup-create-recovery-services-vault#set-cross-region-restore) option allows you to restore data in a secondary, Azure paired region. 
 
-1. Return to the Recovery Services vault blade, click the **Update** link under **Security Settings** label.
+1. Return to the Recovery Services vault blade, click the **Update** link under **Soft Delete and Security Settings** label.
 
-1. On the **Security Settings** blade, note that **Soft Delete (For workload running in Azure)** is **Enabled**. Notice the **soft delete retention period** is **14** days. 
+1. On the **Security and soft delete settings** blade, note that **Soft Delete (For workload running in Azure)** is **Enabled**. Notice the **soft delete retention period** is **14** days. 
 
 1. Return to the Recovery Services vault blade, select the **Overview** blade.
 
@@ -150,7 +150,7 @@ In this task, you will implement Azure virtual-machine level backup. As part of 
     | Frequency | **Daily** |
     | Time | **12:00 AM** |
     | Timezone | the name of your local time zone |
-    | Retain instant recovery snapshot(s) for | **12** Days(s) |
+    | Retain instant recovery snapshot(s) for | **2** Days(s) |
 
     ![Screenshot of the backup policy page.](../media/az104-lab10-backup-policy.png)
 
