@@ -212,7 +212,7 @@ In this task, you will use Azure Monitor to query the data captured from the vir
    ```bash
    // Virtual Machine available memory
    // Chart the VM's available memory over the last hour.
-   InsightsMetrics \
+   InsightsMetrics 
    | where TimeGenerated > ago(1h) 
    | where Name == "AvailableMB" 
    | project TimeGenerated, Name, Value 
