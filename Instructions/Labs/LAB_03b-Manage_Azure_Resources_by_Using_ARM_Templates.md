@@ -91,8 +91,8 @@ In this task, you use the downloaded template to deploy a new managed disk. This
 
 1. Within the editor pane, make these changes.
 
-    + Change **disks_az104_disk1_name** to `disk_name` (two places to change)
-    + Change **az104_disk1** to `az102_disk2` (one place to change)
+    + Change **disks_az104_disk1_name** to **disks_az104_disk2_name** (two places to change)
+    + Change **az104_disk1** to **az104_disk**` (one place to change)
 
 1. Notice this is a **Standard** disk. The location is **eastus**. The disk size is **32GB**.
 
@@ -102,7 +102,7 @@ In this task, you use the downloaded template to deploy a new managed disk. This
 
 1. Make this change so it matches the template file.
 
-    Change **disks_az104_disk1_name** to **disk_name** (one place to change)
+    Change **disks_az104_disk1_name** to **disks_az104_disk2_name** (one place to change)
 
 1. **Save** your changes. 
 
