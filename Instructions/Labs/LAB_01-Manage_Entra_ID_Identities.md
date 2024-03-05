@@ -10,7 +10,7 @@ lab:
 
 This is the first in a series of labs for Azure Administrators. In this lab, you learn about users and groups. Users and groups are the basic building blocks for an identity solution. 
 
-## Estimated timing: 30 minutes
+## Estimated timing: 20 minutes
 
 ## Lab scenario
 
