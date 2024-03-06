@@ -73,20 +73,22 @@ The organization plans a large amount of growth for core services. In this task,
 	| ------------------ | -------------------- |
 	| IPv4 address space | `10.20.0.0/16` (separate the entries)    |
 
-1. Select **+ Add a subnet**. Complete the name and address information for each subnet. Be sure to select **Add** for each new subnet. 
+1. ***In this step you will add 2 subnets into the Virtual network.*** Select **+ Add a subnet**. Complete the name and address information for each subnet. Be sure to select **Add** for each new subnet. 
 
-	| **Subnet**             | **Option**           | **Value**              |
-	| ---------------------- | -------------------- | ---------------------- |
-	| SharedServicesSubnet   | Subnet name          | `SharedServicesSubnet`   |
-	|                        | Starting address		| `10.20.10.0`          |
-	|						 | Size					| `/24`	|
-	| DatabaseSubnet         | Subnet name          | `DatabaseSubnet`         |
-	|                        | Starting address		| `10.20.20.0`        |
-	|						 | Size					| `/24`	|
+    | **Option**            | **Value**              |
+    | --------------------  | ---------------------- |
+    | Subnet 1 name           | `SharedServicesSubnet`   |
+    | Starting address	    | `10.20.10.0`          |
+    | Size					| `/24`	|
+    | Subnet 2 name           | `DatabaseSubnet`         |
+    | Starting address		| `10.20.20.0`        |
+    | Size					| `/24`	|
 
 	>**Note:** Every virtual network must have at least one subnet. Reminder that five IP addresses will always be reserved, so consider that in your planning. 
 
-1. To finish creating the CoreServicesVnet and its associated subnets, select **Review + create**.
+1. Delete the **Default** Subnet.
+
+1. To finish creating the **CoreServicesVnet** and its associated **subnets**, select **Review + create**.
 
 1. Verify your configuration passed validation, and then select **Create**.
 
