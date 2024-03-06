@@ -132,42 +132,79 @@ In this task, you will swap the staging slot with the production slot. Swapping 
 
     >**Note:** Copy the Default domain **URL** you will need it for load testing in the next task. 
 
-## Task 5: Configure and test autoscaling of the Azure Web App
+## Task 5: Configure and test Autoscaling of the Azure web app
 
-In this task, you will configure autoscaling of Azure Web App. Autoscaling enables you to maintain optimal performance for your web app when traffic to the web app increases. To determine when the app should scale you can monitor metrics like CPU usage, memory, or bandwidth.
+In this task, you will configure and test autoscaling of Azure web app. 
 
-1. In the **Settings** section, select **Scale out (App Service plan)**.
+1. On the blade displaying the production slot of the web app, in the **Settings** section, click **Scale out (App Service plan)**.
 
-    >**Note:** Ensure you are working on the production slot not the staging slot.  
+1. In the **Scaling** section, `Scale out method`, select **Rules Based**
 
-1. From the **Scaling** section, select **Automatic**. Notice the **Rules Based** option. Rules based scaling can be configured for different app metrics. 
+1. On the warning label that appears, select **Manage rules based scaling**
 
-1. In the **Maximum burst** field, select **2**.
+1. Select the **Custom autoscale** radio button.
 
-    ![Screenshot of the autoscale page.](../media/az104-lab09a-autoscale.png)
+1. In the `Default*` rule section, for `Scale mode`, Select **Scale based on a metric**.
 
-1. Select **Save**.
+1. On the `Rules` banner that appears, Select **Add a rule**.
 
-1. Select **Diagnose and solve problems** (left pane).
+1. On the **Scale rule** blade, specify the following settings (leave others with their default values):
 
-1. In the **Load Test your App** box, select **Create Load Test**.
+    | Setting | Value |
+    | --- |--- |
+    | Metric source | **Current resource** |
+    | Metric namespace | **Standard metrics** |
+    | Metric name | **CPU Percentage** |
+    | Operator | **Greater than** |
+    | Metric threshold to trigger scale action | **2** |
+    | Duration (in minutes) | **1** |
+    | Time grain statistic | **Maximum** |
+    | Operation | **Increase count by** |
+    | Cool down (minutes) | **2** |
+    | Instance count | **1** |
+    
 
-    + Select **+ Create** and give your load test a **name**.  The name must be unique.
-    + Select **Review + create** and then **Create**.
+    >**Note**: Obviously these values do not represent a realistic configuration, since their purpose is to trigger autoscaling as soon as possible, without extended wait period. 
 
-1. Wait for the load test to create, and then select **Go to resource**.
+1. Click **Add** and, back on the `Default*` rule for `Instance limits`, specify the following settings.
 
-1. From the **Overview** | **Add HTTP requests**, select **Create**.
+    | Setting | Value |
+    | --- |--- |
+    | Instance limits Minimum | **1** |
+    | Instance limits Maximum | **3** |
+    | Instance limits Default | **1** |
 
-1. For the **Test URL**, paste in your **Default domain** URL. Ensure this is properly formatted and begins with **https://**.
+1. Click **Save**.
 
-1. Select **Review + create** and **Create**.
+1. In the Azure portal, open the **Azure Cloud Shell** by clicking on the icon in the top right of the Azure Portal.
 
-    >**Note:** It may take a couple of minutes to create the test. 
+1. If prompted to select either **Bash** or **PowerShell**, select **PowerShell**. 
 
-1. Review the test results including **Virtual users**, **Response time**, and **Requests/sec**.
+1. From the Cloud Shell pane, run the following to identify the URL of the Azure web app.
 
-1. Select **Stop** to complete the test run.
+   ```pwsh
+   $rgName = 'az104-rg9'
+
+   $webapp = Get-AzWebApp -ResourceGroupName $rgName
+   ```
+
+1. From the Cloud Shell pane, run the following to start and infinite loop that sends the HTTP requests to the web app:
+
+   ```pwsh
+   while ($true) { Invoke-WebRequest -Uri $webapp.DefaultHostName }
+   ```
+
+1. Minimize the Cloud Shell pane (but do not close it). In the **Autoscale setting** blade, take note of the `Instance count`.
+
+1. Wait for a minute and then refresh the blade
+
+1. Monitor the utilization and the number of instances for a few minutes.
+
+    >**Note**: You may need to **Refresh** the page.
+
+1. Once you notice that the number of instances has increased to 2, reopen the Cloud Shell pane and terminate the script by pressing **Ctrl+C**.
+
+1. Close the Cloud Shell pane.
 
 ## Cleanup your resources
 
