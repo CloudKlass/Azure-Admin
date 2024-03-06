@@ -207,7 +207,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Tier | **Standard V2** |
     | Enable autoscaling | **No** |
     | Minimum instance count | `2` |
-    | Availability zone | **None** |
+    | Availability zone | **Accept the defaults** |
     | HTTP2 | **Disabled** |
     | Virtual network | **az104-06-vnet1** |
     | Subnet | **subnet-appgw (10.60.3.224/27)** |
