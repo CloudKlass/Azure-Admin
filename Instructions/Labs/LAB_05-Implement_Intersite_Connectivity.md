@@ -76,7 +76,7 @@ In this task, you create a core services virtual network with a virtual machine.
 
     | Setting | Value | 
     | --- | --- |
-    | Name | `CoreServicesVNet` (Create new) |
+    | Name | `CoreServicesVnet` (Create new) |
     | Address range | `10.0.0.0/16`  |
     | Subnet Name | `Core` | 
     | Subnet address range | `10.0.0.0/24` |
