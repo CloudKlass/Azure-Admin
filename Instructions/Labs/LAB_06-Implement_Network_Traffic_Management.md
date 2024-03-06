@@ -261,13 +261,14 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Port | `80` |
     | Listener type | **Basic** |
 
-1. Move to the **Backend targets** tab. Select **Add** after completing the basic information.
+1. Move to the **Backend targets** tab.
 
    | Setting | Value |
     | --- | --- |
     | Backend target | Select from drop down list `az104-appgwbe` |
     | Backend settings name | `az104-http` (add new) |
-    |`Accept all other default settings`||
+
+1. Accept all other default settings and select **Add**.
 
    >**Note:** Take a minute to read the information about **Cookie-based affinity** and **Connection draining**.
 
