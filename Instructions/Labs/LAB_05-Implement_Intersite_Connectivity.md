@@ -219,7 +219,7 @@ In this task, you retest the connection between the virtual machines in differen
    
 ### Test the connection to the CoreServicesVM from the **ManufacturingVM**.
 
->**Did you know?** There are many ways to check connections. In this task, you use **Run command**. You could also continue to use Network Watcher. Or you could use a [Remote Desktop Connection](https://learn.microsoft.com/azure/virtual-machines/windows/connect-rdp#connect-to-the-virtual-machine) to the access the virtual machine. Once connected, use **test-connection**. 
+>**Did you know?** There are many ways to check connections. In this task, you use **Run command**. You could also continue to use Network Watcher. Or you could use a [Remote Desktop Connection](https://learn.microsoft.com/azure/virtual-machines/windows/connect-rdp#connect-to-the-virtual-machine) to the access the virtual machine. Once connected, use **Test-NetConnection**. 
 
 1. Switch to the `ManufacturingVM` virtual machine.
 
