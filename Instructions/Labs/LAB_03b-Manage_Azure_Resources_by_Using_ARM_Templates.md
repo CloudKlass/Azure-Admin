@@ -162,7 +162,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
    
 1. Select the **Editor** (curly brackets) icon and navigate to the parameters JSON file.
 
-1. Make a change. For example, change the disk name to **az104-disk3**. Use **Ctrl +S** to save your changes. 
+1. Make a change. Change the disk name **Value** from `null` to **disk3**. Use **Ctrl +S** to save your changes. 
 
     >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
@@ -179,7 +179,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
    Get-AzDisk -ResourceGroup az104-rg3
    ```
    
-## Task 5: Deploy a template with the CLI 
+## Task 4: Deploy a template with the CLI 
 
 1. Continue in the **Cloud Shell** select **Bash**. **Confirm** your choice.
 
@@ -209,7 +209,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
      az disk list --output table
      ```
    
-## Task 6: Deploy a resource by using Azure Bicep
+## Task 5: Deploy a resource by using Azure Bicep
 
 In this task, you will use a Bicep file to deploy a managed disk. Bicep is a declarative automation tool that is built on ARM templates.
 
