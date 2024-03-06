@@ -221,7 +221,6 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Frontend IP address type | **Public** |
     | Public IP address| **Add new** |
     | Name | `az104-gwpip` |
-    | Availability zone | **None** |
 
     >**Note:** The Application Gateway can have both a public and private IP address.
  
