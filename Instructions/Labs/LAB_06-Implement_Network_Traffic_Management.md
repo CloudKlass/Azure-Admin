@@ -266,7 +266,8 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
    | Setting | Value |
     | --- | --- |
     | Backend target | Select from drop down list `az104-appgwbe` |
-    | Backend settings | `az104-http` (add new) |
+    | Backend settings name | `az104-http` (add new) |
+    `Accept all other default settings`
 
    >**Note:** Take a minute to read the information about **Cookie-based affinity** and **Connection draining**.
 
