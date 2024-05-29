@@ -134,18 +134,6 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 >**Note:** There is a completed template files in the lab files directory. 
 
-### Make changes to the parameters file
-
-1. Locate the **template.json** file exported in the previous task. It should be in your **Downloads** folder.
-
-1. Edit the file using the editor of your choice.
-
-1. Replace the one occurrence of **CoreServicesVnet** with `ManufacturingVnet`.
-
-1. Replace the **null** entry next to ***value:*** with `ManufacturingVnet`
-
-1. **Save** your changes.
-   
 ### Deploy the custom template
 
 1. In the portal, search for and select **Deploy a custom template**.
