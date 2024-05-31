@@ -30,7 +30,6 @@ There is an interactive lab simulation that you might find useful for this topic
 + Task 2: Create and configure a Recovery Services vault.
 + Task 3: Configure Azure virtual machine-level backup.
 + Task 4: Monitor Azure Backup.
-+ Task 5: Enable virtual machine replication. 
 
 ## Architecture diagram
 
@@ -215,64 +214,6 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 1. Locate the backup operation for the **az104-10-vm0** virtual machine. 
 
 1. Review the details of the backup job.
-
-## Task 5: Enable virtual machine replication
-
-1. In the Azure portal, search for and select `Recovery Services vaults` and, on the **Recovery Services vaults** blade, click **+ Create**.
-
-1. On the **Create Recovery Services vault** blade, specify the following settings:
-
-    | Settings | Value |
-    | --- | --- |
-    | Subscription | the name of your Azure subscription |
-    | Resource group | `az104-rg-region2` (If necessary, select **Create new**) |
-    | Vault Name | `az104-rsv-region2` |
-    | Region | **West US** |
-
-    >**Note**: Make sure that you specify a **different** region than the virtual machine.
-
-1. Click **Review + Create**, ensure that the validation passes and then click **Create**.
-
-    >**Note**: Wait for the deployment to complete. The deployment should take a couple of minutes. 
-
-1. Search for and select the `az104-10-vm0` virtual machine.
-
-1. In the **Backup + Disaster recovery** blade, select **Disaster recovery**. 
-
-1. Select **Enable replication**.
-
-1. On the **Basics** tab, notice the **Target region**.
-
-1. Move to the **Advanced settings** tab. Resource selections have been made for you. It is important to review them. 
-
-1. Verify your subscription, vm resource group, virtual network, and availability (take the default) settings.
-
-1. In **Storage settings** select **Show details**.
-
-    | Setting | Value |
-    | ---- | ---- |
-    | Churn for the vm | **Normal churn**  |
-    | Cache storage account | **(new) xxx**  |
-
-   >**Note:** It is important that both of these settings be populated or the validation will fail. If values are not present, try refreshing the page. If that doesn't work, create an empty storage account and then return to this page.
-
-1. In **Replication settings** select **Show details**. Notice your recovery resources vault in region 2 was automatically selected.
-
-1. Select **Review + Start replication** and then **Start replication**.
-
-    >**Note**: Enabling replication will take a 10-15 minutes. Watch the notification messages in the upper right of the portal. While you wait, consider reviewing the self-paced training links at the end of this page.
-    
-1. Once the replication is complete, search for and locate your Recovery Services Vault, **az104-rsv-region2**. You may need to **Refresh** the page. 
-
-1. In the **Protected items** section, select **Replicated items**.
-
-1. Check that the virtual machine is showing as healthy for the replication health. Note that the status will show the synchronization (starting at 0%) status and ultimately show **Protected** after the initial synchronization completes.
-
-   ![Screenshot of the replicated items page.](../media/az104-lab10-replicated-items.png)
-
-1. Select the virtual machine to view more details.
-   
->**Did you know?** It is a good practice to [test the failover of a protected VM](https://learn.microsoft.com/azure/site-recovery/tutorial-dr-drill-azure#run-a-test-failover-for-a-single-vm).
 
 ## Cleanup your resources
 
