@@ -169,7 +169,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 1. To deploy to a resource group, use **New-AzResourceGroupDeployment**.
 
     ```powershell
-    New-AzResourceGroupDeployment -ResourceGroupName az104-rg3 -TemplateFile template.json -TemplateParameterFile parameters.json
+    New-AzResourceGroupDeployment -ResourceGroupName az104-rg3 -TemplateFile ./template.json -TemplateParameterFile ./parameters.json
     ```
 1. Ensure the command completes and the ProvisioningState is **Succeeded**.
 
