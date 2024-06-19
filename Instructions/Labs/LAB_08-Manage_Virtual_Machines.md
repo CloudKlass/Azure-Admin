@@ -359,7 +359,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     -Image 'Win2019Datacenter' `
     -Zone '1' `
     -Size 'Standard_D2s_v3' 
-    -Credential '(Get-Credential)' `
+    -Credential '(Get-Credential)'
     ```
 
 1. Once the command completes, use **Get-AzVM** to list the virtual machines in your resource group.
@@ -377,7 +377,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     ```powershell
     Stop-AzVM `
     -ResourceGroupName 'az104-rg8' `
-    -Name 'myPSVM' `
+    -Name 'myPSVM'
     ```
 
 1. Use **Get-AzVM** with the **-Status** parameter to verify the machine is **deallocated**.
