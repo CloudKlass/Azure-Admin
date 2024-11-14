@@ -255,7 +255,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
     | Property | Value    |
     |:---------|:---------|
     | Subscription | **Select your subscription** |
-    | Resource group | **az04-rg4** |
+    | Resource group | **az104-rg4** |
     | Name | `mydomain.com` (if reserved adjust the name) |
     | Region |**East US** (review the informational icon) |
 
@@ -298,7 +298,7 @@ A private DNS zone provides name resolution services within virtual networks. A 
     | Property | Value    |
     |:---------|:---------|
     | Subscription | **Select your subscription** |
-    | Resource group | **az04-rg4** |
+    | Resource group | **az104-rg4** |
     | Name | `private.mydomain.com` (adjust if you had to rename) |
     | Region |**East US** |
 
