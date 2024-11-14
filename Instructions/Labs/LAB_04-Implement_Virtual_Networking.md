@@ -281,7 +281,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
 1. Open a command prompt, and run the following command:
 
    ```sh
-   nslookup www.contoso.com <name server name>
+   nslookup <domain name> <name server name>
    ```
 1. Verify the host name www.mydomain.com resolves to the IP address you provided. This confirms name resolution is working correctly.
 
