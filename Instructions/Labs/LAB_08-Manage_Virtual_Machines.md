@@ -193,7 +193,6 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Orchestration mode | **Uniform** |
     | Security type | **Standard** |
     | Image | **Windows Server 2019 Datacenter - x64 Gen2** |
-    | Run with Azure Spot discount | **Unchecked** |
     | Size | **Standard D2s_v3** |
     | Scaling mode | **Manually update the capacity** |
     | Instance count | **2** |
