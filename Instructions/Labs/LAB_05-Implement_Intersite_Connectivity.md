@@ -181,22 +181,25 @@ In this task, you create a virtual network peering to enable communications betw
 
 | **Parameter**                                    | **Value**                             |
 | --------------------------------------------- | ------------------------------------- |
-| **This virtual network**                                       |                                       |
-| Peering link name                             | `CoreServicesVnet-to-ManufacturingVnet` |
-| Allow CoreServicesVNet to access the peered virtual network            | selected (default)                       |
-| Allow CoreServicesVNet to receive forwarded traffic from the peered virtual network | selected                       |
-| Allow gateway in CoreServicesVNet to forward traffic to the peered virtual network | Not selected (default) |
-| Enable CoreServicesVNet to use the peered virtual networks' remote gateway       | Not selected (default)                        |
-| **Remote virtual network**                                   |                                       |
+| **Remote virtual network summary**                                       |                                       |
 | Peering link name                             | `ManufacturingVnet-to-CoreServicesVnet` |
 | Virtual network deployment model              | **Resource manager**                      |
 | I know my resource ID                         | Not selected                          |
 | Subscription                                  | *your subscription*    |
 | Virtual network                               | **ManufacturingVnet**                     |
+| **Remote virtual network peering settings** |
+| Allow the peered virtual network to access 'CoreServicesVNet'            | selected (default)                       |
+| Allow the peered virtual network to receive forwarded traffic from 'CoreServicesVNet' | selected                       |
+| Allow gateway or route server in the peered virtual network to forward traffic to 'CoreServicesVNet' | Not selected (default) |
+| Enable the peered virtual network to use 'CoreServicesVNet' remote gateway or route server       | Not selected (default)                        |
+| **Local virtual network summary**                                   |                                       |
+| Peering link name                             | 'CoreServicesVnet-to-ManufacturingVnet` |
 | Allow ManufacturingVNet to access CoreServicesVNet  | selected (default)                       |
-| Allow ManufacturingVNet to receive forwarded traffic from CoreServicesVNet | selected                        |
-| Allow gateway in CoreServicesVNet to forward traffic to the peered virtual network | Not selected (default) |
-| Enable ManufacturingVNet to use CoreServicesVNet's remote gateway       | Not selected (default)                        |
+| **Local virtual network peering setting** |
+| Allow 'CoreServicesVnet' to access the peered virtual network
+| Allow 'CoreServicesVnet' to receive forwarded traffic from the peered virtual network | selected                        |
+| Allow gateway or remote server in 'CoreServicesVNet' to forward traffic to the peered virtual network | Not selected (default) |
+| Enable 'CoreServicesVnet' to use the peered virtual networks remote gateway or route server       | Not selected (default)                        |
 
 1. Review your settings and select **Add**.
 
