@@ -94,7 +94,7 @@ In this task, you will review the built-in roles and assign the VM Contributor r
 
     >**Note:** The next step assigns the role to the **IT Lab Administrators** group.
 
-1. Search for and select the `helpdesk` group. Click **Select**. 
+1. Search for and select the `IT Lab Administrators` group. Click **Select**. 
 
 1. Click **Review + assign** twice to create the role assignment.
 
