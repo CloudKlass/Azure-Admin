@@ -110,7 +110,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. Continue working on your management group. In the **Access control (IAM)** blade, select the **Check access** tab.
 
-1. In the **Create a custom role** box, select **Add**.
+1. Select **+Add**, then **Create a custom role**.
 
 1. On the Basics tab complete the configuration.
 
