@@ -122,7 +122,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
     
     >**Note**: It might take between 5 and 10 minutes for the policy to take effect.
 
-1. In the portal, search for and select `Storage Account`, and select **+ Create**. 
+1. In the portal, search for and select `Storage Accounts`, and select **+ Create**. 
 
 1. On the **Basics** tab of the **Create storage account** blade, complete the configuration.
 
