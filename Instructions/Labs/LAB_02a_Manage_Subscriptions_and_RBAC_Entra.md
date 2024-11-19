@@ -38,7 +38,7 @@ There are some interactive lab simulations that you might find useful for this t
 
 ## Architecture diagram
 
-![Diagram of lab tasks.](../media/az104-lab02a-architecture.png)
+![Diagram of lab tasks.](../media/az104-lab02a-architecture-new.png)
 
 ## Job skills
 
@@ -49,7 +49,7 @@ There are some interactive lab simulations that you might find useful for this t
 
 ## Task 1: Implement Management Groups
 
-In this task, you will create and configure management groups. Management groups are used to logically organize subscriptions. Subscriptions should be segmented and allow for RBAC and Azure Policy to be assigned and inherited to other management groups and subscriptions. For example, if your organization has a dedicated support team for Europe, you can organize European subscriptions into a management group to provide the support staff access to those subscriptions (without providing individual access to all subscriptions). In our scenario everyone at the Help Desk will need to create a support request across all subscriptions. 
+In this task, you will create and configure management groups. Management groups are used to logically organize subscriptions. Subscriptions should be segmented and allow for RBAC and Azure Policy to be assigned and inherited to other management groups and subscriptions. For example, if your organization has a dedicated support team for Europe, you can organize European subscriptions into a management group to provide the support staff access to those subscriptions (without providing individual access to all subscriptions). In our scenario everyone at the IT Lab Administrators will need to create a support request across all subscriptions. 
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
@@ -76,7 +76,7 @@ In this task, you will create and configure management groups. Management groups
 
 ## Task 2: Review and assign a built-in Azure role
 
-In this task, you will review the built-in roles and assign the VM Contributor role to a member of the Help Desk. Azure provides a large number of [built-in roles](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles). 
+In this task, you will review the built-in roles and assign the VM Contributor role to a member of the IT Lab Administrators. Azure provides a large number of [built-in roles](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles). 
 
 1. Select the **az104-mg1** management group.
 
@@ -92,13 +92,13 @@ In this task, you will review the built-in roles and assign the VM Contributor r
 
 1. On the **Members** tab, **Select Members**.
 
-    >**Note:** The next step assigns the role to the **helpdesk** group. If you do not have a Help Desk group, take a minute to create it.
+    >**Note:** The next step assigns the role to the **IT Lab Administrators** group.
 
 1. Search for and select the `helpdesk` group. Click **Select**. 
 
 1. Click **Review + assign** twice to create the role assignment.
 
-1. Continue on the **Access control (IAM)** blade. On the **Role assignments** tab, confirm the **helpdesk** group has the **Virtual Machine Contributor** role. 
+1. Continue on the **Access control (IAM)** blade. On the **Role assignments** tab, confirm the **IT Lab Administrators** group has the **Virtual Machine Contributor** role. 
 
     >**Note:** As a best practice always assign roles to groups not individuals. 
 
