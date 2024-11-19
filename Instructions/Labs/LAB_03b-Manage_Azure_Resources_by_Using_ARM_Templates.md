@@ -217,7 +217,7 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
 
     >**Note**: If you need to, you can use **clear** to clear the command window.
 
-1. Locate and download the **\Allfiles\Lab03\azuredeploydisk.bicep** file.
+1. Locate and download the **\Allfiles\Labs\03\azuredeploydisk.bicep** file.
 
 1. **Upload** the bicep file to the Cloud Shell. 
 
