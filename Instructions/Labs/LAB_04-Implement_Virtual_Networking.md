@@ -283,7 +283,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
    ```sh
    nslookup www.<domain name> <name server name>
    ```
-    >**Note:** Replace the domain name with your domain and the server name with one of the four DNS server from the zone
+>**Note:** Replace the domain name with your domain and the server name with one of the four DNS server from the zone
 1. Verify the host name www.mydomain.com resolves to the IP address you provided. This confirms name resolution is working correctly.
 
 ### Configure a private DNS zone
