@@ -276,7 +276,7 @@ In this task, you want to control network traffic between the perimeter subnet a
     | Destination type | **IP Addresses** |
     | Destination IP addresses | `10.0.0.0/16` (core services virtual network) |
     | Next hop type | **Virtual appliance** (notice your other choices) |
-    | Next hop address | `10.0.1.7` (future NVA) |
+    | Next hop address | `10.0.1.7` |
 
 1. Select **+ Add** when the route is completed. The last thing to do is associate the route with the subnet.
 
@@ -284,8 +284,8 @@ In this task, you want to control network traffic between the perimeter subnet a
 
     | Setting | Value | 
     | --- | --- |
-    | Virtual network | **CoreServicesVnet** |
-    | Subnet | **Core** |    
+    | Virtual network | **ManufacturingVNet** |
+    | Subnet | **Manufacturing** |    
 
 >**Note**: You have created a user defined route to direct traffic from the DMZ to the new NVA.  
 
