@@ -188,7 +188,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
     >**Note**: Wait for the deployment to complete. It should take about a minute.
 
-1. Search and select your Recovery Services vault.
+1. In the portal search box, search and select your Recovery Services vault.
 
 1. Select **Diagnostic Settings** and then select **Add diagnostic setting**.
 
