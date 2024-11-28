@@ -181,26 +181,29 @@ In this task, you create a virtual network peering to enable communications betw
 
 | **Parameter**                                    | **Value**                             |
 | --------------------------------------------- | ------------------------------------- |
-| **This virtual network**                                       |                                       |
-| Peering link name                             | `CoreServicesVnet-to-ManufacturingVnet` |
-| Allow CoreServicesVNet to access the peered virtual network            | selected (default)                       |
-| Allow CoreServicesVNet to receive forwarded traffic from the peered virtual network | selected                       |
-| Allow gateway in CoreServicesVNet to forward traffic to the peered virtual network | Not selected (default) |
-| Enable CoreServicesVNet to use the peered virtual networks' remote gateway       | Not selected (default)                        |
-| **Remote virtual network**                                   |                                       |
+| **Remote virtual network summary**                                       |                                       |
 | Peering link name                             | `ManufacturingVnet-to-CoreServicesVnet` |
 | Virtual network deployment model              | **Resource manager**                      |
 | I know my resource ID                         | Not selected                          |
 | Subscription                                  | *your subscription*    |
 | Virtual network                               | **ManufacturingVnet**                     |
-| Allow ManufacturingVNet to access CoreServicesVNet  | selected (default)                       |
-| Allow ManufacturingVNet to receive forwarded traffic from CoreServicesVNet | selected                        |
-| Allow gateway in CoreServicesVNet to forward traffic to the peered virtual network | Not selected (default) |
-| Enable ManufacturingVNet to use CoreServicesVNet's remote gateway       | Not selected (default)                        |
+| **Remote virtual network peering settings** |
+| Allow 'ManufacturingVnet' to access 'CoreServicesVNet'            | selected (default)                       |
+| Allow 'ManufacturingVnet' to receive forwarded traffic from 'CoreServicesVNet' | selected                       |
+| Allow gateway or route server in 'ManufacturingVnet' to forward traffic to 'CoreServicesVNet' | Not selected (default) |
+| Enable 'ManufacturingVnet' to use 'CoreServicesVNet' remote gateway or route server       | Not selected (default)                        |
+| **Local virtual network summary**                                   |                                       |
+| Peering link name                             | `CoreServicesVnet-to-ManufacturingVnet` |
+| **Local virtual network peering setting** |
+| Allow 'CoreServicesVnet' to access 'ManufacturingVnet'| selected (default) |
+| Allow 'CoreServicesVnet' to receive forwarded traffic from 'ManufacturingVnet' | selected                        |
+| Allow gateway or remote server in 'CoreServicesVNet' to forward traffic to 'ManufacturingVnet' | Not selected (default) |
+| Enable 'CoreServicesVnet' to use 'ManufacturingVnet' remote gateway or route server       | Not selected (default)                        |
 
 1. Review your settings and select **Add**.
 
-    ![Screenshot of peering page.](../media/az104-lab05-peering.png)
+    ![Screenshot of peering page.](../media/az104-lab05-peering-new.png)
+
  
 1. In CoreServicesVnet | Peerings, verify that the **CoreServicesVnet-to-ManufacturingVnet** peering is listed. Refresh the page to ensure the **Peering status** is **Connected**.
 
@@ -273,7 +276,7 @@ In this task, you want to control network traffic between the perimeter subnet a
     | Destination type | **IP Addresses** |
     | Destination IP addresses | `10.0.0.0/16` (core services virtual network) |
     | Next hop type | **Virtual appliance** (notice your other choices) |
-    | Next hop address | `10.0.1.7` (future NVA) |
+    | Next hop address | `10.0.1.7` |
 
 1. Select **+ Add** when the route is completed. The last thing to do is associate the route with the subnet.
 
@@ -281,8 +284,8 @@ In this task, you want to control network traffic between the perimeter subnet a
 
     | Setting | Value | 
     | --- | --- |
-    | Virtual network | **CoreServicesVnet** |
-    | Subnet | **Core** |    
+    | Virtual network | **ManufacturingVNet** |
+    | Subnet | **Manufacturing** |    
 
 >**Note**: You have created a user defined route to direct traffic from the DMZ to the new NVA.  
 

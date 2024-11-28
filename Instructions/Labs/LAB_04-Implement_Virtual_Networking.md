@@ -255,7 +255,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
     | Property | Value    |
     |:---------|:---------|
     | Subscription | **Select your subscription** |
-    | Resource group | **az04-rg4** |
+    | Resource group | **az104-rg4** |
     | Name | `mydomain.com` (if reserved adjust the name) |
     | Region |**East US** (review the informational icon) |
 
@@ -281,8 +281,9 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
 1. Open a command prompt, and run the following command:
 
    ```sh
-   nslookup www.contoso.com <name server name>
+   nslookup www.<domain name> <name server name>
    ```
+>**Note:** Replace the domain name with your domain and the server name with one of the four DNS server from the zone
 1. Verify the host name www.mydomain.com resolves to the IP address you provided. This confirms name resolution is working correctly.
 
 ### Configure a private DNS zone
@@ -298,7 +299,7 @@ A private DNS zone provides name resolution services within virtual networks. A 
     | Property | Value    |
     |:---------|:---------|
     | Subscription | **Select your subscription** |
-    | Resource group | **az04-rg4** |
+    | Resource group | **az104-rg4** |
     | Name | `private.mydomain.com` (adjust if you had to rename) |
     | Region |**East US** |
 
@@ -308,7 +309,7 @@ A private DNS zone provides name resolution services within virtual networks. A 
 
 1. Notice on the **Overview** blade there are no name server records. 
 
-1. Select **+ Virtual network links** and then select **+ Add**. 
+1. Select **+ Virtual network links** from the DNS Management section of the menu and then select **+ Add**. 
 
     | Property | Value    |
     |:---------|:---------|

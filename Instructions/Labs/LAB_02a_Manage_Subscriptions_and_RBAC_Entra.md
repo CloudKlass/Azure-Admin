@@ -38,7 +38,7 @@ There are some interactive lab simulations that you might find useful for this t
 
 ## Architecture diagram
 
-![Diagram of lab tasks.](../media/az104-lab02a-architecture.png)
+![Diagram of lab tasks.](../media/az104-lab02a-architecture-new.png)
 
 ## Job skills
 
@@ -49,7 +49,7 @@ There are some interactive lab simulations that you might find useful for this t
 
 ## Task 1: Implement Management Groups
 
-In this task, you will create and configure management groups. Management groups are used to logically organize subscriptions. Subscriptions should be segmented and allow for RBAC and Azure Policy to be assigned and inherited to other management groups and subscriptions. For example, if your organization has a dedicated support team for Europe, you can organize European subscriptions into a management group to provide the support staff access to those subscriptions (without providing individual access to all subscriptions). In our scenario everyone at the Help Desk will need to create a support request across all subscriptions. 
+In this task, you will create and configure management groups. Management groups are used to logically organize subscriptions. Subscriptions should be segmented and allow for RBAC and Azure Policy to be assigned and inherited to other management groups and subscriptions. For example, if your organization has a dedicated support team for Europe, you can organize European subscriptions into a management group to provide the support staff access to those subscriptions (without providing individual access to all subscriptions). In our scenario everyone at the IT Lab Administrators will need to create a support request across all subscriptions. 
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
@@ -59,7 +59,7 @@ In this task, you will create and configure management groups. Management groups
 
 1. Review the **Access management for Azure resources** area. Ensure you can manage access to all Azure subscriptions and management groups in the tenant.
    
-1. Search for and select `Management groups`.
+1. In the portal search box search for and select `Management groups`.
 
 1. On the **Management groups** blade, click **+ Create**.
 
@@ -76,7 +76,7 @@ In this task, you will create and configure management groups. Management groups
 
 ## Task 2: Review and assign a built-in Azure role
 
-In this task, you will review the built-in roles and assign the VM Contributor role to a member of the Help Desk. Azure provides a large number of [built-in roles](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles). 
+In this task, you will review the built-in roles and assign the VM Contributor role to a member of the IT Lab Administrators. Azure provides a large number of [built-in roles](https://learn.microsoft.com/azure/role-based-access-control/built-in-roles). 
 
 1. Select the **az104-mg1** management group.
 
@@ -86,19 +86,19 @@ In this task, you will review the built-in roles and assign the VM Contributor r
 
 1. Select **+ Add**, from the drop-down menu, select **Add role assignment**. 
 
-1. On the **Add role assignment** blade, search for and select the **Virtual Machine Contributor**. The Virtual machine contributor role lets you manage virtual machines, but not access their operating system or manage the virtual network and storage account they are connected to. This is a good role for the Help Desk. Select **Next**.
+1. On the **Add role assignment** blade, search for and select the **Virtual Machine Contributor**. The Virtual machine contributor role lets you manage virtual machines, but not access their operating system or manage the virtual network and storage account they are connected to. This is a good role for the IT Lab Administrators. Select **Next**.
 
     >**Did you know?** Azure originally provided only the **Classic** deployment model. This has been replaced by the **Azure Resource Manager** deployment model. As a best practice, do not use classic resources. 
 
 1. On the **Members** tab, **Select Members**.
 
-    >**Note:** The next step assigns the role to the **helpdesk** group. If you do not have a Help Desk group, take a minute to create it.
+    >**Note:** The next step assigns the role to the **IT Lab Administrators** group.
 
-1. Search for and select the `helpdesk` group. Click **Select**. 
+1. Search for and select the `IT Lab Administrators` group. Click **Select**. 
 
 1. Click **Review + assign** twice to create the role assignment.
 
-1. Continue on the **Access control (IAM)** blade. On the **Role assignments** tab, confirm the **helpdesk** group has the **Virtual Machine Contributor** role. 
+1. Continue on the **Access control (IAM)** blade. On the **Role assignments** tab, confirm the **IT Lab Administrators** group has the **Virtual Machine Contributor** role. 
 
     >**Note:** As a best practice always assign roles to groups not individuals. 
 
@@ -110,7 +110,7 @@ In this task, you will create a custom RBAC role. Custom roles are a core part o
 
 1. Continue working on your management group. In the **Access control (IAM)** blade, select the **Check access** tab.
 
-1. In the **Create a custom role** box, select **Add**.
+1. Select **+Add**, then **Create a custom role**.
 
 1. On the Basics tab complete the configuration.
 
@@ -151,12 +151,7 @@ In this task, you view the activity log to determine if anyone has created a new
 
 ## Cleanup your resources
 
-If you are working with **your own subscription** take a minute to delete the lab resources. This will ensure resources are freed up and cost is minimized. The easiest way to delete the lab resources is to delete the lab resource group. 
-
-+ In the Azure portal, select the resource group, select **Delete the resource group**, **Enter resource group name**, and then click **Delete**.
-+ Using Azure PowerShell, `Remove-AzResourceGroup -Name resourceGroupName`.
-+ Using the CLI, `az group delete --name resourceGroupName`.
-  
+If you are working with **your own subscription** take a minute to delete the lab resources.
 ## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 

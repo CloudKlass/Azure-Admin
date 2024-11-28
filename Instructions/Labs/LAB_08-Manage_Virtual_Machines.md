@@ -193,7 +193,6 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Orchestration mode | **Uniform** |
     | Security type | **Standard** |
     | Image | **Windows Server 2019 Datacenter - x64 Gen2** |
-    | Run with Azure Spot discount | **Unchecked** |
     | Size | **Standard D2s_v3** |
     | Scaling mode | **Manually update the capacity** |
     | Instance count | **2** |
@@ -281,7 +280,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
 1. Select **Go to resource** or search for and select the **vmss1** scale set.
 
-1. Choose **Scaling** from the menu on the left-hand side of the scale set window.
+1. Choose **Scaling** from the menu on the left-hand side in the Availability + scale section of the scale set window.
 
 >**Did you know?** You can **Manual scale** or **Custom autoscale**. In scale sets with a small number of VM instances, increasing or decreasing the instance count (Manual scale) may be best. In scale sets with a large number of VM instances, scaling based on metrics (Custom autoscale) may be more appropriate.
 

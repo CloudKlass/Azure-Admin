@@ -230,8 +230,8 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | --- | --- |
     | Name | `az104-appgwbe` |
     | Add backend pool without targets | **No** |
-    | `Target type:` **Virtual machine** | `Target:` **az104-rg6-nic1 (10.60.1.4)** |
-    | `Target type:` **Virtual machine** | `Target:` **az104-rg6-nic2 (10.60.2.4)** |
+    | `Target type:` **Virtual machine** | `Target:` **az104-06-nic1 (10.60.1.4)** |
+    | `Target type:` **Virtual machine** | `Target:` **az104-06-nic2 (10.60.2.4)** |
 
 1. Click **Add a backend pool**. This is the backend pool for **images**. Specify the following settings (leave others with their default values). When completed click **Add**.
 
@@ -239,7 +239,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | --- | --- |
     | Name | `az104-imagebe` |
     | Add backend pool without targets | **No** |
-    | `Target type:` **Virtual machine** | `Target:` **az104-rg6-nic1 (10.60.1.4)** |
+    | `Target type:` **Virtual machine** | `Target:` **az104-06-nic1 (10.60.1.4)** |
 
 1. Click **Add a backend pool**. This is the backend pool for **video**. Specify the following settings (leave others with their default values). When completed click **Add**.
 
@@ -247,7 +247,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | --- | --- |
     | Name | `az104-videobe` |
     | Add backend pool without targets | **No** |
-    | `Target type:` **Virtual machine** | `Target:` **az104-rg6-nic2 (10.60.2.4)** |
+    | `Target type:` **Virtual machine** | `Target:` **az104-06-nic2 (10.60.2.4)** |
 
 1. Select **Next: Configuration** and then **Add routing rules**. Complete the information.
 

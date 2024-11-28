@@ -139,17 +139,9 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
     >**Did you know?**  If you mostly work with Linux systems, Bash (CLI) feels more familiar. If you mostly work with Windows systems, Azure PowerShell feels more familiar. 
 
-1. On the **You have no storage mounted** screen select **Show advanced settings** and provide the required information. 
+1. On the **Getting started** screen select **No storage account required**, in the subscription dialog box select your subscription
 
-    >**Note:** As you work with the Cloud Shell a storage account and file share is required. 
-
-    | Settings | Values |
-    |  -- | -- |
-    | Resource Group | **az104-rg3** |
-    | Storage account (Create new) | `sacloudshell` (must be globally unique, between 3 and 24 characters in length and use numbers and lower case letters only) |
-    | File share (Create new) | `fs-cloudshell` |
-
-1. When completed select **Create storage**. You only need to do this the first time you use the Cloud Shell. It will take a couple of minutes to provision the storage.
+1. When completed select **Apply**. It will take a couple of minutes to provision the storage.
 
 1. Use the **Upload/Download files** icon to upload the template and parameters file from the downloads directory. You will need to upload each file separately.
 
@@ -162,7 +154,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
    
 1. Select the **Editor** (curly brackets) icon and navigate to the parameters JSON file.
 
-1. Make a change. Change the disk name **Value** from `null` to **disk3**. Use **Ctrl +S** to save your changes. 
+1. Make a change. Change the disk name **Value** from `null` to **'disk3'**. Use **Ctrl +S** to save your changes. 
 
     >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
@@ -217,7 +209,7 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
 
     >**Note**: If you need to, you can use **clear** to clear the command window.
 
-1. Locate and download the **\Allfiles\Lab03\azuredeploydisk.bicep** file.
+1. Locate and download the **\Allfiles\Labs\03\azuredeploydisk.bicep** file.
 
 1. **Upload** the bicep file to the Cloud Shell. 
 
