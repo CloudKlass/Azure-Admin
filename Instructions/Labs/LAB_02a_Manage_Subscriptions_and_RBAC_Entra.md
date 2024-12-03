@@ -149,9 +149,6 @@ In this task, you view the activity log to determine if anyone has created a new
 
     ![Screenshot of the Activity log page with configured filter.](../media/az104-lab02a-searchactivitylog.png)
 
-## Cleanup your resources
-
-If you are working with **your own subscription** take a minute to delete the lab resources.
 ## Key takeaways
 
 Congratulations on completing the lab. Here are the main takeaways for this lab. 
