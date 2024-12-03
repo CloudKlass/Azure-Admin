@@ -133,10 +133,6 @@ In this task, you create a group account. Group accounts can include user accoun
 
 >**Note:** You may be managing a large number of groups. Does your organization have a plan for creating groups and adding members?
    
-## Cleanup your resources
-
-If you are working with **your own subscription** take a minute to delete the lab resources. 
-  
 ## Key takeaways
 
 Congratulations on completing the lab. Here are some main takeways for this lab:
