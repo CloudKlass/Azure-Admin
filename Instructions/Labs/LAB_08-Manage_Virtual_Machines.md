@@ -208,7 +208,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
 5. On the **Disks** tab, accept the default values and click **Next : Networking >**.
 
-6. On the **Networking** page, click the **Create virtual network** link below the **Virtual network** textbox and create a new virtual network with the following settings (leave others with their default values).  When finished, select **OK**.
+6. On the **Networking** page, click the **Edit virtual network** link below the **Virtual network** textbox and create a new virtual network with the following settings (leave others with their default values).  When finished, select **OK**.
 
     | Setting | Value |
     | --- | --- |
