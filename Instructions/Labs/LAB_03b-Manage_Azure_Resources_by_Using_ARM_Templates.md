@@ -151,7 +151,9 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
     dir
     ```
     >**Note**: If you need to, you can use **cls** to clear the command window. You can use the arrow keys to move the command history.
-   
+
+1. Select the **Editor** (pen) icon, select the confirm button to switch to classic mode and wait for   PowerShell to restart.
+
 1. Select the **Editor** (curly brackets) icon and navigate to the parameters JSON file.
 
 1. Make a change. Change the disk name **Value** from `null` to **"disk3"**. (Ensure you place double quotation marks around disk3) Use **Ctrl +S** to save your changes. 
