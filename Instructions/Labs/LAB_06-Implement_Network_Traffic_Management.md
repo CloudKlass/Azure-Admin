@@ -188,7 +188,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Setting | Value |
     | --- | --- |
     | Name | `subnet-appgw` |
-    | Subnet address range | `10.60.3.224/27` |
+    | Subnet address range | `10.60.3.0/27` |
 
 1. Click **Save**
 
