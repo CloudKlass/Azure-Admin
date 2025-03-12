@@ -210,7 +210,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Availability zone | **Accept the defaults** |
     | HTTP2 | **Disabled** |
     | Virtual network | **az104-06-vnet1** |
-    | Subnet | **subnet-appgw (10.60.3.224/27)** |
+    | Subnet | **subnet-appgw (10.60.3.0/27)** |
 
     ![Screenshot of the create app gateway page.](../media/az104-lab06-create-appgw.png)
 
