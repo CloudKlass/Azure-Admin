@@ -143,31 +143,31 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 1. When completed select **Apply**. It will take a couple of minutes to provision the storage.
 
-1. Use the **Upload/Download files** icon to upload the template and parameters file from the downloads directory. You will need to upload each file separately.
+2. Use the **Manage files** icon to upload the template and parameters file from the downloads directory.
 
-1. Verify your files are available in the Cloud Shell storage. 
+3. Verify your files are available in the Cloud Shell storage. 
 
     ```powershell
     dir
     ```
     >**Note**: If you need to, you can use **cls** to clear the command window. You can use the arrow keys to move the command history.
 
-1. Select the **Editor** (pen) icon, select the confirm button to switch to classic mode and wait for   PowerShell to restart.
+4. Select the **Editor** (pen) icon, select the confirm button to switch to classic mode and wait for   PowerShell to restart.
 
-1. Select the **Editor** (curly brackets) icon and navigate to the parameters JSON file.
+5. Select the **Editor** (curly brackets) icon and navigate to the parameters JSON file.
 
-1. Make a change. Change the disk name **Value** from `null` to **"disk3"**. (Ensure you place double quotation marks around disk3) Use **Ctrl +S** to save your changes. 
+6. Make a change. Change the disk name **Value** from `null` to **"disk3"**. (Ensure you place double quotation marks around disk3) Use **Ctrl +S** to save your changes. 
 
     >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
-1. To deploy to a resource group, use **New-AzResourceGroupDeployment**.
+7. To deploy to a resource group, use **New-AzResourceGroupDeployment**.
 
     ```powershell
     New-AzResourceGroupDeployment -ResourceGroupName az104-rg3 -TemplateFile ./template.json -TemplateParameterFile ./parameters.json
     ```
-1. Ensure the command completes and the ProvisioningState is **Succeeded**.
+8. Ensure the command completes and the ProvisioningState is **Succeeded**.
 
-1. Confirm the disk was created.
+9. Confirm the disk was created.
 
    ```powershell
    Get-AzDisk -ResourceGroup az104-rg3
