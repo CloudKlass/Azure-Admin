@@ -132,7 +132,7 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Be sure to **Save** your changes.
 
->**Note:** There is a completed template files in the lab files directory. 
+>**Note:** There is a completed template and parameter file in the lab files directory. Allfiles\Labs\04\az104-04-template.json and az104-04-parameters.json that you can deploy instead. 
 
 ### Deploy the custom template
 
