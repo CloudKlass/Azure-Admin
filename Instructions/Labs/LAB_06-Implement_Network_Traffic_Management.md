@@ -36,8 +36,6 @@ There are interactive lab simulations that you might find useful for this topic.
 
 In this task, you will use a template to deploy one virtual network, one network security group, and two virtual machines.
 
-1. Download the **\\Allfiles\\Lab06** lab files (template and parameters).
-
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
 1. Search for and select `Deploy a custom template`.
@@ -46,11 +44,11 @@ In this task, you will use a template to deploy one virtual network, one network
 
 1. On the edit template page, select **Load file**.
 
-1. Locate and select the **\\Allfiles\\Lab06\\az104-06-vms-template.json** file and select **Open**.
+1. Locate and select the **\\Allfiles\\Labs\\06\\az104-06-vms-template.json** file and select **Open**.
 
 1. Select **Save**.
 
-1. Select **Edit parameters** and load the **\\Allfiles\\Lab06\\az104-06-vms-parameters.json** file.
+1. Select **Edit parameters** and load the **\\Allfiles\\Labs\\06\\az104-06-vms-parameters.json** file.
 
 1. Select **Save**.
 
