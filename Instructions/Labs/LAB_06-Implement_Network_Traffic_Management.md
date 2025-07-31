@@ -78,7 +78,7 @@ In this task, you implement an Azure Load Balancer in front of two Azure virtual
 
 ![Diagram of the lab tasks.](../media/az104-lab06-lb-architecture.png)
 
-1. In the Azure portal, search for and select `Load balancers` and, on the **Load balancers** blade, click **+ Create**.
+1. In the Azure portal, search for and select `Load balancers` and, on the **Load balancers** blade, click **+ Create**, then **Standard Load Balancer**.
 
 1. Create a load balancer with the following settings (leave others with their default values) then click **Next: Frontend IP configuration**:
 
