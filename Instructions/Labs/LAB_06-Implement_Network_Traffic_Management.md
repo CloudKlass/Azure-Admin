@@ -192,7 +192,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
     > **Note**: This subnet will be used by the Azure Application Gateway. The Application Gateway requires a dedicated subnet of /27 or larger size.
 
-1. In the Azure portal, search and select `Application Gateways` and, on the **Application Gateways** blade, click **+ Create**.
+1. In the Azure portal, search and select `Application Gateways` and, on the **Application Gateways** blade, click **+ Create** then click **Application Gateway**.
 
 1. On the **Basics** tab, specify the following settings (leave others with their default values):
 
