@@ -177,9 +177,9 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
 1. In the Azure portal, search and select `Virtual networks`.
 
-1. On the **Virtual networks** blade, in the list of virtual networks, click **az104-vnet1**.
+1. On the **Virtual networks** blade, in the list of virtual networks, click **az104-06-vnet1**.
 
-1. On the **az104-vnet1** virtual network blade, in the **Settings** section, click **Subnets**, and then click **+ Subnet**.
+1. On the **az104-06-vnet1** virtual network blade, in the **Settings** section, click **Subnets**, and then click **+ Subnet**.
 
 1. Add a subnet with the following settings (leave others with their default values).
 
@@ -210,7 +210,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Virtual network | **az104-06-vnet1** |
     | Subnet | **subnet-appgw (10.60.3.0/27)** |
 
-    ![Screenshot of the create app gateway page.](../media/az104-lab06-create-appgw.png)
+    ![Screenshot of the create app gateway page.](../media/az104-lab06-create-appgw2.png)
 
 1. Click **Next: Frontends >** and specify the following settings (leave others with their default values). When complete, click **OK**.
 
