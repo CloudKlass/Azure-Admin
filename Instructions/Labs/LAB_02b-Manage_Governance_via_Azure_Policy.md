@@ -107,7 +107,7 @@ In this task, you will assign the built-in *Require a tag and its value on resou
 
     >**Note**: The **Assignment name** is automatically populated with the policy name you selected, but you can change it. The **Description** is optional. Notice you can disable the policy at any time. 
 
-1. Click **Next** twice and set **Parameters** to the following values:
+1. Click **Next** and set **Parameters** to the following values:
 
     | Setting | Value |
     | --- | --- |
@@ -168,7 +168,7 @@ In this task, we will use the new policy definition to remediate any non-complia
     | Description | `Inherit the Cost Center tag and its value 000 from the resource group if missing` |
     | Policy enforcement | Enabled |
 
-1. Click **Next** twice and set **Parameters** to the following values:
+1. Click **Next** and set **Parameters** to the following values:
 
     | Setting | Value |
     | --- | --- |
@@ -183,7 +183,7 @@ In this task, we will use the new policy definition to remediate any non-complia
 
     >**Note**: This policy definition includes the **Modify** effect. So, a managed identity is required. 
 
-    ![Screenshot of the policy remediation page. ](../media/az104-lab02b-policyremediation.png) 
+    ![Screenshot of the policy remediation page. ](../media/az104-lab02b-policyremediation2.png) 
 
 1. Click **Review + Create** and then click **Create**.
 
