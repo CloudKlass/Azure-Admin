@@ -318,7 +318,7 @@ A private DNS zone provides name resolution services within virtual networks. A 
 
 1. Select **OK** and wait for the link to create. 
 
-1. From the **Overview** blade select **+ Record set**. You would now add a record for each virtual machine that needs private name-resolution support.
+1. From the **DNS Management** section select **Recordsets**, then +Add. You would now add a record for each virtual machine that needs private name-resolution support.
 
     | Property | Value    |
     |:---------|:---------|
