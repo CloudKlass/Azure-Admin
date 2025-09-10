@@ -72,10 +72,10 @@ In this task, you will create and configure a storage account. The storage accou
 
 1. Review the **Overview** blade and the additional configurations that can be changed. These are global settings for the storage account. Notice the storage account can be used for Blob containers, File shares, Queues, and Tables.
 
-1. In the **Security + Networking** section, select **Networking**. Notice public network access is disabled.
+1. In the **Security + Networking** section, select **Networking**. Notice public network access is disabled, Select Manage.
 
-    + Change the **public access level** to **Enabled from selected virtual networks and IP addresses**.
-    + In the **Firewall** section, check the box for **Add your client IP address.**
+    + Change the **public access level** to **Enabled from selected networks**.
+    + In the **IPv4 Addresses** section, check the box for **Add your client IP address.**
     + Be sure to **Save** your changes. 
   
 1. In the **Data management** section, view the **Redundancy** blade. Notice the information about your primary and secondary data center locations.
@@ -235,6 +235,8 @@ In this task, you will create and configure Azure File shares. You will use Stor
     |Subnets|**default**|
 
 1. On the **Add networks** blade, click **Add**. 
+
+1. Under the **IPv4 Addresses** delete you client IP.
 
 
 1. Be sure to **Save** your changes.
