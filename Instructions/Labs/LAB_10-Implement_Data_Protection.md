@@ -33,7 +33,7 @@ There is an interactive lab simulation that you might find useful for this topic
 
 ## Architecture diagram
 
-![Diagram of the architecture tasks.](../media/az104-lab10-architecture.png)
+![Diagram of the architecture tasks.](../media/az104-lab10-architecture2.png)
 
 ## Task 1: Use a template to provision an infrastructure
 
