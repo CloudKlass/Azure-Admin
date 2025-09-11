@@ -136,7 +136,7 @@ In this task, you will swap the staging slot with the production slot. Swapping 
 
 In this task, you will configure and test autoscaling of Azure web app. 
 
-1. On the blade displaying the production slot of the web app, in the **Settings** section, click **Scale out (App Service plan)**.
+1. On the blade displaying the production slot of the web app, in the **App Servcie plan** section, click **Scale out**.
 
 1. In the **Scaling** section, `Scale out method`, select **Rules Based**
 
