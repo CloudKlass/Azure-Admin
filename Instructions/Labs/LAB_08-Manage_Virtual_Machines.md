@@ -342,7 +342,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
     >**Note:** If you are interested in using Azure PowerShell for virtual machine creation, try Task 5. If you are interested in using the CLI to create virtual machines, try Task 6.
 
-## Task 5: Create a virtual machine using Azure PowerShell (option 1)
+## Task 5: Create a virtual machine using Azure PowerShell (optional 1)
 
 1. Use the icon (top right) to launch a **Cloud Shell** session. Alternately, navigate directly to `https://shell.azure.com`.
 
@@ -383,7 +383,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
     >**Did you know?** When you use Azure to stop your virtual machine, the status is *deallocated*. This means that any non-static public IPs are released, and you stop paying for the VM’s compute costs.
 
-## Task 6: Create a virtual machine using the CLI (option 2)
+## Task 6: Create a virtual machine using the CLI (optional 2)
 
 1. Use the icon (top right) to launch a **Cloud Shell** session. Alternately, navigate directly to `https://shell.azure.com`.
 
