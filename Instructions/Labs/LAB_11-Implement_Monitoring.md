@@ -141,7 +141,7 @@ In this task, if the alert is triggered send an email notification to the operat
     | Notification type | Select **Email/SMS message/Push/Voice** |
     | Name | `VM was deleted` |
 
-1. Select **Email**, and in the **Email** box, enter your email address, and then select **OK**. 
+1. Select **Email**, and in the **Email** box, enter your email address, and then select **OK**. (Use a personal email, not a company or the QA Admin email)
 
     >**Note:** You should receive an email notification saying you were added to an action group. There may be a few minutes delay, but that is a sure sign the rule has deployed.
 
