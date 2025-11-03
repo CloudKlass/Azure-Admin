@@ -49,7 +49,7 @@ In this task, you create a core services virtual network with a virtual machine.
 
 1. Search for and select `Virtual Machines`.
 
-1. From the virtual machines page, select **Create** then select **Azure Virtual Machine**.
+1. From the virtual machines page, select **Create** then select **Virtual Machine**.
 
 1. On the Basics tab, use the following information to complete the form, and then select **Next: Disks >**. For any setting not specified, leave the default value.
  
@@ -61,7 +61,7 @@ In this task, you create a core services virtual network with a virtual machine.
     | Region | **(US) East US** |
     | Availability options | No infrastructure redundancy required |
     | Security type | **Trusted launch virtual machines** |
-    | Image | **Windows Server 2019 Datacenter: x64 Gen2** (notice your other choices) |
+    | Image | **Windows Server 2019 Datacenter - x64 Gen2** (You may need to select `see all images` and select it from the **Windows Server** Select list) |
     | Size | **Standard_DS2_v3** |
     | Username | `localadmin` | 
     | Password | **Provide a complex password** |
@@ -76,10 +76,12 @@ In this task, you create a core services virtual network with a virtual machine.
 
     | Setting | Value | 
     | --- | --- |
-    | Name | `CoreServicesVnet` (Create new) |
+    | Name | `CoreServicesVnet` (Edit virtual network) |
     | Address range | `10.0.0.0/16`  |
     | Subnet Name | `Core` | 
     | Subnet address range | `10.0.0.0/24` |
+
+1. **Save** the Subnet settings and then **Save** the Network Setting.
 
 1. In the **Public IP** dropdown list select **None**
 
@@ -97,7 +99,7 @@ In this task, you create a manufacturing services virtual network with a virtual
 
 1. From the Azure portal, search for and navigate to **Virtual Machines**.
 
-1. From the virtual machines page, select **Create** then select **Azure Virtual Machine**.
+1. From the virtual machines page, select **Create** then select **Virtual Machine**.
 
 1. On the Basics tab, use the following information to complete the form, and then select **Next: Disks >**. For any setting not specified, leave the default value.
  
@@ -126,6 +128,8 @@ In this task, you create a manufacturing services virtual network with a virtual
     | Address range | `172.16.0.0/16`  |
     | Subnet Name | `Manufacturing` |
     | Subnet address range | `172.16.0.0/24` |
+
+1. **Save** the Subnet settings and then **Save** the Network Setting.
 
 1. In the **Public IP** dropdown list select **None**    
 
@@ -183,10 +187,9 @@ In this task, you create a virtual network peering to enable communications betw
 | --------------------------------------------- | ------------------------------------- |
 | **Remote virtual network summary**                                       |                                       |
 | Peering link name                             | `ManufacturingVnet-to-CoreServicesVnet` |
-| Virtual network deployment model              | **Resource manager**                      |
 | I know my resource ID                         | Not selected                          |
 | Subscription                                  | *your subscription*    |
-| Virtual network                               | **ManufacturingVnet**                     |
+| Virtual network                               | Select **ManufacturingVnet** from the drop-down list                     |
 | **Remote virtual network peering settings** |
 | Allow 'ManufacturingVnet' to access 'CoreServicesVNet'            | selected (default)                       |
 | Allow 'ManufacturingVnet' to receive forwarded traffic from 'CoreServicesVNet' | selected                       |
@@ -246,10 +249,11 @@ In this task, you want to control network traffic between the perimeter subnet a
 
 1. Search for select the `CoreServicesVnet`.
 
-1. Select **Subnets** and then **+ Subnet**. Be sure to **Save** your changes. 
+1. Select **Subnets** and then **+ Subnet**. Be sure to click **+Add** on completion to **Save** your changes. 
 
     | Setting | Value | 
     | --- | --- |
+    | Subnet purpose | `Default` |
     | Name | `perimeter` |
     | Subnet address range | `10.0.1.0/24`  |
 
