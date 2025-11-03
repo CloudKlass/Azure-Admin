@@ -91,20 +91,12 @@ In this task, you use the downloaded template to deploy a new managed disk. This
 
 1. Within the editor pane, make these changes.
 
-    + Change **disks_az104_disk1_name** to **disks_az104_disk2_name** (two places to change)
-    + Change **az104-disk1** to **az104-disk2** (one place to change)
+    + Change **disks_az104_disk1_name** to **disks_az104_disk_name** (two places to change: Line 5 and Line 15)
+    + Change **az104-disk1** to **az104-disk2** (one place to change: Line 6)
 
 1. Notice this is a **Standard** disk. The location is **eastus**. The disk size is **32GB**.
 
 1. **Save** your changes.
-
-1. Don't forget the parameters file. Select **Edit parameters**, click **Load file** and upload the **parameters.json**. 
-
-1. Make this change so it matches the template file.
-
-    Change **disks_az104_disk1_name** to **disks_az104_disk2_name** (one place to change)
-
-1. **Save** your changes. 
 
 1. Complete the custom deployment settings:
 
@@ -154,9 +146,9 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 4. Select the **Editor** (pen) icon, select the confirm button to switch to classic mode and wait for   PowerShell to restart.
 
-5. Select the **Editor** (curly brackets) icon and navigate to the parameters JSON file.
+5. Select the **Editor** (curly brackets) icon and navigate to the **parameters.json** file.
 
-6. Make a change. Change the disk name **Value** from `null` to **"disk3"**. (Ensure you place double quotation marks around disk3) Use **Ctrl +S** to save your changes. 
+6. Make a change. Change the disk name **Value** on Line 6 from `null` to **"az104-disk3"**. (Ensure you place double quotation marks around disk3) Use **Ctrl +S** to save your changes. 
 
     >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
@@ -185,7 +177,7 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 1. Select the **Editor** (curly brackets) icon and navigate to the parameters JSON file.
 
-1. Make a change. Change the disk name to **disk4**. Use **Ctrl +S** to save your changes.
+1. Make a change. Change the disk name to **az104-disk4**. Use **Ctrl +S** to save your changes.
 
    ![Screenshot of cloud shell editor.](../media/az104-lab03-parameter_file_disk4.png)
 
@@ -225,7 +217,7 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
 
     + On Line 2 Change the **managedDiskName** value to `az104-Disk5`.
     + On Line 7 Change the **diskSizeinGiB** value to `32`.
-    + On Line 26 Change the **sku name** value to `StandardSSD_LRS`.
+    + On Line 26 Change the **sku name** value to `StandardSSD_LRS`.  ***(Note: The name is Case Sensitive)***
 
 1. Use **Ctrl +S** to save your changes.
 
