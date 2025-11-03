@@ -73,36 +73,47 @@ The organization plans a large amount of growth for core services. In this task,
 	| ------------------ | -------------------- |
 	| IPv4 address space | `10.20.0.0/16` (separate the entries)    |
 
-1. ***In this step you will add 2 subnets into the Virtual network.*** Select **+ Add a subnet**. Complete the name and address information for each subnet. Be sure to select **Add** for each new subnet. 
+1. *** Select **+ Add a subnet**. Complete the name and address information for the subnet. 
 
     | **Option**            | **Value**              |
     | --------------------  | ---------------------- |
-    | Subnet 1 name           | `SharedServicesSubnet`   |
+    | Subnet purpose | `Default` |
+    | Name           | `SharedServicesSubnet`   |
     | Starting address	    | `10.20.10.0`          |
     | Size					| `/24`	|
+
+1. Click **Add**
+
+1. *** Select **+ Add a subnet**. Complete the name and address information for the subnet. 
+
+    | **Option**            | **Value**              |
+    | --------------------  | ---------------------- |
+    | Subnet purpose | `Default` |
     | Subnet 2 name           | `DatabaseSubnet`         |
     | Starting address		| `10.20.20.0`        |
     | Size					| `/24`	|
 
+1. Click **Add**
+
 	>**Note:** Every virtual network must have at least one subnet. Reminder that five IP addresses will always be reserved, so consider that in your planning. 
 
-1. Delete the **Default** Subnet.
+2. Delete the **Default** Subnet.
 
-1. To finish creating the **CoreServicesVnet** and its associated **subnets**, select **Review + create**.
+3. To finish creating the **CoreServicesVnet** and its associated **subnets**, select **Review + create**.
 
-1. Verify your configuration passed validation, and then select **Create**.
+4. Verify your configuration passed validation, and then select **Create**.
 
-1. Wait for the virtual network to deploy and then select **Go to resource**.
+5. Wait for the virtual network to deploy and then select **Go to resource**.
 
-1. Take a minute to verify the **Address space** and the **Subnets**. Notice your other choices in the **Settings** blade. 
+6. Take a minute to verify the **Address space** and the **Subnets**. Notice your other choices in the **Settings** blade. 
 
-1. In the **Automation** section, select **Export template**, and then wait for the template to be generated.
+7. In the **Automation** section, select **Export template**, and then wait for the template to be generated.
 
-1. **Download** the template.
+8. **Download** the template.
 
-1. Navigate on the local machine to the **Downloads** folder and **Extract all** the files in the downloaded zip file. 
+9. Navigate on the local machine to the **Downloads** folder and **Extract all** the files in the downloaded zip file. 
 
-1. Before proceeding, ensure you have the **template.json** file. You will use this template to create the ManufacturingVnet in the next task. 
+10. Before proceeding, ensure you have the **template.json** file. You will use this template to create the ManufacturingVnet in the next task. 
  
 ## Task 2: Create a virtual network and subnets using a template
 
@@ -257,7 +268,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
     | Subscription | **Select your subscription** |
     | Resource group | **az104-rg4** |
     | Name | `mydomain.com` (if reserved adjust the name) |
-    | Region |**East US** (review the informational icon) |
+    | Resource group location |**This will be greyed out** (review the informational icon) |
 
 1. Select **Review create** and then **Create**.
    
@@ -265,7 +276,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
 
 1. On the **Overview** blade notice the names of the four Azure DNS name servers assigned to the zone. **Copy** one of the name server addresses. You will need it in a future step. 
   
-1. Select **+ Record set**. You add a virtual network link record for each virtual network that needs private name-resolution support.
+1. Select **Recordsets** from the tabs at the top, `or` from the menu under **DNS Management**. Click **+Add**  
 
     | Property | Value    |
     |:---------|:---------|
@@ -276,7 +287,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
 
 >**Note:**  In a real-world scenario, you'd enter the public IP address of your web server.
 
-1. Select **OK** and verify **mydomain.com** has an A record set named **www**.
+1. Click **Add** and verify **mydomain.com** has an A record set named **www**.
 
 1. Open a command prompt, and run the following command:
 
@@ -301,7 +312,7 @@ A private DNS zone provides name resolution services within virtual networks. A 
     | Subscription | **Select your subscription** |
     | Resource group | **az104-rg4** |
     | Name | `private.mydomain.com` (adjust if you had to rename) |
-    | Region |**East US** |
+    | Resource group location |**This will be greyed out** |
 
 1. Select **Review create** and then **Create**.
    
@@ -318,7 +329,7 @@ A private DNS zone provides name resolution services within virtual networks. A 
 
 1. Select **OK** and wait for the link to create. 
 
-1. From the **DNS Management** section select **Recordsets**, then +Add. You would now add a record for each virtual machine that needs private name-resolution support.
+1. From the **DNS Management** section select **Recordsets**, then **+Add**. You would now add a record for each virtual machine that needs private name-resolution support.
 
     | Property | Value    |
     |:---------|:---------|
@@ -326,6 +337,8 @@ A private DNS zone provides name resolution services within virtual networks. A 
     | Type | **A** |
     | TTL | **1** |
     | IP address | **10.1.1.4** |
+
+1. Click **Add**
 
  >**Note:**  In a real-world scenario, you'd enter the IP address for a specific manufacturing virtual machine.
 
