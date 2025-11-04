@@ -47,7 +47,7 @@ In this task, you create an Azure web app. Azure App Services is a Platform As a
 
 1. Search for and select `App services`.
 
-1. Select **+ Create**, from drop-down menu, **Web App**. Notice the other choices. 
+1. Select **+ Create**, from drop-down menu, **+ Web App**. Notice the other choices. 
 
 1. On the **Basics** tab of the **Create Web App** blade, specify the following settings (leave others with their default values):
 
