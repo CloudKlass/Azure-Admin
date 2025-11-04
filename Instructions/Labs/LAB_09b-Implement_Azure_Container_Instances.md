@@ -62,6 +62,10 @@ In this task, you will create a simple web application using a Docker image. Doc
 
     >**Note**: Your container will be publicly reachable at dns-name-label.region.azurecontainer.io. If you receive a **DNS name label not available** error message, specify a different value.
 
+1. Click **Next: Monitoring** 
+
+1. De-select `Enable container instance logs` **Tick box**.
+
 1. Click **Next: Advanced >**, review the settings without making any changes.
 
  1. Click **Review + Create**, ensure that the validation passed and then select **Create**.
