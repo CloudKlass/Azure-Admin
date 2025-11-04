@@ -49,7 +49,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
 1. Sign in to the Azure portal - `https://portal.azure.com`.
 
-1. Search for and select `Virtual machines`, on the **Virtual machines** blade, click **+ Create**, and then select in the drop-down **+ Azure virtual machine**. Notice your other choices.
+1. Search for and select `Virtual machines`, on the **Virtual machines** blade, click **+ Create**, and then select in the drop-down **+ Virtual machine**. Notice your other choices.
 
 1. On the **Basics** tab, in the **Availability zone** drop down menu, place a checkmark next to **Zone 2**. This should select both **Zone 1** and **Zone 2**.
 
@@ -62,7 +62,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | Subscription | the name of your Azure subscription |
     | Resource group |  **az104-rg8** (If necessary, click **Create new**) |
     | Virtual machine names | `az104-vm1` and `az104-vm2` (After selecting both availability zones, select **Edit names** under the VM name field.) |
-    | Region | **East US** |
+    | Region | **UK South** |
     | Availability options | **Availability zone** |
     | Availability zone | **Zone 1, 2** (read the note about using virtual machine scale sets) |
     | Security type | **Standard** |
@@ -80,7 +80,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
 
     | Setting | Value |
     | --- | --- |
-    | OS disk type | **Premium SSD** |
+    | OS disk type | **Premium SSD** (Locally-redundant storage) |
     | Delete with VM | **checked** (default) |
     | Enable Ultra Disk compatibility | **Unchecked** |
 
@@ -192,10 +192,10 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Availability zone | **Zones 1, 2, 3** |
     | Orchestration mode | **Uniform** |
     | Security type | **Standard** |
-    | Image | **Windows Server 2019 Datacenter - x64 Gen2** |
-    | Size | **Standard D2s_v3** |
     | Scaling mode | **Manually update the capacity** |
     | Instance count | **2** |
+    | Image | **Windows Server 2019 Datacenter - x64 Gen2** |
+    | Size | **Standard D2s_v3** |
     | Username | `localadmin` |
     | Password | **Provide a secure password**  |
     | Already have a Windows Server license? | **Unchecked** |
@@ -208,18 +208,18 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
 
 5. On the **Disks** tab, accept the default values and click **Next : Networking >**.
 
-6. On the **Networking** page, click the **Edit virtual network** link below the **Virtual network** textbox and create a new virtual network with the following settings (leave others with their default values).  When finished, select **OK**.
+6. On the **Networking** page, click the **Edit virtual network** link below the **Virtual network** textbox and edit the existing settings using the following settings (leave others with their default values).  When finished, select **Save**.
 
     | Setting | Value |
     | --- | --- |
     | Name | `vmss-vnet` |
-    | Address range | `10.82.0.0/20` (change what is there) |
+    | Address range | `10.82.0.0/16` (change what is there) |
     | Subnet name | `subnet0` |
     | Subnet range | `10.82.0.0/24` |
 
-7. In the **Networking** tab, click the **Edit network interface** icon to the right of the network interface entry.
+7. In the **Networking** tab, click the **Edit network interface** icon (`pen icon`) to the right of the network interface entry.
 
-8. For **NIC network security group** section, select **Advanced** and then click **Create new** under the **Configure network security group** drop-down list.
+8. For **NIC network security group** section, select **Advanced** and then click **Create new** (under the **Configure network security group** drop-down list).
 
 9. On the **Create network security group** blade, specify the following settings (leave others with their default values):
 
@@ -250,7 +250,7 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Load balancing options | **Azure load balancer** |
     | Select a load balancer | **Create a load balancer** |
 
-14. On the **Create a load balancer** page, specify the load balancer name and take the defaults. Click **Create** when you are done then **Next : Scaling >**.
+14. On the **Create a load balancer** page, specify the load balancer name and take the defaults. Click **Create** when you are done then **Next : Management >**.
 
     | Setting | Value |
     | --- | --- |
@@ -305,7 +305,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
 
     ![Screenshot of the scaling add rule page.](../media/az104-lab08-scale-rule.png)
 
-1. Be sure to **Save** your changes.
+1. Be sure click **Add** to **Save** your changes.
 
 ### Scale in rule
 
@@ -322,7 +322,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     | Operation | **decrease percentage by** (review your other choices) |
     | Percentage | **20** |
 
-1. Be sure to **Save** your changes.
+1. Be sure to click **Add** to **Save** your changes.
 
 ### Set the instance limits
 
@@ -336,7 +336,7 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     | Maximum | **10** |
     | Default | **2** |
 
-1. Be sure to **Save** your changes
+1. Be sure to **Save** your changes at the top of the page.
 
 1. On the **vmss1** page, select **Instances**. This is where you would monitor the number of virtual machine instances.
 
