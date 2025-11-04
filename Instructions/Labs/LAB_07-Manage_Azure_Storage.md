@@ -52,35 +52,39 @@ In this task, you will create and configure a storage account. The storage accou
     | Resource group        | **az104-rg7** (create new) |
     | Storage account name  | any globally unique name between 3 and 24 in length consisting of letters and digits |
     | Region                | **(US) East US**  |
+    | Preferred storage type | `***leave blank***` |
     | Performance           | **Standard** (notice the Premium option) |
     | Redundancy            | **Geo-redundant storage** (notice the other options)|
-    | Make read access to data in the event of regional availability | Check the box |
+    | Make read access to data in the event of regional availability | `Check the box` |
+
+1. Select **Next*
 
 >**Did you know?** You should use the Standard performance tier for most applications. Use the Premium performance tier for enterprise or high-performance applications. 
 
-1. On the **Advanced** tab, use the informational icons to learn more about the choices. Take the defaults. 
+1. On the **Advanced** tab, use the informational icons to learn more about the choices. Accept the defaults and click **Next**. 
 
-1. On the **Networking** tab, review the available options, select **Disable public access and use private access.**.
+1. On the **Networking** tab, review the available options. From the **Public network access** section, select the **Disable** radio button and click **Next**.
 
-1. Review the **Data protection** tab. Notice 7 days is the default soft delete retention policy. Note you can enable blob versioning. Accept the defaults.
+2. Review the **Data protection** tab. Notice 7 days is the default soft delete retention policy. Note you can enable blob versioning. Accept the defaults and click **Next**.
 
-1. Review the **Encryption** tab. Notice the additional security options. Accept the defaults.
+3. Review the **Encryption** tab. Notice the additional security options. Accept the defaults.
 
-1. Select **Review**, wait for the validation process to complete, and then click **Create**.
+4. click **Review + Create**, wait for the validation process to complete, and then click **Create**.
 
-1. Once the storage account is deployed, select **Go to resource**.
+5. Once the storage account is deployed, select **Go to resource**.
 
-1. Review the **Overview** blade and the additional configurations that can be changed. These are global settings for the storage account. Notice the storage account can be used for Blob containers, File shares, Queues, and Tables.
+6. Review the **Overview** blade and the additional configurations that can be changed. These are global settings for the storage account. Notice the storage account can be used for Blob containers, File shares, Queues, and Tables.
 
-1. In the **Security + Networking** section, select **Networking**. Notice public network access is disabled, Select Manage.
+7. In the **Security + Networking** section, select **Networking**. Notice public network access is disabled, Select `Manage`.
 
-    + Change the **public access level** to **Enabled from selected networks**.
-    + In the **IPv4 Addresses** section, check the box for **Add your client IP address.**
+    + Change the **public access level** to **Enable**.
+    + Change the **Public network access scope** to **Enable from selected networks**
+    + In the **IPv4 Addresses** section, click on **`+ Add your client IPv 4 address (*<ip address>*)`.**
     + Be sure to **Save** your changes. 
   
-1. In the **Data management** section, view the **Redundancy** blade. Notice the information about your primary and secondary data center locations.
+8. Back In the main Storage blade in the **Data management** section, view the **Redundancy** blade. Notice the information about your primary and secondary data center locations.
 
-1. In the **Data management** section, select **Lifecycle management**, and then select **Add a rule**.
+9. In the **Data management** section, select **Lifecycle management**, and then select **+ Add a rule**.
 
     + **Name** the rule `Movetocool`. Notice your options for limiting the scope of the rule, accept the defaults and Select **Next**.
     
@@ -100,7 +104,7 @@ In this task, you will create a blob container and upload an image. Blob contain
 
 1. In the **Data storage** section, click **Containers**. 
 
-1. Click **+ Container** and **Create** a container with the following settings:
+1. Click **+ Add container** and **Create** a container with the following settings:
 
     | Setting | Value |
     | --- | --- |
@@ -109,20 +113,20 @@ In this task, you will create a blob container and upload an image. Blob contain
 
     ![Screenshot of create a container.](../media/az104-lab07-create-container.png)
 
-1. On your container, scroll to to the ellipses (...) on the far right, select **Access Policy**.
+1. After creation. In the **Containers** blade, select the ellipses `(...)` on the far right of the `Data` container, and select **Access Policy**.
 
-1. In the **Immutable blob storage** area, select **Add policy**.
+1. In the **Immutable blob storage** area, select **+ Add policy**.
 
     | Setting | Value |
     | --- | --- |
-    | Policy type | **Time-based retention**  |
+    | Policy type | **Time-based retention** (from the drop down list). |
     | Set retention period for | `180` days |
 
 1. Select **Save**.
 
 ### Manage blob uploads
 
-1. Return to the containers page, select your **data** container and then click **Upload**.
+1. Return to the containers page, select your **`data`** container and then click **Upload**.
 
 1. On the **Upload blob** blade, expand the **Advanced** section.
 
@@ -131,7 +135,6 @@ In this task, you will create a blob container and upload an image. Blob contain
     | Setting | Value |
     | --- | --- |
     | Browse for files | add the file you have selected to upload |
-    | Select **Advanced** | |
     | Blob type | **Block blob** |
     | Block size | **4 MiB** |
     | Access tier | **Hot**  (notice the other options) |
@@ -152,7 +155,7 @@ In this task, you will create a blob container and upload an image. Blob contain
 
 ### Configure limited access to the blob storage
 
-1. Select your uploaded file and then on the **Generate SAS** tab. You can also use the ellipses (...) to the far right. Specify the following settings (leave others with their default values):
+1. Select your uploaded file and then on the **Generate SAS** tab. You can also use the ellipses `(...)` to the far right. Specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
@@ -222,8 +225,6 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 1. In the **Security + networking** section, select the **Networking** blade.
 
-1. Select **Manage** under Public network access and then select **Enable from selected networks**.
-
 11. Under **Virtual networks** , click **+ Add a virtual network** and **Add existing virtual network**. 
 
 1. on the Add network blade select:
@@ -231,10 +232,10 @@ In this task, you will create and configure Azure File shares. You will use Stor
     |Setting|Value|
     |---|---|
     |Subscription|the name of the Azure subscription you are using in this lab|
-    |Virtual networks|**vent1**|
+    |Virtual networks|**vnet1**|
     |Subnets|**default**|
 
-1. On the **Add networks** blade, click **Add**. 
+1. On the **Add networks** blade, click **Enable**, then click **Add**. 
 
 1. Under the **IPv4 Addresses** delete you client IP.
 
