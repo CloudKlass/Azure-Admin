@@ -81,16 +81,9 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. Select your virtual machine, and then **Enable** (twice).
 
-1. Under the `Data collection rule` drop down list, select `Create new`
+1. Accept the defaults and Select **Review + enable**.
 
-    | Setting       | Value         | 
-    | ---           | ---           |
-    |Data collector rule name | **collector1** |
-    | Enable processes and dependencies (Map) | **Tick the box**
-
-1. Select **Create**
-
-1. Select **Configure**. 
+1. Select **Enable**
 
 1. It will take a few minutes for the virtual machine agent to install and configure, proceed to the next step. 
    
@@ -145,6 +138,8 @@ In this task, if the alert is triggered send an email notification to the operat
 
     >**Note:** You should receive an email notification saying you were added to an action group. There may be a few minutes delay, but that is a sure sign the rule has deployed.
 
+1. Select **Review + create** to validate your input, then select **Create** (To create the Action group)
+
 1. Once the action group is created move to the **Next: Details** tab and enter the following values for each setting.
 
     | Setting | Value |
@@ -198,6 +193,8 @@ In this task, you will use Azure Monitor to query the data captured from the vir
 1. If necessary close the splash screen. 
 
 1. Select a scope, your **resource group**. Select **Apply**. 
+
+1. On the right hand side of the query editor. Change from `Simple mode` to `KQL mode`
 
 1. In the **Queries** tab, select **Virtual machines** (left pane). 
 
