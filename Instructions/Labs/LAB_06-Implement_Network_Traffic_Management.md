@@ -34,7 +34,7 @@ There are interactive lab simulations that you might find useful for this topic.
 
 ## Task 1: Use a template to provision an infrastructure
 
-In this task, you will use a template to deploy one virtual network, one network security group, and two virtual machines.
+In this task, you will use a template to deploy one virtual network, one network security group, and three virtual machines.
 
 1. Sign in to the **Azure portal** - `https://portal.azure.com`.
 
@@ -103,28 +103,31 @@ In this task, you implement an Azure Load Balancer in front of two Azure virtual
     | Gateway Load Balancer | None |
     | Public IP address | Select **Create new** (use the instructions in the next step) |
 
-1. On the **Add a public IP address** popup, use the following settings before clicking **OK** and then **Add**. When completed click **Next: Backend pools**.
+1. On the **Add a public IP address** popup, use the following settings before clicking **Save** and then **Save**.
 
     | Setting | Value |
     | --- | --- |
     | Name | `az104-lbpip` |
-    | SKU | Standard |
-    | Tier | Regional |
-    | Assignment | Static |
-    | Routing Preference | **Microsoft network** |
+    | Routing Preference | Microsoft network |
 
     >**Note:** The Standard SKU provides a static IP address. Static IP addresses are assigned with the resource is created and released when the resource is deleted.  
 
-1. On the **Backend pools** tab, click **+ Add a backend pool** with the following settings (leave others with their default values). Click **+ Add** (twice) and then click **Next: Inbound rules**.
+1. Select **Next: Backend pools**
+
+1. On the **Backend pools** tab, click **+ Add a backend pool** with the following settings (leave others with their default values).
 
     | Setting | Value |
     | --- | --- |
     | Name | `az104-be` |
     | Virtual network | **az104-06-vnet1** |
     | Backend Pool Configuration | **NIC** |
-    | Click **Add** to add a virtual machine |  |
+    | Click **Add** (to add virtual machines) |  |
     | az104-06-vm0 | **check the box** |
     | az104-06-vm1 | **check the box** |
+
+1. Click **Add** and then click **Save**
+
+1. Select **Next: Inbound rules**
 
 1. As you have time, review the other tabs, then click **Review and create**. Ensure there are no validation errors, then click **Create**.
 
@@ -134,7 +137,7 @@ In this task, you implement an Azure Load Balancer in front of two Azure virtual
 
 1. In the **Settings** blade, select **Load balancing rules**.
 
-1. Select **Add a load balancing rule**. Add a load balancing rule with the following settings (leave others with their default values).  As you configure the rule use the informational icons to learn about each setting. When finished click **Save**.
+1. Select **+ Add**. Add a load balancing rule with the following settings (leave others with their default values).  As you configure the rule use the informational icons to learn about each setting. When finished click **Save**.
 
     | Setting | Value |
     | --- | --- |
@@ -185,10 +188,11 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
     | Setting | Value |
     | --- | --- |
+    | Subnet purpose | `Default` |
     | Name | `subnet-appgw` |
     | Subnet address range | `10.60.3.0/27` |
 
-1. Click **Save**
+1. Click **Add**
 
     > **Note**: This subnet will be used by the Azure Application Gateway. The Application Gateway requires a dedicated subnet of /27 or larger size.
 
@@ -205,7 +209,6 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Tier | **Standard V2** |
     | Enable autoscaling | **No** |
     | Minimum instance count | `2` |
-    | Availability zone | **Accept the defaults** |
     | HTTP2 | **Disabled** |
     | Virtual network | **az104-06-vnet1** |
     | Subnet | **subnet-appgw (10.60.3.0/27)** |
@@ -254,7 +257,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Rule name | `az104-gwrule` |
     | Priority | `10` |
     | Listener name | `az104-listener` |
-    | Frontend IP | **Public** |
+    | Frontend IP | **Public IPv4** |
     | Protocol | **HTTP** |
     | Port | `80` |
     | Listener type | **Basic** |
@@ -290,7 +293,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Backend settings | **az104-http** |
     | Backend target | `az104-videobe` |
 
-1. Select **Add** twice then select **Next: Tags >**. No changes are needed.
+1. Select **Add** then select **Next: Tags >**. No changes are needed.
 
 1. Select **Next: Review + create >** and then click **Create**.
 
