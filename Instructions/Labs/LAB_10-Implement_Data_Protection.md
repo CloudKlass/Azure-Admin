@@ -73,7 +73,7 @@ In this task, you will use a template to deploy a virtual machine. The virtual m
 
 1. Select **Review + Create**, then select **Create**.
 
-    >**Note:** Wait for the template to deploy, then select **Go to resource**. You should have one virtual machine in one virtual network. 
+    >**Note:** Do not wait for the template to deploy, go straight to **Task 2**. 
 
 ## Task 2: Create and configure a Recovery Services vault
 
@@ -110,7 +110,7 @@ In this task, you will create a Recovery Services vault. A Recovery Services vau
     
     >**Did you know?** The [Cross Region Restore](https://learn.microsoft.com/azure/backup/backup-create-recovery-services-vault#set-cross-region-restore) option allows you to restore data in a secondary, Azure paired region. 
 
-1. Return to the Recovery Services vault blade, click the **Update** link under **Soft Delete and Security Settings** label.
+1. Return to the Recovery Services vault blade, click the **Update** link under **Soft Delete Settings** label.
 
 1. On the **Security and soft delete settings** blade, note that **Soft Delete (For workload running in Azure)** is **Enabled**. Notice the **soft delete retention period** is **14** days. 
 
@@ -153,17 +153,19 @@ In this task, you will implement Azure virtual-machine level backup. As part of 
 
 1. Click **OK** to create the policy and then, in the **Virtual Machines** section, select **Add**.
 
-1. On the **Select virtual machines** blade, select **az-104-10-vm0**, click **OK**, and then back on the **Backup** blade, click **Enable backup**.
+1. On the **Select virtual machines** blade, select **az-104-10-vm0**, click **OK**.
+
+   Then back on the **Backup** blade, click **Enable backup**.
 
     >**Note**: Wait for the backup to be enabled. This should take approximately 2 minutes.
 
-1. In the **Protected items** section, click **Backup items**, and then click the **Azure virtual machine** entry.
+2. In the **Protected items** section, click **Backup items**, and then click the **Azure virtual machine** entry.
 
-1. Select the **View details** link for **az104-10-vm0**, and review the values of the **Backup Pre-Check** and **Last Backup Status** entries.
+3. Select the **View details** link for **az104-10-vm0**, and review the values of the **Backup Pre-Check** and **Last Backup Status** entries.
 
     >**Note:** Notice the backup is pending.
     
-1. Select **Backup now**, accept the default value in the **Retain Backup Till** drop-down list, and click **OK**.
+4. Select **Backup now**, accept the default value in the **Retain Backup Till** drop-down list, and click **OK**.
 
     >**Note**: Do not wait for the backup to complete but instead proceed to the next task.
 
@@ -173,9 +175,9 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. From the Azure portal, search for and select `Storage accounts`.
 
-1. On the Storage accounts page, select **Create**.
+1. On the Storage accounts page, select **+ Create**.
 
-1. Use the following information to define the storage account, then and select **Review**.
+1. Use the following information to define the storage account.
 
     | Settings | Value |
     | --- | --- | 
@@ -183,6 +185,9 @@ In this task, you will deploy an Azure storage account. Then you will configure 
     | Resource group        | **az104-rg-region1**        |
     | Storage account name  | Provide a globally unique name   |
     | Region                | **East US**   |
+    (Leave all other settings as default).
+
+1. Select **Review + create**
 
 1. On the Review tab, select **Create**.
 
@@ -207,7 +212,7 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. In the Storage account drop-down field, select the storage account that you deployed earlier in this task.
 
-1. Select **Save**.
+1. Select **Save** (At the top of the screen).
 
 1. Return to your Recovery Services vault, in the **Monitoring** blade select **Backup jobs**.
 
