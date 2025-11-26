@@ -79,13 +79,14 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. On the `overview blade` (right hand side) Select **View** in the **VM Insights** box, and then select **Configure Insights**.
 
-1. Select your virtual machine, and then **Enable** (twice).
+1. Select your virtual machine, and then select **Enable**.
 
 1. Accept the defaults and Select **Review + enable**.
 
 1. Select **Enable**
 
-1. It will take a few minutes for the virtual machine agent to install and configure, proceed to the next step. 
+1. It will take a few minutes for the virtual machine agent to install and configure.
+   ***Don't wait***, proceed to the next step. 
    
 ## Task 2: Create an alert
 
