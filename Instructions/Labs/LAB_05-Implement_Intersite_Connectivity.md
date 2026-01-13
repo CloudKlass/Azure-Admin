@@ -62,7 +62,7 @@ In this task, you create a core services virtual network with a virtual machine.
     | Availability options | No infrastructure redundancy required |
     | Security type | **Trusted launch virtual machines** |
     | Image | **Windows Server 2019 Datacenter - x64 Gen2** (You may need to select `see all images` and select it from the **Windows Server** Select list) |
-    | Size | **Standard_DS2_v3** |
+    | Size | **Standard_D2S_v3** |
     | Username | `localadmin` | 
     | Password | **Provide a complex password** |
 
@@ -70,7 +70,7 @@ In this task, you create a core services virtual network with a virtual machine.
    
 1. On the **Disks** tab take the defaults and then select **Next: Networking >**.
 
-1. On the **Networking** tab, for Virtual network, select **Edit virtual network**.
+1. On the **Networking** tab, for Virtual network, select **Create new**.
 
 1. Use the following information to configure the virtual network, and then select **Ok**. If necessary, remove or replace the existing information.
 
