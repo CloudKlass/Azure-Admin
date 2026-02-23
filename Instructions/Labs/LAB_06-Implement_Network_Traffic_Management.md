@@ -59,7 +59,7 @@ In this task, you will use a template to deploy one virtual network, one network
     | Subscription  | your Azure subscription |
     | Resource group | `az104-rg6` (If necessary, select **Create new**) |
     | Location | **Southeast Asia** |
-    | Password      | **Pa55w.rd1234abc** |
+    | Password      | Enter a complex Password |
 
     >**Note**: If you receive an error that the VM size is unavailable, select a SKU that is available in your subscription and has at least 2 cores.
 
