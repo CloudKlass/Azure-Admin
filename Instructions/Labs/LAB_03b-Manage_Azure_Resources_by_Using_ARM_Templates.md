@@ -71,9 +71,9 @@ In this task, we will create a managed disk in the Azure portal. Managed disks a
 
 1. Take a minute to review the **Template** and **Parameters** files.
 
-1. Click **Download** and save the templates to the local drive. This creates a compressed zipped file. 
+1. Select the **Template** tab and **Download** the template. Then, switch to the **Parameters** tab, and repeat the **Download** operation.
 
-1. Use File Explorer to extract the content of the downloaded file into the **Downloads** folder on your computer. Notice there are two JSON files (template and parameters). 
+1. Use File Explorer to navigate to the **Downloads** folder on your computer. Notice there are two JSON files (template and parameters). 
 
    >**Did you know?**  You can export an entire resource group or just specific resources within that resource group.
 
