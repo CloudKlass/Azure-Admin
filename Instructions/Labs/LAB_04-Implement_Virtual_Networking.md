@@ -109,9 +109,9 @@ The organization plans a large amount of growth for core services. In this task,
 
 7. In the **Automation** section, select **Export template**, and then wait for the template to be generated.
 
-8. **Download** the template.
+8. Select the **Template** tab and **Download** the template. Then, switch to the **Parameters** tab, and repeat the **Download** operation.
 
-9. Navigate on the local machine to the **Downloads** folder and **Extract all** the files in the downloaded zip file. 
+9. Navigate on the local machine to the **Downloads** folder. 
 
 10. Before proceeding, ensure you have the **template.json** file. You will use this template to create the ManufacturingVnet in the next task. 
  
