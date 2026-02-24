@@ -93,7 +93,7 @@ In this task, you implement an Azure Load Balancer in front of two Azure virtual
     | Type | **Public** |
     | Tier | **Regional** |
 
-     ![Screenshot of the create load balancer page.](../media/az104-lab06-create-lb1.png)
+     ![Screenshot of the create load balancer page.](../media/az104-lab06-create-lb1a.png)
 
 1. On the **Frontend IP configuration** tab, click **Add a frontend IP configuration** and use the following settings:  
 
