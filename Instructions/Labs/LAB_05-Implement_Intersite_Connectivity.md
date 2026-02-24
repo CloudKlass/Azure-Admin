@@ -10,7 +10,7 @@ lab:
 
 In this lab you explore communication between virtual networks. You implement virtual network peering and test connections. You will also create a custom route. 
 
-This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**. 
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **SouthEast Asia**. 
 
 ## Estimated time: 45 minutes
     
@@ -58,7 +58,7 @@ In this task, you create a core services virtual network with a virtual machine.
     | Subscription |  *your subscription* |
     | Resource group |  `az104-rg5` (If necessary, **Create new**. )
     | Virtual machine name |    `CoreServicesVM` |
-    | Region | **(US) East US** |
+    | Region | **Southeast Asia** |
     | Availability options | No infrastructure redundancy required |
     | Security type | **Trusted launch virtual machines** |
     | Image | **Windows Server 2019 Datacenter - x64 Gen2** (You may need to select `see all images` and select it from the **Windows Server** Select list) |
@@ -108,7 +108,7 @@ In this task, you create a manufacturing services virtual network with a virtual
     | Subscription |  *your subscription* |
     | Resource group |  `az104-rg5` |
     | Virtual machine name |    `ManufacturingVM` |
-    | Region | **(US) East US** |
+    | Region | **Southeast Asia** |
     | Availability options | No infrastructure redundancy required |
     | Security type | **Trusted launch virtual machines** |
     | Image | **Windows Server 2019 Datacenter: x64 Gen2** |
