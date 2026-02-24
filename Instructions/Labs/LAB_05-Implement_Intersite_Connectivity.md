@@ -264,7 +264,7 @@ In this task, you want to control network traffic between the perimeter subnet a
     | --- | --- |
     | Subscription | your subscription |
     | Resource group | `az104-rg5`  |
-    | Region | **East US** |
+    | Region | **Southeast Asia** |
     | Name | `rt-CoreServices` |
     | Propagate gateway routes | **No** |
 
