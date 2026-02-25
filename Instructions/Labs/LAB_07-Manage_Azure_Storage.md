@@ -225,7 +225,9 @@ In this task, you will create and configure Azure File shares. You will use Stor
 
 1. In the **Security + networking** section, select the **Networking** blade.
 
-11. Under **Virtual networks** , click **+ Add a virtual network** and **Add existing virtual network**. 
+1. Click the **Manage** Button and then select the radio button **Enable from selected networks**
+
+1. Under **Virtual networks** , click **+ Add a virtual network** and **Add existing virtual network**. 
 
 1. on the Add network blade select:
 
