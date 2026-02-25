@@ -62,11 +62,11 @@ In this task, you create a core services virtual network with a virtual machine.
     | Availability options | No infrastructure redundancy required |
     | Security type | **Trusted launch virtual machines** |
     | Image | **Windows Server 2019 Datacenter - x64 Gen2** (You may need to select `see all images` and select it from the **Windows Server** Select list) |
-    | Size | **Standard_DS2_v3** |
+    | Size | **Standard_D2S_v3** |
     | Username | `localadmin` | 
     | Password | **Provide a complex password** |
 
-    ![Screenshot of Basic virtual machine creation page. ](../media/az104-lab05-createcorevm-2.png)
+    ![Screenshot of Basic virtual machine creation page. ](../media/az104-lab05-createcorevm-3.png)
    
 1. On the **Disks** tab take the defaults and then select **Next: Networking >**.
 
@@ -112,7 +112,7 @@ In this task, you create a manufacturing services virtual network with a virtual
     | Availability options | No infrastructure redundancy required |
     | Security type | **Trusted launch virtual machines** |
     | Image | **Windows Server 2019 Datacenter: x64 Gen2** |
-    | Size | **Standard_DS2_v3** | 
+    | Size | **Standard_D2S_v3** | 
     | Username | `localadmin` | 
     | Password | **Provide a complex password** |
 
