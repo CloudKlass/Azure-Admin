@@ -179,13 +179,14 @@ In this task, you will deploy an Azure storage account. Then you will configure 
 
 1. Use the following information to define the storage account.
 
-    | Settings | Value |
-    | --- | --- | 
-    | Subscription          | *Your subscription*    |
-    | Resource group        | **az104-rg-region1**        |
-    | Storage account name  | Provide a globally unique name   |
-    | Region                | **East US**   |
-    (Leave all other settings as default).
+  |Setting | Value|
+  | --- | --- | 
+  | Subscription          | *Your subscription*    |
+  | Resource group        | **az104-rg-region1**        |
+  | Storage account name  | Provide a globally unique name   |
+  | Region                | **East US**   |
+  
+  (Leave all other settings as default).
 
 1. Select **Review + create**
 
