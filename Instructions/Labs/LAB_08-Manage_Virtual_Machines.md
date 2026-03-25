@@ -91,12 +91,7 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | Delete public IP and NIC when VM is deleted | **Checked** |
     | Load balancing options | **None** |
 
-
-1. Click **Next: Management >** and specify the following settings (leave others with their default values):
-
-    | Setting | Value |
-    | --- | --- |
-    | Patch orchestration options | **Azure orchestrated** |  
+1. Click **Next: Management >** 
 
 1. Click **Next: Monitoring >** and specify the following settings (leave others with their default values):
 
