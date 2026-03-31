@@ -61,10 +61,10 @@ In this task, you create a core services virtual network with a virtual machine.
     | Region | **Southeast Asia** |
     | Availability options | No infrastructure redundancy required |
     | Security type | **Trusted launch virtual machines** |
-    | Image | **Windows Server 2019 Datacenter - x64 Gen2** (You may need to select `see all images` and select it from the **Windows Server** Select list) |
+    | Image | **Windows Server 2025 Datacenter - x64 Gen2**  |
     | Size | **Standard_D2S_v3** |
     | Username | `localadmin` | 
-    | Password | **Provide a complex password** |
+    | Password | **Pa55w.rd1234abc** |
 
     ![Screenshot of Basic virtual machine creation page. ](../media/az104-lab05-createcorevm-3.png)
    
@@ -111,10 +111,10 @@ In this task, you create a manufacturing services virtual network with a virtual
     | Region | **Southeast Asia** |
     | Availability options | No infrastructure redundancy required |
     | Security type | **Trusted launch virtual machines** |
-    | Image | **Windows Server 2019 Datacenter: x64 Gen2** |
+    | Image | **Windows Server 2025 Datacenter: x64 Gen2** |
     | Size | **Standard_D2S_v3** | 
     | Username | `localadmin` | 
-    | Password | **Provide a complex password** |
+    | Password | **Pa55w.rd1234abc** |
 
 1. On the **Disks** tab take the defaults and then select **Next: Networking >**.
 
