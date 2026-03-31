@@ -10,7 +10,7 @@ lab:
 
 In this lab, you create and compare virtual machines to virtual machine scale sets. You learn how to create, configure and resize a single virtual machine. You learn how to create a virtual machine scale set and configure autoscaling.
 
-This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**.
+This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **(Asia Pacific) SouthEast Asia**.
 
 ## Estimated timing: 50 minutes
 
@@ -62,15 +62,15 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | Subscription | the name of your Azure subscription |
     | Resource group |  **az104-rg8** (If necessary, click **Create new**) |
     | Virtual machine names | `az104-vm1` and `az104-vm2` (After selecting both availability zones, select **Edit names** under the VM name field.) |
-    | Region | **UK South** |
+    | Region | **(Asia Pacific) SouthEast Asia** |
     | Availability options | **Availability zone** |
     | Availability zone | **Zone 1, 2** (read the note about using virtual machine scale sets) |
     | Security type | **Standard** |
-    | Image | **Windows Server 2019 Datacenter - x64 Gen2** |
+    | Image | **Windows Server 2025 Datacenter - x64 Gen2** |
     | Azure Spot instance | **unchecked** |
     | Size | **Standard D2s v3** |
     | Username | `localadmin` |
-    | Password | **Provide a secure password** |
+    | Password | **Pa55w.rd1234abc** |
     | Public inbound ports | **None** |
     | Would you like to use an existing Windows Server license? | **Unchecked** |
 
@@ -183,16 +183,16 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Subscription | the name of your Azure subscription  |
     | Resource group | **az104-rg8**  |
     | Virtual machine scale set name | `vmss1` |
-    | Region | **(US)East US** |
+    | Region | **(Asia Pacific) SouthEast Asia** |
     | Availability zone | **Zones 1, 2, 3** |
     | Orchestration mode | **Uniform** |
     | Security type | **Standard** |
     | Scaling mode | **Manually update the capacity** |
     | Instance count | **2** |
-    | Image | **Windows Server 2019 Datacenter - x64 Gen2** |
+    | Image | **Windows Server 2025 Datacenter - x64 Gen2** |
     | Size | **Standard D2s_v3** |
     | Username | `localadmin` |
-    | Password | **Provide a secure password**  |
+    | Password | **Pa55w.rd1234abc**  |
     | Already have a Windows Server license? | **Unchecked** |
 
     >**Note**: For the list of Azure regions which support deployment of Windows virtual machines to availability zones, refer to [What are Availability Zones in Azure?](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
