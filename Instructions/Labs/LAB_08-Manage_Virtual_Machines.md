@@ -350,7 +350,6 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     -ResourceGroupName 'az104-rg8' `
     -Name 'myPSVM' `
     -Location 'South East Asia' `
-    -Image '2019-Datacenter-gensecond' `
     -Zone '1' `
     -Size 'Standard_D2s_v3' `
     -Credential (Get-Credential)
