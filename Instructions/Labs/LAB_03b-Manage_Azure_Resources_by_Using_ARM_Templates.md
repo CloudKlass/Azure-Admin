@@ -175,21 +175,19 @@ In this task, you work with the Azure Cloud Shell and Azure PowerShell. Azure Cl
 
 1. Select the **Editor** (curly brackets) icon and navigate to the parameters JSON file.
 
-1. Make a change. Change the disk name to **az104-disk4**. Use **Ctrl +S** to save your changes.
+1. Make a change. Change the disk name to **"az104-disk4"**. (Ensure you use double quotation marks, not singles around the name). Use **Ctrl +S** to save your changes.
 
-   ![Screenshot of cloud shell editor.](../media/az104-lab03-parameter_file_disk4.png)
+  >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
 
-    >**Note**: You can target your template deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands.
-
-1. To deploy to a resource group, use **az deployment group create**.
+2. To deploy to a resource group, use **az deployment group create**.
 
     ```sh
     az deployment group create --resource-group az104-rg3 --template-file template.json --parameters parameters.json
     ```
     
-1. Ensure the command completes and the ProvisioningState is **Succeeded**.
+3. Ensure the command completes and the ProvisioningState is **Succeeded**.
 
-1. Confirm the disk was created.
+4. Confirm the disk was created.
 
      ```sh
      az disk list --output table --resource-group az104-rg3
