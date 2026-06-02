@@ -81,9 +81,11 @@ In this task, you will deploy a virtual machine that will be used to test monito
 
 1. Select your virtual machine, and then select **Enable**.
 
-1. Ensure Open Telemetry Metrics is not checked.
+1. De-Select `Open Telemetry Metrics`.
 
-1. Ensure [Classic] Log based metrics **is** checked.
+1. Select `[Classic] Log based metrics`.
+
+1. De-select `Enable recommended alerts`.
 
 1. Accept the defaults and Select **Review + enable**.
 
