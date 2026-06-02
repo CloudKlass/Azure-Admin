@@ -63,7 +63,7 @@ In this task, you will deploy a virtual machine that will be used to test monito
     | Resource group| `az104-rg11` (If necessary, select **Create new**)
     | Region        | **East US**   |
     | Username      | `localadmin`   |
-    | Password      | Pa55w.rd1234dac |
+    | Password      | `Pa55w.rd1234abc` |
     
 1. Select **Review + Create**, then select **Create**.
 
@@ -82,6 +82,8 @@ In this task, you will deploy a virtual machine that will be used to test monito
 1. Select your virtual machine, and then select **Enable**.
 
 1. Ensure Open Telemetry Metrics is not checked.
+
+1. Ensure [Classic] Log based metrics **is** checked.
 
 1. Accept the defaults and Select **Review + enable**.
 
