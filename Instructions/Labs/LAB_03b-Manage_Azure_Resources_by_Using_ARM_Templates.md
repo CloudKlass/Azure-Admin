@@ -205,7 +205,7 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
 
 1. **Upload** the bicep file to the Cloud Shell. 
 
-1. Select the **Editor** (curly brackets) icon and navigate to the file.
+1. Select the **Editor** (Pen icon) icon and navigate to the file.
 
 1. Take a minute to read through the bicep template file. Notice how the disk resource is defined. 
    
@@ -213,8 +213,7 @@ In this task, you will use a Bicep file to deploy a managed disk. Bicep is a dec
 
     + On Line 2 Change the **managedDiskName** value to `az104-Disk5`.
     + On Line 7 Change the **diskSizeinGiB** value to `32`.
-    + On Line 26 Change the **sku name** value to `StandardSSD_LRS`.  ***(Note: The name is Case Sensitive)***
-
+    
 1. Use **Ctrl +S** to save your changes.
 
 1. Now, deploy the template.
