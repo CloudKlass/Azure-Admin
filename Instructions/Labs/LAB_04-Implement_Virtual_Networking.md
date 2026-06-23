@@ -117,7 +117,7 @@ In this task, you create the ManufacturingVnet virtual network and associated su
 
 1. Select **Build your own template in the editor** and then **Load file**.
 
-1. Navigate to the **Allfiles\Labs\04** and select the **az104-04-template.json* file and click **save**.
+1. Navigate to the **Allfiles\Labs\04** and select the **az104-04-template.json** file and click **save**.
 
 1. From the Resourcegroup drop down list Select the **az104-rg4**. 
 
