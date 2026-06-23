@@ -107,55 +107,25 @@ The organization plans a large amount of growth for core services. In this task,
 
 6. Take a minute to verify the **Address space** and the **Subnets**. Notice your other choices in the **Settings** blade. 
 
-7. In the **Automation** section, select **Export template**, and then wait for the template to be generated.
-
-8. Select the **Template** tab and **Download** the template. Then, switch to the **Parameters** tab, and repeat the **Download** operation.
-
-9. Navigate on the local machine to the **Downloads** folder. 
-
-10. Before proceeding, ensure you have the **template.json** file. You will use this template to create the ManufacturingVnet in the next task. 
- 
 ## Task 2: Create a virtual network and subnets using a template
 
 In this task, you create the ManufacturingVnet virtual network and associated subnets. The organization anticipates growth for the manufacturing offices so the subnets are sized for the expected growth. For this task, you use a template to create the resources. 
 
-1. Locate the **template.json** file exported in the previous task. It should be in your **Downloads** folder.
-
-1. Edit the file using the editor of your choice. Many editors have a *change all occurrences* feature. If you are using Visual Studio Code be sure you are working in a **trusted window** and not in the **restricted mode**. Consult the architecture diagram to verify the details. 
-
-### Make changes for the ManufacturingVnet virtual network
-
-1. Replace all occurrences of **CoreServicesVnet** with `ManufacturingVnet`. 
-
-1. Replace all occurrences of **10.20.0.0/16** with `10.30.0.0/16`. 
-
-### Make changes for the ManufacturingVnet subnets
-
-1. Change all occurrences of **SharedServicesSubnet** to `SensorSubnet1`.
-
-1. Change all occurrences of **10.20.10.0/24** to `10.30.20.0/24`.
-
-1. Change all occurrences of **DatabaseSubnet** to `SensorSubnet2`.
-
-1. Change all occurrences of **10.20.20.0/24** to `10.30.21.0/24`.
-
-1. Read back through the file and ensure everything looks correct.
-
-1. Be sure to **Save** your changes.
-
 >**Note:** There is a completed template and parameter file in the lab files directory. Allfiles\Labs\04\az104-04-template.json and az104-04-parameters.json that you can deploy instead. 
 
-### Deploy the custom template
+### Deploy a custom template
 
 1. In the portal, search for and select **Deploy a custom template**.
 
 1. Select **Build your own template in the editor** and then **Load file**.
 
-1. Select the **templates.json** file with your Manufacturing changes, then select **Save**.
+1. Navigate to the **Allfiles\Labs\04** and select the **az104-04-template.json* file and click **save**.
 
-1. Select **Review + create** and then **Create**.
+1. From the Resourcegroup drop down list Select the **az104-rg4**. 
 
-1. Wait for the template to deploy, then confirm (in the portal) the Manufacturing virtual network and subnets were created.
+2. Select **Review + create** and when validation has completed, select **Create**.
+
+3. Wait for the template to deploy, then confirm (in the portal) the Manufacturing virtual network and subnets were created.
 
 >**Note:** If you have to deploy more than one time you may find some resources were successfully completed and the deployment is failing. You can manually remove those resources and try again. 
    
