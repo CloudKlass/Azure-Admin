@@ -127,7 +127,7 @@ In this task, you create a manufacturing services virtual network with a virtual
     | Name | `ManufacturingVNet` |
     | Address range | `172.16.0.0/16`  |
     | Subnet Name | `Manufacturing` |
-    | Subnet address range | `172.16.0.0/24` |
+    | Starting address | `172.16.0.0/24` |
 
 1. **Save** the Subnet settings and then **Save** the Network Setting.
 
@@ -255,7 +255,7 @@ In this task, you want to control network traffic between the perimeter subnet a
     | --- | --- |
     | Subnet purpose | `Default` |
     | Name | `perimeter` |
-    | Subnet address range | `10.0.1.0/24`  |
+    | Starting Address | `10.0.1.0/24`  |
 
    
 1. In the Azure portal, search for and select `Route tables`, and then select **+ Create**. 
