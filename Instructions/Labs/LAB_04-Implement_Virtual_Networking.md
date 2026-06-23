@@ -111,8 +111,6 @@ The organization plans a large amount of growth for core services. In this task,
 
 In this task, you create the ManufacturingVnet virtual network and associated subnets. The organization anticipates growth for the manufacturing offices so the subnets are sized for the expected growth. For this task, you use a template to create the resources. 
 
->**Note:** There is a completed template and parameter file in the lab files directory. Allfiles\Labs\04\az104-04-template.json and az104-04-parameters.json that you can deploy instead. 
-
 ### Deploy a custom template
 
 1. In the portal, search for and select **Deploy a custom template**.
