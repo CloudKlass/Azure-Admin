@@ -61,9 +61,9 @@ In this task, you will deploy a virtual machine that will be used to test monito
     | ---           | ---           |
     | Subscription  | Your Azure subscription |
     | Resource group| `az104-rg11` (If necessary, select **Create new**)
-    | Region        | **East US**   |
+    | Region        | **SouthEastAsia**   |
     | Username      | `localadmin`   |
-    | Password      | `Pa55w.rd1234abc` |
+    | Password      | `Pa55w.rd123
     
 1. Select **Review + Create**, then select **Create**.
 
